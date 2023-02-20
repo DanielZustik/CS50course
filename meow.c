@@ -1,7 +1,11 @@
 #include <stdio.h>
-int i = 5;
-while (i>0)
+int main(void)
+{
+
+int i = 0;
+while (i < 4)
 {
     printf("Meow\n");
-    i--;
+    i;
+}
 }
