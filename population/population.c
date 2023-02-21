@@ -13,7 +13,12 @@ int main(void)
 
     // TODO: Prompt for end size
 
-    int stop = get_int ("Jaká je koncová populace?");
+    int stop;
+    while (stop < n)
+    {
+         stop = get_int ("Jaká je koncová populace?");
+    }
+
 
     // TODO: Calculate number of years until we reach threshold
 
