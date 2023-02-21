@@ -7,7 +7,7 @@ int main(void)
     int n = 0;
     while (n < 9)
 {
-    n = get_int ("Jaká je počáteční populace?");
+    n = get_int("Jaká je počáteční populace?");
 }
 
 
@@ -16,7 +16,7 @@ int main(void)
     int stop = 0;
     while (stop < n)
     {
-         stop = get_int ("Jaká je koncová populace?");
+        stop = get_int("Jaká je koncová populace?");
     }
 
 
