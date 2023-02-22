@@ -2,5 +2,5 @@ má se vytisknout pyrtamida tvořená hashi
 uživatel určí jak vysoká
 
 prompt user for height
-budeme se ptát loppem tak dlouho, dokud nezadá správně
+if height is not betwen 1 and 8 go back one step
 následně se tento počet dá do loopu a vytiskne se pyramida
