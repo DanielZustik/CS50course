@@ -15,6 +15,10 @@ int main(void)
     for (int i = 0; i < height; i++)
     {
         printf("#\n");
+        for (int j = 0; j < height; j++)
+        {
+        printf("\n");
+        }
     }
 
     //vytiskni
