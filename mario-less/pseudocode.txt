@@ -1,6 +1,4 @@
-má se vytisknout pyrtamida tvořená hashi
-uživatel určí jak vysoká
-
 prompt user for height
 if height is not betwen 1 and 8 go back one step
-následně se tento počet dá do loopu a vytiskne se pyramida
+iterate from 1 through height:
+    on iteration i print i hashes and then new line
