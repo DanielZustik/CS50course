@@ -9,4 +9,6 @@ int main(void)
         height = get_int("Height:");
     }
     while (height >8);
+
+    printf("Stored: %i/n",height);
 }
