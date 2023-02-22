@@ -19,12 +19,13 @@ int main(void)
 float half(float bill, float tax, int tip)
 {
     tip = (float) tip;
+
     tax = tax/100;
     tip = tip/100;
-    float dil = bill + tax*bill;
-    float dil2 = tip*dil;
-    float halff = dil2/2;
-    return halff;
+
+    float tip2 = tip*(bill + tax*bill);
+    float dil = (bill + tip2 + tax*bill)/2;
+    return dil;
 }
 
 // rozdělení billu rovnoměrně, na polovinu
