@@ -12,18 +12,13 @@ int main(void)
 
     //printf("Stored: %i\n",height);
 
-
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j <== i; j++)
+        for (int j = 0; j < i || j == i; j++)
         {
             printf("#");
-
         }
         printf("\n");
     }
 
-//vytiskni jeden
-//vytiskni dva
-//vytiskni height
 }
