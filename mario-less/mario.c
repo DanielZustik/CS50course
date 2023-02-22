@@ -4,5 +4,9 @@
 int main(void)
 {
     int height = get_int("Height:");
-    
+    do
+    {
+
+    }
+    while (height >8)
 }
