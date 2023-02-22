@@ -21,12 +21,12 @@ int main(void)
             //{
             //    printf(".");
             //}
-            //printf("#");
             while (k > j)
             {
-                k++;
+                k--;
                 printf(".");
             }
+            printf("#");
         }
 
         printf("\n");
