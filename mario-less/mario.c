@@ -12,5 +12,11 @@ int main(void)
 
     //printf("Stored: %i\n",height);
 
-    for (height )
+    for (int i = 0; i < height; i++)
+    {
+        printf("#\n");
+    }
+
+    //vytiskni
+    //posun o radek
 }
