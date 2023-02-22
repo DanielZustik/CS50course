@@ -1,0 +1,6 @@
+má se vytisknout pyrtamida tvořená hashi
+uživatel určí jak vysoká
+
+prompt user for height
+budeme se ptát loppem tak dlouho, dokud nezadá správně
+následně se tento počet dá do loopu a vytiskne se pyramida
