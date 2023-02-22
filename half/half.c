@@ -12,7 +12,7 @@ int main(void)
     float tax_percent = get_float("Sale Tax Percent: ");
     int tip_percent = get_int("Tip percent: ");
 
-    printf("You will owe $%.5f each!\n", half(bill_amount, tax_percent, tip_percent));
+    printf("You will owe $%.2f each!\n", half(bill_amount, tax_percent, tip_percent));
 }
 
 // TODO: Complete the function
