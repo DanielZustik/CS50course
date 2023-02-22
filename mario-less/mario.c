@@ -18,6 +18,10 @@ int main(void)
         {
             printf("#");
         }
+        for (int j = 0; j < i || j == i; j++)
+        {
+            printf(".");
+        }
         printf("\n");
     }
 
