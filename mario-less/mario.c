@@ -17,7 +17,7 @@ int main(void)
         printf("#\n");
         for (int j = 0; j < height; j++)
         {
-        printf("\n");
+        printf("#");
         }
     }
 
