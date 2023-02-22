@@ -3,5 +3,6 @@
 
 int main(void)
 {
-    get_
+    long number = get_long("Number:");
+    printf("%li\n", number);
 }
