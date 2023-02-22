@@ -4,20 +4,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-float half(float bill, float tax, float tip);
+float half(float bill, float tax, int tip);
 
 int main(void)
 {
     float bill_amount = get_float("Bill before tax and tip: ");
     float tax_percent = get_float("Sale Tax Percent: ");
-    float tip_percent = get_float("Tip percent: ");
+    int tip_percent = get_int("Tip percent: ");
 
-    printf("You will owe $%.2f each!\n", half(bill_amount, tax_percent, tip_percent));
+    printf("You will owe $%.5f each!\n", half(bill_amount, tax_percent, tip_percent));
 }
 
 // TODO: Complete the function
-float half(float bill, float tax, float tip)
+float half(float bill, float tax, int tip)
 {
+    tip = (float) tip;
     tax = tax/100;
     tip = tip/100;
     float dil = (bill + tax*bill + tip*bill)/2;
