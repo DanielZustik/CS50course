@@ -21,8 +21,10 @@ float half(float bill, float tax, int tip)
     tip = (float) tip;
     tax = tax/100;
     tip = tip/100;
-    float dil = (bill + tax*bill + tip*bill)/2;
-    return dil;
+    float dil = bill + tax*bill;
+    float dil2 = tip*dil;
+    float halff = dil2/2;
+    return halff;
 }
 
 // rozdělení billu rovnoměrně, na polovinu
