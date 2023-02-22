@@ -22,3 +22,8 @@ float half(float bill, float tax, int tip)
 }
 
 // rozdělení billu rovnoměrně, na polovinu
+
+// dotázání na částku billu
+//zjištění výše zdanění
+//zjištění htěného billu
+//zobrazení výpočtu
