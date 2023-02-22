@@ -21,6 +21,7 @@ int main(void)
         }
     }
 
-    //vytiskni
-    //posun o radek
+//vytiskni jeden
+//vytiskni dva
+//vytiskni height
 }
