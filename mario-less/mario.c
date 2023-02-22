@@ -15,13 +15,9 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height; j++)
+        for (int j = 0; j < 5; j++)
         {
-            printf("#");
-            for (int y = 0; y < height; y++)
-            {
-                printf("\n");
-            }
+            printf("#\n");
 
         }
     }
