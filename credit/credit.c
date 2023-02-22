@@ -5,4 +5,6 @@ int main(void)
 {
     long number = get_long("Number:");
     printf("%li\n", number);
+
+    if 
 }
