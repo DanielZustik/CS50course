@@ -16,11 +16,12 @@ int main(void)
     {
         for (int j = 0; j < i || j == i; j++)
         {
-            int k = height;
+            int k = height-1;
             //for (k; k > j || k == j; k--)
             //{
             //    printf(".");
             //}
+            for (int x = 0; x < 4; x++)
             while (k > j)
             {
                 k--;
