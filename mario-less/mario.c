@@ -17,8 +17,8 @@ int main(void)
         for (int j = 0; j < height; j++)
         {
             printf("#");
+            printf("\n");
         }
-        printf("\n");
     }
 
 //vytiskni jeden
