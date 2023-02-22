@@ -16,7 +16,7 @@ int main(void)
     {
         for (int j = 0; j < i || j == i; j++)
         {
-            int k = height--;
+            int k = height-;
             //for (k; k > j || k == j; k--)
             //{
             //    printf(".");
