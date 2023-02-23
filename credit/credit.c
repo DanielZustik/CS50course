@@ -9,5 +9,9 @@ int main(void)
 
     long test = 1234 % 10;
     printf("%li\n", test);
+    long test2 = 1234 % 100;
+    printf("%li\n", test2);
+    long test3 = 1234 % 1000;
+    printf("%li\n", test3);
     //dělení modulem 10, 100 atd. dokud nedostaneme zbytek 0
 }
