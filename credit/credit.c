@@ -9,7 +9,7 @@ int main(void)
     long number0 = get_long("Number:");
     long number = number0;
 
-    int mistne = 0;
+    int mistne = 2;
     do
     {
         number = number/10;
