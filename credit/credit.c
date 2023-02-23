@@ -19,11 +19,20 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-    int zbytek = number0 % 10;
-    printf("zbytek:%i\n", zbytek);
+    if (cifer = 15)
+    {
+        printf("AMEX");
+    }
+    if else (cifer = 16)
+    {
+        printf("MASTERCARD");
+    }
+    else ()
 
+    int zbytek = number0 % 10;          //vytiskne jednotlive cislice
+    printf("zbytek:%i\n", zbytek);
     int number2 = number0;
-    for (int i = 0; i < cifer; i++)
+    for (int i = 1; i < cifer; i++)
     {
         number2 = number2 / 10;
         int zbytek2 = number2 % 10;
