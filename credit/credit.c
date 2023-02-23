@@ -6,8 +6,15 @@ int main(void)
     //long number = get_long("Number:");
     //printf("%li\n", number);
 
-
     long test = get_long("Number:");
+
+    velikost = number - 10000000000000;
+
+    if (velikost > 0)
+    {
+        printf("číslo je );
+    }
+
     long test = test / 1000000000000; //13-ti
     long test = test / 10000000000000; //14-ti
     long test = test / 100000000000000; //15-ti
