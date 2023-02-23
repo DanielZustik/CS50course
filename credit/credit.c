@@ -22,8 +22,11 @@ int main(void)
     int zbytek = number0 % 10;
     printf("zbytek:%i\n", zbytek);
 
-    for (int i = 0, i <= cifer; i++)
+    int number2 = number0;
+    for (int i = 0; i <= cifer; i++)
     {
-        int zbytek_ = number0 / 10 % 10;
+        number2 = number2 / 10;
+        int zbytek2 = number2 % 10;
+        printf("dalsi zbytky: %i\n", zbytek2);
     }
 }
