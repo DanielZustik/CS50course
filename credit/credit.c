@@ -15,25 +15,15 @@ int main(void)
     {
         number = number/10;
         cifer = cifer + 1;
-        one =
-        two
-        three
-        four
-        five
-        six
-        seven
-        eight
-        nine
-        ten
-        eleven
-        twelve
-        thirteen
-        fourteen
-        fiveteen
-        sixteen
     }
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
+    int zbytek = number0 % 10;
+    printf("zbytek:%i\n", zbytek);
 
+    for (int i = 0, i <= cifer; i++)
+    {
+        int zbytek_ = number0 / 10 % 10;
+    }
 }
