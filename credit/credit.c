@@ -8,7 +8,6 @@ int main(void)
 
 
     long test = get_long("Number:");
-    if (test)
     long test = 2234000000000 / 1000000000000; //13-ti
     long test = 2234000000000 / 10000000000000; //14-ti
     long test = 2234000000000 / 100000000000000; //15-ti
