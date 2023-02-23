@@ -7,11 +7,12 @@ int main(void)
     //printf("%li\n", number);
 
 
-    long test = 1234 % 10;
-    printf("%li\n", test);
-    long test2 = 1234 % 100;
-    printf("%li\n", test2);
-    long test3 = 2234000000000 / 1000000000000;
-    printf("%li\n", test3);
+    long test = get_long("Number:");
+    if (test)
+    long test = 2234000000000 / 1000000000000; //13-ti
+    long test = 2234000000000 / 10000000000000; //14-ti
+    long test = 2234000000000 / 100000000000000; //15-ti
+    long test = 2234000000000 / 1000000000000000; //16-ti
+    printf("%li\n", test1);
     //dělení modulem 10, 100 atd. dokud nedostaneme zbytek 0
 }
