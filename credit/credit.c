@@ -19,5 +19,5 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-
+    
 }
