@@ -23,11 +23,11 @@ int main(void)
     {
         printf("AMEX");
     }
-    if else (cifer = 16)
+    else if (cifer = 16)
     {
         printf("MASTERCARD");
     }
-    else ()
+    else if (cifer = )
 
     int zbytek = number0 % 10;          //vytiskne jednotlive cislice
     printf("zbytek:%i\n", zbytek);
