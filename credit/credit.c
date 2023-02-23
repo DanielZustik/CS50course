@@ -11,7 +11,7 @@ int main(void)
     printf("%li\n", test);
     long test2 = 1234 % 100;
     printf("%li\n", test2);
-    long test3 = 1234 / 100 % 10;
+    long test3 = 2234000000000 / 1000000000000;
     printf("%li\n", test3);
     //dělení modulem 10, 100 atd. dokud nedostaneme zbytek 0
 }
