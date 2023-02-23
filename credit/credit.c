@@ -23,7 +23,7 @@ int main(void)
     printf("zbytek:%i\n", zbytek);
 
     int number2 = number0;
-    for (int i = 0; i <= cifer; i++)
+    for (int i = 0; i < cifer; i++)
     {
         number2 = number2 / 10;
         int zbytek2 = number2 % 10;
