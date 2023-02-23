@@ -10,14 +10,14 @@ int main(void)
     long number0 = get_long("Number:");
     long number = number0;
 
-    int mistne = 1;                 //zjisti počet cifer
+    int cifer = 1;                 //zjisti počet cifer
     do
     {
         number = number/10;
-        mistne = mistne + 1;
+        cifer = cifer + 1;
     }
     while (number >= 10);
-    printf("počet cifer: %i\n", mistne);
+    printf("počet cifer: %i\n", cifer);
 
-    
+
 }
