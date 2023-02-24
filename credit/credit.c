@@ -14,20 +14,24 @@ int main(void)
 
 
     int cifer = 1;                 //zjisti počet cifer
+    do
+    {
+        number = number / 10;
+        cifer = cifer + 1;
+    }
+    while (number >= 10);
+    printf("počet cifer: %i\n", cifer);
+
     int asd = number2 % 10;
     int sum = asd;
     int zbytek3 = 0;
     do
     {
-        number = number / 10;
-        cifer = cifer + 1;
-
         number2 = number2 / 100;
         zbytek3 = number2 % 10;
         sum = sum + zbytek3;
     }
-    while (number >= 10);
-    printf("počet cifer: %i\n", cifer);
+    while (number2 >= 10);
     printf("suma: %i\n", sum);
 
 
