@@ -19,15 +19,22 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-    if (cifer = 15)
+    if (cifer == 15)            // určí o jaký typ akrty jde
     {
-        printf("AMEX");
+        printf("AMEX\n");
     }
-    else if (cifer = 16)
+    else if (cifer == 16)
     {
-        printf("MASTERCARD");
+        printf("MASTERCARD\n");
     }
-    else if (cifer = )
+    else if (cifer == 13)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 
     int zbytek = number0 % 10;          //vytiskne jednotlive cislice
     printf("zbytek:%i\n", zbytek);
