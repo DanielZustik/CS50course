@@ -21,7 +21,19 @@ int main(void)
     printf("počet cifer: %i\n", cifer);
 
 
-    if (cifer == 16)
+
+
+
+    if (cifer == 15)            // určí o jaký typ akrty jde
+    {
+        printf("AMEX\n");
+    }
+    else if (cifer == 13)
+    {
+        printf("VISA\n");
+    }
+
+    else if (cifer == 16)
     {
         number0 = number0/1000000000000000;
         if (number0 == 4)
@@ -32,27 +44,6 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-    }
-
-
-    if (cifer == 15)            // určí o jaký typ akrty jde
-    {
-        printf("AMEX\n");
-    }
-    else if (cifer == 16)
-    {
-        if (something == 4)
-        {
-            printf("VISA\n");
-        }
-        else
-        {
-            printf("MASTERCARD\n");
-        }
-    }
-    else if (cifer == 13)
-    {
-        printf("VISA\n");
     }
     else
     {
