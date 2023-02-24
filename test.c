@@ -16,7 +16,11 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-    printf("number0 je %li\n", number);
+
+
+
+
+    printf("number0 je %li\n", number0);
 
     if (cifer == 6)
     {
