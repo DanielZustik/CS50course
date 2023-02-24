@@ -28,7 +28,7 @@ int main(void)
     do
     {
         number2 = number2 / 100;
-        zbytek3 = number2 % 10;
+        zbytek3 = number2 % 10 * 2;
         sum = sum + zbytek3 ;
     }
     while (number2 >= 10);
