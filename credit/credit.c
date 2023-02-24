@@ -24,7 +24,6 @@ int main(void)
     if (cifer == 16)
     {
         number0 = number0/1000000000000000;
-        printf("number0 je %li\n", number0);
         if (number0 == 4)
         {
             printf("VISA\n");
