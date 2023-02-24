@@ -19,18 +19,22 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
+    
+
     if (cifer == 15)            // určí o jaký typ akrty jde
     {
         printf("AMEX\n");
     }
     else if (cifer == 16)
     {
-        if ()
+        if (something == 4)
         {
-            
+            printf("VISA\n");
         }
-        printf("MASTERCARD\n");
-
+        else
+        {
+            printf("MASTERCARD\n");
+        }
     }
     else if (cifer == 13)
     {
