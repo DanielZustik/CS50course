@@ -28,7 +28,7 @@ int main(void)
     }
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
-    printf("počet cifer: %i\n", sum);
+    printf("suma: %i\n", sum);
 
 
     if (cifer == 15)            // určí o jaký typ akrty jde
