@@ -10,6 +10,7 @@ int main(void)
     long number0 = get_long("Number:");
     long number = number0;
 
+
     int cifer = 1;                 //zjisti počet cifer
     do
     {
@@ -19,7 +20,12 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-    
+
+    if (cifer == 13 )
+    {
+        printf("AMEX\n");
+    }
+
 
     if (cifer == 15)            // určí o jaký typ akrty jde
     {
@@ -44,6 +50,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
+
 
     int zbytek = number0 % 10;          //vytiskne jednotlive cislice
     printf("zbytek:%i\n", zbytek);
