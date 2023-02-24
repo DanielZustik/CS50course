@@ -60,7 +60,7 @@ int main(void)
 
     int zbytek = number0 % 10;          //vytiskne jednotlive cislice
     printf("zbytek:%i\n", zbytek);
-    int number2 = number0;
+    number2 = number0;
     for (int i = 1; i < cifer; i++)
     {
         number2 = number2 / 10;
