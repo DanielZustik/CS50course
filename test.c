@@ -25,10 +25,8 @@ int main(void)
     if (cifer == 6)
     {
         number0 = number0/100000;
-        printf("number je %li\n", number0);
-        int zbytekVorM = number0 % 10;
-        printf("zbytekVorM: %i\n", zbytekVorM);
-        if (zbytekVorM == 4)
+        printf("number0 je %li\n", number0);
+        if (number0 == 4)
         {
             printf("VISA\n");
         }
