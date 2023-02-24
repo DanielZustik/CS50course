@@ -19,7 +19,7 @@ int main(void)
 
     if (cifer == 16)
     {
-        number = number/10000000000000;
+        number = number/1000000000000;
         int zbytekVorM = number % 10;
         printf("zbytekVorM: %i\n", zbytekVorM);
         if (zbytekVorM == 4)
