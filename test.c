@@ -16,13 +16,13 @@ int main(void)
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
 
-    printf("number je %li\n", number);
+    printf("number0 je %li\n", number);
 
     if (cifer == 6)
     {
-        number = number/100000;
-        printf("number je %li\n", number);
-        int zbytekVorM = number % 10;
+        number0 = number0/100000;
+        printf("number je %li\n", number0);
+        int zbytekVorM = number0 % 10;
         printf("zbytekVorM: %i\n", zbytekVorM);
         if (zbytekVorM == 4)
         {
