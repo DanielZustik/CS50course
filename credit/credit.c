@@ -45,7 +45,7 @@ int main(void)
     while (number9 >= 10);
 
     sum9 = sum9 - sum;
-    int clk = sum + sum9;
+    int clk = sum * 2 + sum9;
     printf("clk: %i\n", clk);
 
     if (cifer == 15)            // určí o jaký typ akrty jde
