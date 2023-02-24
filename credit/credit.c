@@ -21,9 +21,18 @@ int main(void)
     printf("počet cifer: %i\n", cifer);
 
 
-    if (cifer == 13 )
+    if (cifer == 16)
     {
-        printf("AMEX\n");
+        number = number/100000000000000;
+        zbytekVorM = number % 10;
+        if (zbytekVorM == 4)
+        {
+            printf("VISA\n");
+        }
+        else
+        {
+            printf("MASTERCARD\n");
+        }
     }
 
 
