@@ -75,13 +75,13 @@ int main(void)
     }
 
 
-    int zbytek = number0 % 10;          //vytiskne jednotlive cislice
-    printf("zbytek:%i\n", zbytek);
-    number2 = number0;
-    for (int i = 1; i < cifer; i++)
-    {
-        number2 = number2 / 10;
-        int zbytek2 = number2 % 10;
-        printf("dalsi zbytky: %i\n", zbytek2);
-    }
+  //  int zbytek = number0 % 10;          //vytiskne jednotlive cislice
+  //  printf("zbytek:%i\n", zbytek);
+  //  number2 = number0;
+   // for (int i = 1; i < cifer; i++)
+  //  {
+   //     number2 = number2 / 10;
+  //      int zbytek2 = number2 % 10;
+  //     printf("dalsi zbytky: %i\n", zbytek2);
+  //  }
 }
