@@ -30,10 +30,9 @@ int main(void)
         number2 = number2 / 100;
         zbytek3 = number2 % 10;
         sum = sum + zbytek3 ;
-
     }
     while (number2 >= 10);
-    printf("suma: %i\n", sum);
+    //printf("suma: %i\n", sum);
 
     int sum9 = 0;
     int zbytek9 = 0;
@@ -42,10 +41,12 @@ int main(void)
         zbytek9 = number9 % 10;
         number9 = number9 / 10;
         sum9 = sum9 + zbytek9;
-
     }
     while (number9 >= 10);
 
+    sum9 = sum9 - sum;
+    int clk = sum + sum9;
+    printf("clk: %i\n", clk);
 
     if (cifer == 15)            // určí o jaký typ akrty jde
     {
