@@ -57,4 +57,9 @@ int main(void)
         int zbytek2 = number2 % 10;
         printf("dalsi zbytky: %i\n", zbytek2);
     }
+    for()
+    {
+        //procházej každé druhé číslo a vynásob ho dvěma a prověd součet těchto násobků
+    }
+
 }
