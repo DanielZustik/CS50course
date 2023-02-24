@@ -28,12 +28,21 @@ int main(void)
     do
     {
         number2 = number2 / 100;
-        zbytek3 = number2 % 10 * 2;
+        zbytek3 = number2 % 10;
         sum = sum + zbytek3 ;
-        numer3 = number3 
+
     }
     while (number2 >= 10);
     printf("suma: %i\n", sum);
+
+    do
+    {
+        number2 = number2 / 100;
+        zbytek3 = number2 % 10;
+        sum = sum + zbytek3 ;
+
+    }
+    while (number2 >= 10);
 
 
     if (cifer == 15)            // určí o jaký typ akrty jde
