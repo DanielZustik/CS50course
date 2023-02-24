@@ -30,6 +30,7 @@ int main(void)
         number2 = number2 / 100;
         zbytek3 = number2 % 10 * 2;
         sum = sum + zbytek3 ;
+        numer3 = number3 
     }
     while (number2 >= 10);
     printf("suma: %i\n", sum);
