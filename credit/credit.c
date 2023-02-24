@@ -10,10 +10,13 @@ int main(void)
     long number0 = get_long("Number:");
     long number = number0;
     long number2 = number0;
-    int sum = 0;
+
 
 
     int cifer = 1;                 //zjisti počet cifer
+    int asd = number2 % 10;
+    int sum = asd;
+    int zbytek3 = 0;
     do
     {
         number = number / 10;
@@ -25,7 +28,7 @@ int main(void)
     }
     while (number >= 10);
     printf("počet cifer: %i\n", cifer);
-    printf("počet cifer: %i\n", cifer);
+    printf("počet cifer: %i\n", sum);
 
 
     if (cifer == 15)            // určí o jaký typ akrty jde
