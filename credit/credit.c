@@ -29,7 +29,7 @@ int main(void)
     {
         number2 = number2 / 100;
         zbytek3 = number2 % 10;
-        sum = sum + zbytek3;
+        sum = sum + zbytek3 ;
     }
     while (number2 >= 10);
     printf("suma: %i\n", sum);
