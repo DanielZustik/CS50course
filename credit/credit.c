@@ -10,7 +10,7 @@ int main(void)
     long number0 = get_long("Number:");
     long number = number0;
     long number2 = number0;
-
+    long number9 = number0;
 
 
     int cifer = 1;                 //zjisti počet cifer
@@ -35,14 +35,16 @@ int main(void)
     while (number2 >= 10);
     printf("suma: %i\n", sum);
 
+    int sum9 = 0;
+    int zbytek9 = 0;
     do
     {
-        number2 = number2 / 100;
-        zbytek3 = number2 % 10;
-        sum = sum + zbytek3 ;
+        zbytek9 = number9 % 10;
+        number9 = number9 / 10;
+        sum9 = sum9 + zbytek9;
 
     }
-    while (number2 >= 10);
+    while (number9 >= 10);
 
 
     if (cifer == 15)            // určí o jaký typ akrty jde
