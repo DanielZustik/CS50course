@@ -17,10 +17,10 @@ int main(void)
     printf("počet cifer: %i\n", cifer);
 
 
-    if (cifer == 16)
+    if (cifer == 6)
     {
-        number = number/1000000000000;
-        printf("number je%li\n", number);
+        number = number/100000;
+        printf("number je %li\n", number);
         int zbytekVorM = number % 10;
         printf("zbytekVorM: %i\n", zbytekVorM);
         if (zbytekVorM == 4)
