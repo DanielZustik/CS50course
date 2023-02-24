@@ -25,7 +25,10 @@ int main(void)
     }
     else if (cifer == 16)
     {
-        
+        if ()
+        {
+            
+        }
         printf("MASTERCARD\n");
 
     }
