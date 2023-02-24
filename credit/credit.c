@@ -9,15 +9,22 @@ int main(void)
 
     long number0 = get_long("Number:");
     long number = number0;
+    long number2 = number0;
+    int sum = 0;
 
 
     int cifer = 1;                 //zjisti počet cifer
     do
     {
-        number = number/10;
+        number = number / 10;
         cifer = cifer + 1;
+
+        number2 = number2 / 100;
+        zbytek3 = number2 % 10;
+        sum = sum + zbytek3;
     }
     while (number >= 10);
+    printf("počet cifer: %i\n", cifer);
     printf("počet cifer: %i\n", cifer);
 
 
@@ -32,7 +39,7 @@ int main(void)
 
     else if (cifer == 16)
     {
-        number0 = number0/1000000000000000;
+        number0 = number0 / 1000000000000000;
         if (number0 == 4)
         {
             printf("VISA\n");
@@ -57,9 +64,4 @@ int main(void)
         int zbytek2 = number2 % 10;
         printf("dalsi zbytky: %i\n", zbytek2);
     }
-    for()
-    {
-        //procházej každé druhé číslo a vynásob ho dvěma a prověd součet těchto násobků
-    }
-
 }
