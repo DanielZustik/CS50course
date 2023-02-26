@@ -38,8 +38,10 @@ int compute_score(string word)
     // TODO: Compute and return score for string, kalok každý jednotlivý cahrakter váží.. s tím, že je je v poli na první místě, stejně jako jeho hodnota v poli definovaném nahoře
     // tedy mohu zjistit umístění písmena v poli a následně se odkázat na hodnotu v poli points na stejné pozici.. tuhle hodnotu uložit resp. sečíst s další hodnotou... a tak to dělat až do konce slova
     int sum;
-    for (int i = 0; i < strlg(word); i++)
-    [
-        sum =+ points[word[i]-97]
-    ]
+    int length = strlen(word);
+    for (int i = 0; i < length; i++)
+    {
+        sum += POINTS[word[i]-97];
+        return sum;
+    }
 }
