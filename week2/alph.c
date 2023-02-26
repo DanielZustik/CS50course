@@ -8,6 +8,6 @@ int main(void)
 {
     string strg = get_string("String: ");
     // získat velikost pole strlen(string), string.h
-    // entrnout každý prvek pole, který je lowercase a srovnat ho s přecházejícím
+    // entrnout každý prvek pole, který je lowercase a srovnat ho s přecházejícím, pokud všechyn splnují podmínku tisknout yes.. a nějak ignorovat uppercase písmena.. tedy checknout zda jde o upper nb lower nejprve,
 
 }
