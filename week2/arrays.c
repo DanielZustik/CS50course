@@ -3,7 +3,12 @@
 
 int main(void)
 {
-    int n = get_int("Velikost pole:");
+    int n;
+    do
+    {
+        n = get_int("Velikost pole:");
+    }
+    while (n < 1);
     int pole[n];
     //pole[0] = 1;
     //pole[1] = 2;
