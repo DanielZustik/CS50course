@@ -14,6 +14,7 @@ int main(void)
 
         for (i = 1; i < strlen(word); i++)
         {
+            int i 1;
             do
             {
                 if (word[i] > word[i - 1])
@@ -25,6 +26,7 @@ int main(void)
                     boolean = "false";
                     i = strlen(word);
                 }
+                i =+;
             while (boolean = "true");
              }
     printf("No\n");
