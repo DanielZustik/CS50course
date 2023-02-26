@@ -17,7 +17,18 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!");
+    }
+    else if (score1 < score2)
+    {
+        printf("Player 2 wins!");
+    }
+    else
+    {
+        printf("Tie!");
+    }
     // TODO: Print the winner
     //pouze srovnám které je větší a vypíšu vítěze
 }
@@ -27,10 +38,8 @@ int compute_score(string word)
     // TODO: Compute and return score for string, kalok každý jednotlivý cahrakter váží.. s tím, že je je v poli na první místě, stejně jako jeho hodnota v poli definovaném nahoře
     // tedy mohu zjistit umístění písmena v poli a následně se odkázat na hodnotu v poli points na stejné pozici.. tuhle hodnotu uložit resp. sečíst s další hodnotou... a tak to dělat až do konce slova
     int sum;
-    for (i = 0; i < strlg(word); i++)
+    for (int i = 0; i < strlg(word); i++)
     [
         sum =+ points[word[i]-97]
     ]
-
-
 }
