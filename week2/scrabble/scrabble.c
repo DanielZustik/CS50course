@@ -29,7 +29,7 @@ int compute_score(string word)
     int length = strlg(word);
     for (i = 0; i < length; i++)
     {
-        word[i] = 
+        for (j = 0; j < )
     }
 
 }
