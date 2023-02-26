@@ -10,6 +10,6 @@ int main(void)
     //pole[2] = 4;
     for(int i = 1, i <=n, i++)
     {
-        pole[i] = i 
+        pole[i] = pole[i-1] * 2;
     }
 }
