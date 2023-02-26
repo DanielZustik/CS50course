@@ -41,7 +41,14 @@ int compute_score(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
     {
-        sum += POINTS[word[i]-97];
+        if (islower(word[i]))
+        {
+             sum += POINTS[word[i]-97];
+        }
+        else if (islower(word[i]))
+        {
+             sum += POINTS[word[i]-65];
+        }
     }
     return sum;
 }
