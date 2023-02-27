@@ -23,7 +23,15 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        printf("%c", rotate(plaintext[i], k));
+        if (plaintext[i] < 95 || plaintext[i] > 122)
+        {
+            printf("%c", plaintext[i]);
+        }
+        else
+        {
+            printf("%c", rotate(plaintext[i], k));
+        }
+
     }
     printf("\n");
 }
