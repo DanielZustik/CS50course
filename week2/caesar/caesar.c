@@ -3,7 +3,6 @@
 
 int main(int argc, string argv[])
 {
-    k = (int) s;
     if (argc == 2)
     {
         printf("Ok\n");
