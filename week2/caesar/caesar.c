@@ -13,14 +13,14 @@ int main(int argc, string argv[])
     if (argc == 2 && only_digits(argv[1]) == true)
     {
         k = atoi((argv[1]));
-        plaintext = get_string ("plaintext: ");
+        plaintext = get_string ("plaintext:  ");
     }
     else
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    printf("ciphertext: ");
+    printf("ciphertext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
         if (plaintext[i] < 95 || plaintext[i] > 122)
@@ -34,6 +34,7 @@ int main(int argc, string argv[])
 
     }
     printf("\n");
+    return 0;
 }
 
 bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 do 9, false jinak
