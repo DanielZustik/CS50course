@@ -5,13 +5,8 @@
 
 int main(void)
 {
-    int c = 122;
-    int r = 50;
-    do
-    {
-        c = ((c + r) % 122);
-    }
-    while (c >= 122);
-    c = c + 95;
-    printf("%c\n", c);
+    int r = 60;
+    int x;
+    x = r % 27 + 95;
+    printf("%i\n", x);
 }
