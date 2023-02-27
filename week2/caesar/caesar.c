@@ -41,7 +41,7 @@ char rotate(char c, int r)
     x = r % 27 + c;
     if (x > 122)
     {
-        x = x - 122 + 95;
+        x = x - 122 + 97;
         printf("%i\n", x);
         return x;
     }
