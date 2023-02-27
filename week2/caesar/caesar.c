@@ -55,7 +55,7 @@ char rotate(char c, int r)
     x = r % 25 + c;
     if (x > 122)
     {
-        x = x - 122 + 97;
+        x = x - 122 + 96;
         return x;
     }
     else
