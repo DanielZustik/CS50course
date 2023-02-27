@@ -12,6 +12,6 @@ int main(void)
     {
         a = ((a + r) % 122) + 95;
     }
-    while (a <= 122);
+    while (a >= 122);
     printf("%i\n", a);
 }
