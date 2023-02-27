@@ -34,8 +34,8 @@ bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 d
     return true;
 }
 
-int rotate(int r)
+char rotate(char c, int r)
 {
-
+    c = c + r
 }
 
