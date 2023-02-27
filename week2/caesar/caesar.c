@@ -3,6 +3,9 @@
 
 int main(int argc, string argv[])
 {
+    string s = argv[1];
+    int k;
+    k = (int) s;
     if (argc == 2 && argv[1] > 0)
     {
         printf("Ok\n");
