@@ -8,10 +8,10 @@ char rotate(char c, int r);
 
 int main(int argc, string argv[])
 {
+    int k;
     if (argc == 2 && only_digits(argv[1]) == true)
     {
         printf("Ok\n");
-        int k;
         k = atoi((argv[1]));
         string plaintext = get_string ("plaintext: ");
     }
@@ -20,10 +20,9 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    printf("%c\n", rotate('c', 1));
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        rotate(plaintext[i], 
+        printf("%c", rotate(plaintext[i], k))
     }
 }
 
