@@ -36,9 +36,16 @@ bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 d
 
 char rotate(char c, int r)
 {
-    int r = 60;
     int x;
-    x = r % 27 + 95;
-    printf("%i\n", x);
+    x = r % 27 + c;
+    if (x > 122)
+    {
+        x = x - 122 + 95;
+        printf("%i\n", x);
+    }
+    else
+    {
+        printf("%i\n", x);
+    }
 }
 
