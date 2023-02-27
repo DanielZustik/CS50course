@@ -3,12 +3,13 @@
 
 int main(int argc, string argv[])
 {
-    if (argc == 2)
+    if (argc == 2 && argv[1] > 0)
     {
-
+        printf("Ok\n");
     }
     else
     {
-        
+        printf("Off\n");
+        return 1;
     }
 }
