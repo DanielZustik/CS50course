@@ -6,6 +6,6 @@
 int main(void)
 {
     int a;
-    a = 15 % 10;
+    a = 28 % 12;
     printf("%i\n", a);
 }
