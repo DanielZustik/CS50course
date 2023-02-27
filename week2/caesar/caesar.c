@@ -6,6 +6,7 @@ int main(int argc, string argv[])
     if (argc == 2 && argv[1] > 0)
     {
         printf("Ok\n");
+        printf("%i %s\n", argv[1], argv[1]);
     }
     else
     {
