@@ -14,18 +14,19 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    printf("%bl\n", only_digits(argv[1]));
 }
 
 bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 do 9, false jinak
 {
-    if (s < 48 || s > 57)
+    for (i = 0; i < strlen(s); i++)
     {
-        return false;
+        if (s[i] < 48 || s[i] > 57)
+        {
+            return false;
+        }
     }
-    else
-    {
-        return true;
-    }
+    return true;
 }
 
 
