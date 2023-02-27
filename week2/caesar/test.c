@@ -5,11 +5,12 @@
 
 int main(void)
 {
-    int a;
+    int c = 122;
+    int r = 50;
+    int a = c;
     do
     {
-        a = ((122 + 40) % 122) + 95;
-        a = 
+        a = ((a + r) % 122) + 95;
     }
     while (a <= 122);
     printf("%i\n", a);
