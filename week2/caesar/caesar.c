@@ -13,6 +13,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+int only_digits(string digit)
 
 }
