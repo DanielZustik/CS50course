@@ -42,12 +42,10 @@ char rotate(char c, int r)
     if (x > 122)
     {
         x = x - 122 + 97;
-        printf("%i\n", x);
         return x;
     }
     else
     {
-        printf("%i\n", x);
         return x;
     }
 }
