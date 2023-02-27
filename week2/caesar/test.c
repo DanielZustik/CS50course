@@ -6,6 +6,6 @@
 int main(void)
 {
     int a;
-    a = 28 % 12;
+    a = (122 + 40) % 122 + 95;
     printf("%i\n", a);
 }
