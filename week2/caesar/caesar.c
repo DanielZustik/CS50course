@@ -12,7 +12,6 @@ int main(int argc, string argv[])
     string plaintext;
     if (argc == 2 && only_digits(argv[1]) == true)
     {
-        printf("Ok\n");
         k = atoi((argv[1]));
         plaintext = get_string ("plaintext: ");
     }
