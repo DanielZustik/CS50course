@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 bool only_digits(string s);
-int rotate(int r);
+char rotate(char c, int r);
 
 int main(int argc, string argv[])
 {
@@ -36,6 +36,6 @@ bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 d
 
 int rotate(int r)
 {
-    
+
 }
 
