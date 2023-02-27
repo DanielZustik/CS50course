@@ -21,6 +21,7 @@ int main(int argc, string argv[])
         return 1;
     }
     printf("%c\n", rotate('c', 1));
+    
 }
 
 bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 do 9, false jinak
