@@ -9,11 +9,12 @@ char rotate(char c, int r);
 int main(int argc, string argv[])
 {
     int k;
+    string plaintext;
     if (argc == 2 && only_digits(argv[1]) == true)
     {
         printf("Ok\n");
         k = atoi((argv[1]));
-        string plaintext = get_string ("plaintext: ");
+        plaintext = get_string ("plaintext: ");
     }
     else
     {
@@ -23,7 +24,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        printf("%c", rotate(plaintext[i], k))
+        printf("%c", rotate(plaintext[i], k));
     }
     printf("\n");
 }
