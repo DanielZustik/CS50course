@@ -3,11 +3,10 @@
 
 int main(int argc, string argv[])
 {
-    int k = (int) argv[1]
-    if (argc == 2 && k > 0)
+    if (argc == 2 && argv[1] > 0)
     {
         printf("Ok\n");
-        printf("%s\n", k);
+        printf("%s\n", argv[1]);
     }
     else
     {
