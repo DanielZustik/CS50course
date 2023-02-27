@@ -3,17 +3,17 @@
 
 int main(int argc, string argv[])
 {
-    string s = argv[1];
-    int k;
     k = (int) s;
-    if (argc == 2 && argv[1] > 0)
+    if (argc == 2)
     {
         printf("Ok\n");
-        printf("%s\n", argv[1]);
     }
     else
     {
         printf("Off\n");
         return 1;
     }
+
+
+
 }
