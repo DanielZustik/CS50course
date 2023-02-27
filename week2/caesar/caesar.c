@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Off\n");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
