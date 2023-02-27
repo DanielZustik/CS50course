@@ -20,10 +20,12 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    printf("ciphertext: ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
         printf("%c", rotate(plaintext[i], k))
     }
+    printf("\n");
 }
 
 bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 do 9, false jinak
