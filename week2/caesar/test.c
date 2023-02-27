@@ -9,8 +9,9 @@ int main(void)
     int r = 50;
     do
     {
-        c = ((c + r) % 122) + 95;
+        c = ((c + r) % 122);
     }
     while (c >= 122);
-    printf("%i\n", c);
+    c = c + 95;
+    printf("%c\n", c);
 }
