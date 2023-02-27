@@ -18,8 +18,14 @@ int main(int argc, string argv[])
 
 bool only_digits(string s);
 {
-    
-
+    if (s < 48 || s > 57)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 
