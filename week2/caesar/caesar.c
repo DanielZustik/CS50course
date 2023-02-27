@@ -1,14 +1,19 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 bool only_digits(string s);
+int rotate(int r);
 
 int main(int argc, string argv[])
 {
     if (argc == 2 && only_digits(argv[1]) == true)
     {
         printf("Ok\n");
+        int k;
+        k = atoi((argv[1]));
+        string plaintext = get_string ("plaintext: ");
     }
     else
     {
@@ -29,4 +34,8 @@ bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 d
     return true;
 }
 
+int rotate(int r)
+{
+    
+}
 
