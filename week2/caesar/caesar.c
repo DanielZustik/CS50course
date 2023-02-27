@@ -20,6 +20,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    printf("%c", rotate('a', 50));
 }
 
 bool only_digits(string s) // true pokud obsahuje zadané pouze číslice od 0 do 9, false jinak
@@ -42,10 +43,12 @@ char rotate(char c, int r)
     {
         x = x - 122 + 95;
         printf("%i\n", x);
+        return x;
     }
     else
     {
         printf("%i\n", x);
+        return x;
     }
 }
 
