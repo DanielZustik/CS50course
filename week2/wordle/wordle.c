@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     // TODO #2
     if (strlen(argv[]) ==! 2)
     {
-            printf("Usage: ./wordle wordsize");
+            printf("Error: wordsize must be either 5, 6, 7 or 8");
             return 1;
     }
 
