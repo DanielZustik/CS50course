@@ -45,6 +45,8 @@ int main(int argc, string argv[])
             }
           }
       }
-    string key;
-    key = get_string("plaintext:  ");
+    string plaintext;
+    string ciphertext;
+    plaintext = get_string("plaintext:  ");
+    
 }
