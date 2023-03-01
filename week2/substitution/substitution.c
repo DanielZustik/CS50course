@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     }
 
     bool check = true;
-    int count;
+    int count = 0;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
           check = isalpha(argv[1][i]);
