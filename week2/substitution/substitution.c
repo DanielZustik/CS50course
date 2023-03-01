@@ -45,6 +45,7 @@ int main(int argc, string argv[])
             }
           }
       }
+    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string key = argv[1];
     string plaintext;
     string ciphertext;
