@@ -46,9 +46,8 @@ int main(int argc, string argv[])
           }
       }
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string key[1] = argv[1];
-    string plaintext[0];
-    string ciphertext[0];
+    array plaintext;
+    string ciphertext;
     plaintext = get_string("plaintext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
@@ -56,7 +55,7 @@ int main(int argc, string argv[])
         {
             if (plaintext[0][i] == ABC[0][j])
             {
-                ciphertext[0][i] = key[0][j];
+                ciphertext[0][i] = argv[0][j];
             }
         }
     }
