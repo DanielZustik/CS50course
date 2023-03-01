@@ -24,7 +24,8 @@ int main(int argc, string argv[])
         argv[1][i] = tolower(argv[1][i]);
     }
 
-    bool check = true;
+    bool check = true;¨
+    int count;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
           check = isalpha(argv[1][i]);
@@ -36,6 +37,10 @@ int main(int argc, string argv[])
           for (int j = 0; j < strlen(argv[1]); j++)
           {
             if (argv[1][i] == argv[1][j])
+            {
+                count +=;
+            }
+            if (count > 2)
             {
                 printf("key must not contain repeated characters.\n");
                 return 1;
