@@ -47,7 +47,7 @@ int main(int argc, string argv[])
       }
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string plaintext;
-    string ciphertext;
+    string ciphertext = "";
     plaintext = get_string("plaintext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
@@ -59,4 +59,5 @@ int main(int argc, string argv[])
             }
         }
     }
+    printf("ciphertext: %s\n", ciphertext);
 }
