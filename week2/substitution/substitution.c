@@ -16,16 +16,16 @@ int main(int argc, string argv[])
         printf("Key must contain 6 characters.\n");
         return 1;
     }
-    if
+    bool check;
+    for (int i = 0; i < strlen(argv[1]); i++)
     {
-        for (int i = 0; i < strlen(argv[1]); i++)
+        check = isalpha(argv[1][i])
+        if (check = false)
         {
-            argv[1][i] = tolower(argv[1][i]);
-            printf("%c", argv[1][i]);
+            printf("key must contain only ABC etc.");
+            return 1;
         }
-    printf("\n");
     }
-
 
     for (int i = 0; i < strlen(argv[1]); i++)
     {
