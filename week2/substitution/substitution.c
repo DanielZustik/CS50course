@@ -50,7 +50,7 @@ int main(int argc, string argv[])
     string plaintext[1];
     plaintext[0] = get_string("plaintext:  ");
     string ciphertext[1];
-    ciphertext[0] = plaintext[0];
+    ciphertext[0] = "asdnajosndjonasjdnjsandojnsaojdnoajsndonasodnaosndoasindnaiosdno";
     for (int i = 0; i < strlen(plaintext[0]); i++)
     {
         for (int j = 0; j < 26; j++)
