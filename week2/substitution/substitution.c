@@ -45,4 +45,6 @@ int main(int argc, string argv[])
             }
           }
       }
+    string key;
+    key = get_string("plaintext:  ");
 }
