@@ -48,6 +48,8 @@ int main(int argc, string argv[])
     string ABC = "abcdefghijklmnopqrstuvwxyz";
     string plaintext;
     string ciphertext = "";
+    int q = strlen(argv[1]);
+    string key[] = argv[1];
     plaintext = get_string("plaintext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
