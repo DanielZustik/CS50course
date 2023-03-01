@@ -24,7 +24,7 @@ int main(int argc, string argv[])
         argv[1][i] = tolower(argv[1][i]);
     }
 
-    bool check = true;¨
+    bool check = true;
     int count;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
@@ -38,7 +38,7 @@ int main(int argc, string argv[])
           {
             if (argv[1][i] == argv[1][j])
             {
-                count +=;
+                count = count + 1;
             }
             if (count > 2)
             {
