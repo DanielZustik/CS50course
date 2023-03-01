@@ -6,25 +6,28 @@
 
 int main(int argc, string argv[])
 {
+    bool check = true;
+
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    if (strlen(argv[1]) != 6)
+    else if (strlen(argv[1]) != 6)
     {
         printf("Key must contain 6 characters.\n");
         return 1;
     }
-    bool check;
-    for (int i = 0; i < strlen(argv[1]); i++)
+    else if (check == true)
     {
-        check = isalpha(argv[1][i]);
-        if (check = false)
+        for (int i = 0; i < strlen(argv[1]); i++)
         {
+            check = isalpha(argv[1][i]);
             printf("key must contain only ABC etc.");
             return 1;
         }
+    }
+
     }
 
     for (int i = 0; i < strlen(argv[1]); i++)
