@@ -13,4 +13,9 @@ int main(int argc, string argv[])
     {
         printf("Key must contain 26 characters.\n");
     }
+    for (i = 0; i < strlen(argv[1]); i++)
+    {
+        argv[1][i] = tolower(argv[i]);
+        printf("%c", argv[1][i]);
+    }
 }
