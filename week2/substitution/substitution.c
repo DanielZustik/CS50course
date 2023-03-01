@@ -46,9 +46,9 @@ int main(int argc, string argv[])
           }
       }
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string key = argv[1];
-    string plaintext;
-    string ciphertext;
+    string key[1] = argv[1];
+    string plaintext[0];
+    string ciphertext[0];
     plaintext = get_string("plaintext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
