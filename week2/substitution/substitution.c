@@ -45,9 +45,9 @@ int main(int argc, string argv[])
             }
           }
       }
-    string ABC = "abcdefghijklmnopqrstuvwxyz";
+    string ABC[1] = {abcdefghijklmnopqrstuvwxyz};
     string plaintext[1];
-    plaintext = get_string("plaintext:  ");
+    plaintext[1] = get_string("plaintext:  ");
     string ciphertext[1];
     for (int i = 0; i < strlen(plaintext[0]); i++)
     {
