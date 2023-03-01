@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     bool check;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
-        check = isalpha(argv[1][i])
+        check = isalpha(argv[1][i]);
         if (check = false)
         {
             printf("key must contain only ABC etc.");
