@@ -6,7 +6,7 @@
 
 int main(int argc, string argv[])
 {
-    bool check = true;
+
 
     if (argc != 2)
     {
@@ -18,18 +18,25 @@ int main(int argc, string argv[])
         printf("Key must contain 6 characters.\n");
         return 1;
     }
-    else if (check == true)
+
+    bool check = true;
+    for (int i = 0; i < strlen(argv[1]); i++)
     {
-        for (int i = 0; i < strlen(argv[1]); i++)
-        {
-            check = isalpha(argv[1][i]);
-            if (check == false)
+          check = isalpha(argv[1][i]);
+          if (check == false)
+          {
+            printf("key must contain only ABC etc.\n");
+            return 1;
+          }
+          for (int j = 0; j < strlen(argv[1]); j++)
+          {
+            if (argv[1][i] == argv[1][j])
             {
-                printf("key must contain only ABC etc.\n");
+                printf("key must not contain repeated characters.\n");
                 return 1;
             }
-        }
-    }
+          }
+      }
 
     for (int i = 0; i < strlen(argv[1]); i++)
     {
