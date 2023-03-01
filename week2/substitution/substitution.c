@@ -25,11 +25,10 @@ int main(int argc, string argv[])
             check = isalpha(argv[1][i]);
             if (check == false)
             {
-                printf("key must contain only ABC etc.");
+                printf("key must contain only ABC etc.\n");
                 return 1;
             }
         }
-    }
     }
 
     for (int i = 0; i < strlen(argv[1]); i++)
