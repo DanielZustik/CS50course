@@ -40,7 +40,7 @@ int main(int argc, string argv[])
             {
                 count = count + 1;
             }
-            if (count > 1)
+            if (count > strlen(argv[1]))
             {
                 printf("key must not contain repeated characters.\n");
                 return 1;
