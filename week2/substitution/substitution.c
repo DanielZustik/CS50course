@@ -46,16 +46,16 @@ int main(int argc, string argv[])
           }
       }
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string plaintext[];
-    string ciphertext[];
+    string plaintext;
+    string ciphertext;
     plaintext = get_string("plaintext:  ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
         for (int j = 0; j < 26; j++)
         {
-            if (plaintext[0][i] == ABC[0][j])
+            if (plaintext[i] == ABC[j])
             {
-                ciphertext[0][i] = argv[0][j];
+                ciphertext[i] = argv[1][j];
             }
         }
     }
