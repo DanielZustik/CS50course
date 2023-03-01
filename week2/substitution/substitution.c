@@ -48,5 +48,11 @@ int main(int argc, string argv[])
     string plaintext;
     string ciphertext;
     plaintext = get_string("plaintext:  ");
-    
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        for (int j = 0; j < 26; j++)
+        {
+            plaintext[0][]
+        }
+    }
 }
