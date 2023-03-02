@@ -58,7 +58,7 @@ int main(int argc, string argv[])
             if (plaintext[0][i] == ABC[0][j])
             {
                 ciphertext[0][i] = argv[1][j];
-                j=26;
+                break;
             }
 
         }
