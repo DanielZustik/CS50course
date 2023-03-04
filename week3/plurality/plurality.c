@@ -85,7 +85,11 @@ void print_winner(void)
     // TODO
     kdo ziskal nejvice
     vytisteni
-
-    
+    for (int i = o; i < candidates_count; i++)
+    {
+        if (candidate[i].votes > candiate[i + 1].votes)
+        vitez = candidate[i]
+    }
+    vitez =
     return;
 }
