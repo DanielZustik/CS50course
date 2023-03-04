@@ -67,7 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    candidates
+    search for candidate[i].name
+    if foudn candidate[i].votes +=
+    return true;
+    
+    candidates[1].votes
     return false;
 }
 
