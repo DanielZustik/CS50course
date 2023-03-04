@@ -83,5 +83,9 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    kdo ziskal nejvice
+    vytisteni
+
+    
     return;
 }
