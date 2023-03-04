@@ -67,12 +67,19 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    search for candidate[i].name
-    if foudn candidate[i].votes +=
-    return true;
-    
-    candidates[1].votes
-    return false;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidate[i].name == name)
+        {
+            candidate[i].votes =+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 
 // Print the winner (or winners) of the election
