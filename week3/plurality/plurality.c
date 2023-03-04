@@ -87,8 +87,13 @@ void print_winner(void)
     vytisteni
     for (int i = o; i < candidates_count; i++)
     {
-        if (candidate[i].votes < candiate[i + 1].votes)
-        candidate[i] =
+        for (int j = o; j < candidates_count; j++)
+        {
+            if (candidate[j].votes < candidate[j + 1].votes)
+            {
+                candidate j + 1
+            }
+        }
     }
     vitez =
     return;
