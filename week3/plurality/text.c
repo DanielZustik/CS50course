@@ -33,9 +33,10 @@ int candidate_count = 5;
 
 int main(void)
 {
+    int lwst = 0;
      for (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
     {
-        int lwst = 0;
+
         for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
         {
             if (candidates[lwst].votes > candidates[i + 1].votes)
