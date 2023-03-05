@@ -14,17 +14,17 @@ candidate;
 // Array of candidates
 candidate candidates[5];
 
- candidates[0].name = "Pepa";
-string candidates[1].name = "Karel";
-string candidates[2].name = "Honza";
-string candidates[3].name = "Mirek";
-string candidates[4].name = "David";
+candidates[0].name = "Pepa";
+candidates[1].name = "Karel";
+candidates[2].name = "Honza";
+candidates[3].name = "Mirek";
+candidates[4].name = "David";
 
-int candidates[0].votes = 1;
-int candidates[1].votes = 2;
-int candidates[2].votes = 3;
-int candidates[3].votes = 4;
-int candidates[4].votes = 5;
+candidates[0].votes = 1;
+candidates[1].votes = 2;
+candidates[2].votes = 3;
+candidates[3].votes = 4;
+candidates[4].votes = 5;
 
 // Number of candidates
 int candidate_count = 5;
