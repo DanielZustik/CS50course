@@ -83,9 +83,8 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    string most_ele;
-
-
+    string most_ele = candidates[0].name;
+    
 
 
 
