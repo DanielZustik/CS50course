@@ -83,8 +83,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    string most_ele = candidates[0].name;
-    
+    int most_el = 0;
+    candidates[most_el].votes > candidates[i + 1].votes
+    yes most_el = candidates[i]
+    no most_el = candidates[i+1]
 
 
 
