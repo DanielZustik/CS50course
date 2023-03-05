@@ -95,6 +95,7 @@ void print_winner(void)
             }
         }
         candidates[j] = candidates[most_el];
+        most_el =+
     }
 
 
