@@ -85,17 +85,19 @@ void print_winner(void)
     // TODO
     fot (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nejmenším
     {
-        int most_el = 0;
+        int lwst = 0;
         for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
         {
-            if (candidates[most_el].votes > candidates[i + 1].votes)
+            if (candidates[lwst].votes > candidates[i + 1].votes)
             else
             {
-                most_el = i + 1;
+                lwst = i + 1;
             }
         }
-        candidates[j] = candidates[most_el];
-        most_el =+
+        candidates[j] = candidates[8];
+        candidates[j] = candidates[lwst];
+        candidates[lwst] = candidates[8];
+        lwst =+
     }
 
 
