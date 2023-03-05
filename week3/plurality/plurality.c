@@ -83,7 +83,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    fot (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nejmenším
+    fot (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
     {
         int lwst = 0;
         for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
@@ -99,29 +99,5 @@ void print_winner(void)
         candidates[lwst] = candidates[8];
         lwst =+
     }
-
-
-
-
-
-
-
-    kdo ziskal nejvice
-    vytisteni
-    for (int i = o; i < candidates_count; i++)
-    {
-        for (int j = o; j < candidates_count; j++)
-        {
-            if (candidate[j].votes > candidate[j + 1].votes)
-            {
-                continue
-            }
-            else
-            {
-                candidate[]
-            }
-        }
-    }
-    vitez =
     return;
 }
