@@ -84,16 +84,15 @@ void print_winner(void)
 {
     // TODO
     int most_el = 0;
-    for (int i = 0; i < candidate_count; i ++)
+    for (int i = 0; i < candidate_count - 1; i ++)
+    {
+        if (candidates[most_el].votes > candidates[i + 1].votes)
+        else
+        {
+            most_el = i + 1;
+        }
+    }
 
-    candidates[most_el].votes > candidates[i + 1].votes
-    yes nothing
-    no most_el = i + 1;
-
-    candidates[most_el, 0].votes > candidates[i + 1].votes
-    no most_el = i + 1;
-
-    candidates[most_el, 2].votes > candidates[i + 1].votes
 
 
 
