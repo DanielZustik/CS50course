@@ -92,6 +92,7 @@ void print_winner(void)
             most_el = i + 1;
         }
     }
+    candidates[most_el].
 
 
 
