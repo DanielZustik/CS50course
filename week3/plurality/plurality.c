@@ -83,16 +83,19 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int most_el = 0;
-    for (int i = 0; i < candidate_count - 1; i ++)
+    fot (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nejmenším
     {
-        if (candidates[most_el].votes > candidates[i + 1].votes)
-        else
+        int most_el = 0;
+        for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
         {
-            most_el = i + 1;
+            if (candidates[most_el].votes > candidates[i + 1].votes)
+            else
+            {
+                most_el = i + 1;
+            }
         }
+        candidates[j] = candidates[most_el];
     }
-    candidates[most_el].
 
 
 
