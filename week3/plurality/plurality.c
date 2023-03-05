@@ -83,6 +83,18 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    string most_ele;
+
+
+
+
+
+
+
+
+
+
+
     kdo ziskal nejvice
     vytisteni
     for (int i = o; i < candidates_count; i++)
