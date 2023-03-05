@@ -83,7 +83,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    fot (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
+    for (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
     {
         int lwst = 0;
         for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
