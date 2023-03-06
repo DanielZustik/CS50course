@@ -69,6 +69,7 @@ int main(void)
             {
                 pomocná = prvek[j + 1]
             }
+            
         }
     }
 }
