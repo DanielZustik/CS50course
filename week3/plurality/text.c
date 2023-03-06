@@ -16,25 +16,26 @@ candidate;
 
 int main(void)
 {
-candidate candidates[5];
 
-candidates[0].name = "Pepa";
-candidates[1].name = "Karel";
-candidates[2].name = "Honza";
-candidates[3].name = "Mirek";
-candidates[4].name = "";
+    candidate candidates[5];
 
-candidates[0].votes = 1;
-candidates[1].votes = 2;
-candidates[2].votes = 3;
-candidates[3].votes = 4;
-candidates[4].votes = 0;
+    candidates[0].name = "Pepa";
+    candidates[1].name = "Karel";
+    candidates[2].name = "Honza";
+    candidates[3].name = "Mirek";
+    candidates[4].name = "";
 
-// Number of candidates
-int candidate_count = 5;
+    candidates[0].votes = 1;
+    candidates[1].votes = 2;
+    candidates[2].votes = 3;
+    candidates[3].votes = 4;
+    candidates[4].votes = 0;
+
+    // Number of candidates
+    int candidate_count = 5;
 
     int lwst = 0;
-     for (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
+    for (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
     {
 
         for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
@@ -54,5 +55,5 @@ int candidate_count = 5;
         lwst =+
     }
     return 0;
-    b
+
 }
