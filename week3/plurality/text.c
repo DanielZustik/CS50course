@@ -16,7 +16,7 @@ int main (void)
         }
         else
         {
-            nejmensi = neco[i + 1]; //zaznamenání
+            nejmensi = i + 1; //zaznamenání
         }
     }
     printf("nejmensi: pozice %i, hodnota %i\n", nejmensi, neco[nejmensi]);
