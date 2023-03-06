@@ -56,4 +56,19 @@ int main(void)
     }
     return 0;
 
+    for (int i = 0; i < počet; i++)
+    {
+        if (promená[i] < proměná[i + 1])
+        {
+
+        }
+        else if (promená[i] == proměná[i + 1])
+        {
+
+        }
+        else //větší než
+        {
+
+        }
+    }
 }
