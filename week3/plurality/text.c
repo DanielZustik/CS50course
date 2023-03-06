@@ -19,5 +19,5 @@ int main (void)
             nejmensi = neco[i + 1]; //zaznamenání
         }
     }
-    printf("nejmensi: pozice %i, hodnota %i", nejmensi, neco[nejmensi]);
+    printf("nejmensi: pozice %i, hodnota %i\n", nejmensi, neco[nejmensi]);
 }
