@@ -106,6 +106,6 @@ void print_winner(void)
         nejmensi = nejmensi + 1;
         j = nejmensi - 1;
     }
-    printf("winner: %s\n", candidates[candidate_count - 1].name);
+    printf("%s\n", candidates[candidate_count - 1].name);
     return;
 }
