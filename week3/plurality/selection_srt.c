@@ -7,7 +7,7 @@ int main (void)
 {
     int pocet = 5;
     int nejmensi = 0;
-    int neco[] = {5, 3, 4, 8, 0};
+    int neco[] = {3, 4, 9, 2, 2};
     int pomocna = 0;
 
     for (int j = 0; j < pocet - 1; j++)
