@@ -8,13 +8,13 @@ int main (void)
     int pocet = 5;
     int nejmensi = 0;
     int neco[] = {1, 3, 4, 7, 0};
-    int pomocna;
+    int pomocna = 0;
 
     for (int j = 0; j < pocet - 1; j++)
     {
-        for (int i = 0; i < pocet - 1; i++) //posun +1
+        for (int i = pomocna; i < pocet - 1; i++) //posun +1
         {
-            if (neco[nejmensi] < neco[i + 1]) //aktivování a srovnání
+            if (neco[nejmensi] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
             {
                 // nejmensi = nejmensi; //zaznamenání
             }
@@ -27,6 +27,7 @@ int main (void)
         pomocna = neco[j];
         neco[j] = neco[nejmensi]; //přepis nejmensi na zacatek resp. doleva
         neco[nejmensi] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        pomocna = j + 1;
     }
 
     printf("nejmensi: pozice %i + 1, hodnota %i\n", nejmensi, neco[nejmensi]);
