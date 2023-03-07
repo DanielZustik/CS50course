@@ -83,21 +83,31 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    for (int j = 0; j < candidate_count - 1; j++) //swapne nejmenšího s akutálně nařadě od leva nejmenší po doprava největší
+    int pocet = 5;
+    int nejmensi = 0;
+    int neco[] = {3, 4, 9, 2, 2};
+    int pomocna = 0;
+
+    for (int j = 0; j < pocet - 1; j++)
     {
-        int lwst = 0;
-        for (int i = 0; i < candidate_count - 1; i ++) //nalezne dalšího nejmenšího
+         //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
+        for (int i = j; i < pocet - 1; i++) //posun +1
         {
-            if (candidates[lwst].votes > candidates[i + 1].votes)
+            if (neco[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
+            {
+                // nejmensi = nejmensi; //zaznamenání
+            }
             else
             {
-                lwst = i + 1;
+                j = i + 1; //zaznamenání
             }
         }
-        candidates[j] = candidates[8];
-        candidates[j] = candidates[lwst];
-        candidates[lwst] = candidates[8];
-        lwst =+
+        pomocna = neco[nejmensi];
+        neco[nejmensi] = neco[j]; //přepis nejmensi na zacatek resp. doleva
+        neco[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        nejmensi = nejmensi + 1;
+        j = nejmensi - 1;
     }
-    return;
+    printf("pozice 0.: %i\npozice 1.: %i\npozice 2.: %i\npozice 3.: %i\npozice 4.: %i\n", neco[0], neco[1], neco[2], neco[3], neco[4]);
+    return 0;
 }
