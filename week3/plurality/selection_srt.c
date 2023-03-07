@@ -23,8 +23,9 @@ int main (void)
             }
         }
 
-        pomocna = neco[]
-        neco[j] = neco[nejmensi]
+        pomocna = neco[j]
+        neco[j] = neco[nejmensi] //přepis nejmensi na zacatek resp. doleva
+        neco[nejmensi] = pomocna //zápis hodnoty zleva do pozice doprava na místo nejmenší
     }
 
     printf("nejmensi: pozice %i + 1, hodnota %i\n", nejmensi, neco[nejmensi]);
