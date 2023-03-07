@@ -70,7 +70,6 @@ bool vote(string name)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%s\n", candidates[i].name);
         if (strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes = candidates[i].votes + 1;
@@ -107,6 +106,6 @@ void print_winner(void)
         nejmensi = nejmensi + 1;
         j = nejmensi - 1;
     }
-    printf("winner: %s", candidates[candidate_count - 1].name);
+    printf("winner: %s\n", candidates[candidate_count - 1].name);
     return;
 }
