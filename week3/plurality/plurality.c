@@ -91,7 +91,7 @@ void print_winner(void)
          //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
         for (int i = j; i < candidate_count  - 1; i++) //posun +1
         {
-            if (candidates[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
+            if (candidates[j].votes < candidates[i + 1].votes) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
             {
                 // nejmensi = nejmensi; //zaznamenání
             }
@@ -100,9 +100,9 @@ void print_winner(void)
                 j = i + 1; //zaznamenání
             }
         }
-        pomocna = neco[nejmensi];
-        neco[nejmensi] = neco[j]; //přepis nejmensi na zacatek resp. doleva
-        neco[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        pomocna = candidates[nejmensi];
+        candidates[nejmensi] = candidates[j]; //přepis nejmensi na zacatek resp. doleva
+        candidates[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
         nejmensi = nejmensi + 1;
         j = nejmensi - 1;
     }
