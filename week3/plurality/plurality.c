@@ -106,9 +106,10 @@ void print_winner(void)
         nejmensi = nejmensi + 1;
         j = nejmensi - 1;
     }
+    printf("%s\n", candidates[candidate_count - 1].name);
     for (int i = candidate_count - 1; candidates[i].votes == candidates[i - 1].votes; i--)
     {
-        printf("%s\n", candidates[i].name);
+        printf("%s\n", candidates[i - 1].name);
     }
     return;
 }
