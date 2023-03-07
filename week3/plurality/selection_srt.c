@@ -12,7 +12,7 @@ int main (void)
 
     for (int j = 0; j < pocet - 1; j++)
     {
-        nejmensi = nejmensi + 1; //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
+         //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
         for (int i = j; i < pocet - 1; i++) //posun +1
         {
             if (neco[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
@@ -24,7 +24,7 @@ int main (void)
                 j = i + 1; //zaznamenání
             }
         }
-
+        nejmensi = nejmensi + 1;
         pomocna = neco[nejmensi];
         neco[nejmensi] = neco[j]; //přepis nejmensi na zacatek resp. doleva
         neco[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
