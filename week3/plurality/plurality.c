@@ -70,9 +70,9 @@ bool vote(string name)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].name == name)
+        if (candidates[i].name == name)
         {
-            candidate[i].votes =+
+            candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
     }
@@ -84,7 +84,7 @@ void print_winner(void)
 {
     // TODO
     int nejmensi = 0;
-    int pomocna = 0;
+    candidate pomocna[1];
 
     for (int j = 0; j < candidate_count - 1; j++)
     {
@@ -100,12 +100,12 @@ void print_winner(void)
                 j = i + 1; //zaznamenání
             }
         }
-        pomocna = candidates[nejmensi];
+        pomocna[0] = candidates[nejmensi];
         candidates[nejmensi] = candidates[j]; //přepis nejmensi na zacatek resp. doleva
-        candidates[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        candidates[j] = pomocna[0]; //zápis hodnoty zleva do pozice doprava na místo nejmenší
         nejmensi = nejmensi + 1;
         j = nejmensi - 1;
     }
-    printf("pozice 0.: %i\npozice 1.: %i\npozice 2.: %i\npozice 3.: %i\npozice 4.: %i\n", neco[0], neco[1], neco[2], neco[3], neco[4]);
-    return 0;
+    printf("winner: %s", candidates[candidate_count - 1].name);
+    return;
 }
