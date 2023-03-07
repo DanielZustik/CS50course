@@ -83,17 +83,15 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int pocet = 5;
     int nejmensi = 0;
-    int neco[] = {3, 4, 9, 2, 2};
     int pomocna = 0;
 
-    for (int j = 0; j < pocet - 1; j++)
+    for (int j = 0; j < candidate_count - 1; j++)
     {
          //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
-        for (int i = j; i < pocet - 1; i++) //posun +1
+        for (int i = j; i < candidate_count  - 1; i++) //posun +1
         {
-            if (neco[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
+            if (candidates[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
             {
                 // nejmensi = nejmensi; //zaznamenání
             }
