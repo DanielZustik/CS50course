@@ -158,6 +158,13 @@ bool print_winner(void)
 {
     // TODO
     //spočítání, zda má někdo 50% hlasů či více
+    //... otevření pole s county, aha, tedy u candidátů se to načítá, tedy testování každého kandidáta.votes zda splnuje podmínku vote_counts/2;
+    for (int i = 0; i < candidates_count - 1; i++)
+    {
+        if (candidates[i].votes ==> votes_count / 2)
+            printf("The winner of election is: s%", candidates[i].name)
+            return true;
+    }
     return false;
 }
 
