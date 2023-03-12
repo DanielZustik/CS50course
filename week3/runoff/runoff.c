@@ -6,7 +6,7 @@
 #define MAX_CANDIDATES 9
 
 // preferences[i][j] is jth preference for voter i
-int preferences[MAX_CANDIDATES];
+int preferences[MAX_VOTERS][MAX_CANDIDATES];
 
 // Candidates have name, vote count, eliminated status
 typedef struct
@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    //zápis do tabulky, 2D pole
+    preferences[i][j] = 
     return false;
 }
 
