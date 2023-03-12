@@ -6,7 +6,8 @@
 #define MAX_CANDIDATES 9
 
 // preferences[i][j] is jth preference for voter i
-int preferences[MAX_VOTERS][MAX_CANDIDATES];
+int preferenc
+][MAX_CANDIDATES];
 
 // Candidates have name, vote count, eliminated status
 typedef struct
