@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+int rek(int n);
+
 int main (void)
 {
     int i = get_int("zadejte číslo, jehož faktoriál se má vypočíst: ");
