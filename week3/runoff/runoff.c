@@ -128,8 +128,15 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    preferences[1][1] = "Pepa";
-    return false;
+    if ()
+    {
+        preferences[voter][renk] = name;
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // Tabulate votes for non-eliminated candidates
