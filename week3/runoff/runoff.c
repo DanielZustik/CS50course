@@ -131,17 +131,13 @@ bool vote(int voter, int rank, string name)
     //čekin jestli je jmné, string odpovídá některému ze stringů uložených v poli.. tj. funkce strcmp
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        strcmp()
-    }
-
-    if ()
-    {
-        preferences[voter][renk] = name;
-        return true;
-    }
-    else
-    {
-        return false;
+        if (strcmp(name, candidate[i].name) == 0)
+        {
+            preferences[voter][rank] = name;
+            return true;
+        }
+        else
+            return false;
     }
 }
 
