@@ -157,6 +157,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    //spočítání, zda má někdo 50% hlasů či více
     return false;
 }
 
