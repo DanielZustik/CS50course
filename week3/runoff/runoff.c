@@ -179,11 +179,14 @@ int find_min(void)
     //vrácení tohoto nejmenšího prvku
     int min;
 
-    for (int i = 1; i < candidate_count - 1; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
         if (!candidates[i].eliminted)
         {
-            if candidates[i - 1].votes < candidates[i + 1].votes
+            if (candidates[i - 1].votes < candidates[i].votes)
+                min = candidates[i - 1].votes;
+            else
+                min = candidates[i].votes;
         }
     }
     return 0;
