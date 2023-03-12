@@ -175,7 +175,17 @@ int find_min(void)
 {
     // TODO
     //otevírání každého kandidáta, který není eliminated
-    //otevríná konkrétně jejich .votes
+    //otevríná konkrétně jejich .votes a selecton sort (ne celý, stačí projít ejdnou a zapamatovat si nejmensi) aby vlevo an začátku byl nejmenší počet
+    //vrácení tohoto nejmenšího prvku
+    int min;
+
+    for (int i = 1; i < candidate_count - 1; i++)
+    {
+        if (!candidates[i].eliminted)
+        {
+            if candidates[i - 1].votes < candidates[i + 1].votes
+        }
+    }
     return 0;
 }
 
