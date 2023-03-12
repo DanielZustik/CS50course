@@ -147,7 +147,7 @@ void tabulate(void)
     // TODO
     for (int i = 0; i < voters_count -1; i++)
     {
-        preferences[i][0]
+        candidates[preferences[i][0]] =+;
     }
     return;
 }
