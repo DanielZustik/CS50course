@@ -170,9 +170,12 @@ bool print_winner(void)
 }
 
 // Return the minimum number of votes any remaining candidate has
+//nalezení nejmenšího počtu hlasů u zbývajících kandidátů
 int find_min(void)
 {
     // TODO
+    //otevírání každého kandidáta, který není eliminated
+    //otevríná konkrétně jejich .votes
     return 0;
 }
 
