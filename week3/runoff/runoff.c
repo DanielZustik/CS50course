@@ -128,6 +128,12 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    //čekin jestli je jmné, string odpovídá některému ze stringů uložených v poli.. tj. funkce strcmp
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        strcmp()
+    }
+
     if ()
     {
         preferences[voter][renk] = name;
