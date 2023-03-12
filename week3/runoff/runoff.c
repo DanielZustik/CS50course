@@ -174,22 +174,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    //otevírání každého kandidáta, který není eliminated
-    //otevríná konkrétně jejich .votes a selecton sort (ne celý, stačí projít ejdnou a zapamatovat si nejmensi) aby vlevo an začátku byl nejmenší počet
-    //vrácení tohoto nejmenšího prvku
-    int min;
-
-    for (int i = 1; i < candidate_count; i++)
+    //zesortování všech - otevření prvního, srovnání s dalším a uložení mennšího.. na konci pole se ten uložený nejmenší posune na začátek pořadníku, jeho aktuální pozice
+    //následně testování od nejmenšího - je eliminated? pokud ne, vrátit jeho hodnotu, pokud ano, přesunout se, otestovat dalšího nejmenšího
+    for (int i = 0; i < candidate_count - 1; i++)
     {
-        if (!candidates[i - 1].eliminted || !candidates[i].eliminted)
-        {
-            if (candidates[i - 1].votes < candidates[i].votes)
-                min = candidates[i - 1].votes;
-            else
-                min = candidates[i].votes;
-        }
+
     }
-    return min;
+    return 0;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
