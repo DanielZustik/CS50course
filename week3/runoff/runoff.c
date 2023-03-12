@@ -176,10 +176,26 @@ int find_min(void)
     // TODO
     //zesortování všech - otevření prvního, srovnání s dalším a uložení mennšího.. na konci pole se ten uložený nejmenší posune na začátek pořadníku, jeho aktuální pozice
     //následně testování od nejmenšího - je eliminated? pokud ne, vrátit jeho hodnotu, pokud ano, přesunout se, otestovat dalšího nejmenšího
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int j = 0; j < candidate_count - 1; j++)
     {
+         //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
+        for (int i = j; i < pocet - 1; i++) //posun +1
+        {
+            if (neco[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
+            {
+                // nejmensi = nejmensi; //zaznamenání
+            }
+            else
+            {
+                j = i + 1; //zaznamenání
+            }
+        }
+        pomocna = neco[nejmensi];
+        neco[nejmensi] = neco[j]; //přepis nejmensi na zacatek resp. doleva
+        neco[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        nejmensi = nejmensi + 1;
+        j = nejmensi - 1;
 
-    }
     return 0;
 }
 
