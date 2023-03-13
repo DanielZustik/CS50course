@@ -212,15 +212,19 @@ bool is_tie(int min)
         }
     }
 
-    for (int i = mini + 1; i < canidate_count - 1; i++)
+    for (int i = mini + 1; i < candidate_count - 1; i++)
     {
         if (!candidates[i].eliminated)
         {
-        if (candidate[mini].votes == candidate[i].votes)
-        else
-            return false;
-        }
+            if (candidates[mini].votes == candidates[i].votes)
+            {
 
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
     return true;
 }
@@ -229,5 +233,10 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        if (candidates[i].votes == min)
+            candidates[i].eliminated = true;
+    }
     return;
 }
