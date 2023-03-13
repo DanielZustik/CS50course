@@ -192,8 +192,8 @@ int find_min(void)
                     else
                        {
                             i = j + 1;
-                            j--;
                             minv = candidates[j].votes;
+                            j--;
                        }
 
                 }
