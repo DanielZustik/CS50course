@@ -173,8 +173,8 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    int mini;
-    int minv;
+    int mini = 0;
+    int minv = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
