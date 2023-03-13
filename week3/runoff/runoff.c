@@ -170,19 +170,31 @@ bool print_winner(void)
 }
 
 // Return the minimum number of votes any remaining candidate has
-//nalezení nejmenšího počtu hlasů u zbývajících kandidátů
+// zesortování do zvláštního pole candidáty podle počtu jejich hlasů
+// náísledně testování od nejmenšího počtu hlasů, zda ještě není eliminován, pokund ne, pak vrácení hodnoty, pokud ano, přesunutí se na dalšího a testování ho
 int find_min(void)
 {
     // TODO
-    for (int j = 0; j )
-        for (int i = 0; i < candidate_count; i++)
+    int pomoc[candidate_count];
+    for (int j = 0; j < candidate_count - 1; j++)
+    {
+         //zresetování nejmensi z posledni nalezene nejmensi na nvou possibly nejmensi zacatek loopu
+        for (int i = j; i < candidate_count - 1; i++) //posun +1
         {
-            if (candidate[i].votes <= candidate[i + 1].votes)
-                min = i;
+            if (neco[j] < neco[i + 1]) //aktivování a srovnání, i jako pomocna nejprve je nula, nicméně při dalším průchodu vnější smyčkou bude 1 atd.
+            {
+                // nejmensi = nejmensi; //zaznamenání
+            }
             else
-                min = i;
+            {
+                j = i + 1; //zaznamenání
+            }
         }
-        if (canidates[min].eliminated)
+        pomocna = neco[nejmensi];
+        neco[nejmensi] = neco[j]; //přepis nejmensi na zacatek resp. doleva
+        neco[j] = pomocna; //zápis hodnoty zleva do pozice doprava na místo nejmenší
+        nejmensi = nejmensi + 1;
+        j = nejmensi - 1;
     return 0;
 }
 
