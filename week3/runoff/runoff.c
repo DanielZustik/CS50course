@@ -193,6 +193,8 @@ int find_min(void)
                         minv = candidates[i].votes;
                     else
                         minv = candidates[j].votes;
+                        i = j + 1;
+                        min = j;
                 }
             }
         }
