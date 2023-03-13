@@ -179,18 +179,20 @@ bool print_winner(void)
 int find_min(void)
 {
     int minv = 0;
+    int min =
     for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
             for (int j = i + 1; j < candidate_count; j++)
             {
-                if (!candidates[j].eliminated)
+                min = j;
+                if (!candidates[min].eliminated)
                 {
-                    if (candidates[i].eliminated <= candidates[j].eliminated)
+                    if (candidates[i].eliminated <= candidates[min].eliminated)
                         minv = candidates[i].votes;
                     else
-                        minv = candidates[j].votes;
+                        minv = candidates[min].votes;
                 }
             }
         }
