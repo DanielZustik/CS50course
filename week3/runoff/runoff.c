@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     //čekin jestli je jmné, string odpovídá některému ze stringů uložených v poli.. tj. funkce strcmp
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
@@ -145,7 +145,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    for (int i = 0; i < voter_count -1; i++)
+    for (int i = 0; i < voter_count; i++)
     {
         if (!candidates[preferences[i][0]].eliminated)
             candidates[preferences[i][0]].votes++;
@@ -158,7 +158,7 @@ bool print_winner(void)
 {
     // TODO
     //... otevření pole s county, aha, tedy u candidátů se to načítá, tedy testování každého kandidáta.votes zda splnuje podmínku vote_counts/2;
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= voter_count / 2)
         {
@@ -175,7 +175,7 @@ int find_min(void)
     // TODO
     int mini = 0;
     int minv = 0;
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
@@ -184,7 +184,7 @@ int find_min(void)
         }
     }
 
-    for (int i = mini + 1; i < candidate_count - 1; i++)
+    for (int i = mini + 1; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
@@ -203,7 +203,7 @@ bool is_tie(int min)
 {
     // TODO
     int mini = 0;
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
@@ -212,7 +212,7 @@ bool is_tie(int min)
         }
     }
 
-    for (int i = mini + 1; i < candidate_count - 1; i++)
+    for (int i = mini + 1; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
@@ -233,7 +233,7 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min)
             candidates[i].eliminated = true;
