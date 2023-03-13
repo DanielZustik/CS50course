@@ -160,7 +160,7 @@ bool print_winner(void)
     //... otevření pole s county, aha, tedy u candidátů se to načítá, tedy testování každého kandidáta.votes zda splnuje podmínku vote_counts/2;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= voter_count / 2)
+        if (candidates[i].votes > voter_count / 2)
         {
             printf("The winner of election is: %s\n", candidates[i].name);
             return true;
