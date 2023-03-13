@@ -190,9 +190,12 @@ int find_min(void)
                     if (candidates[i].eliminated <= candidates[j].eliminated)
                         minv = candidates[i].votes;
                     else
-                        minv = candidates[j].votes;
-                        i = j + 1;
-                        j--;
+                       {
+                            i = j + 1;
+                            j--;
+                            minv = candidates[j].votes;
+                       }
+
                 }
             }
         }
