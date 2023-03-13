@@ -170,8 +170,6 @@ bool print_winner(void)
 }
 
 // Return the minimum number of votes any remaining candidate has
-// zesortování do zvláštního pole candidáty podle počtu jejich hlasů
-// náísledně testování od nejmenšího počtu hlasů, zda ještě není eliminován, pokund ne, pak vrácení hodnoty, pokud ano, přesunutí se na dalšího a testování ho
 int find_min(void)
 {
     // TODO
