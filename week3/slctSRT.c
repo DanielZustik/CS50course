@@ -28,7 +28,7 @@ int main(void)
     {
         for (int i = j; i < N; i++)
         {
-            if (prvky[i] = max)
+            if (prvky[i] > max)
             {
                 max_i = i;
                 max = prvky[i];
