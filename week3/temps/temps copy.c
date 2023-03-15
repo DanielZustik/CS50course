@@ -1,5 +1,5 @@
 // Practice working with structs
-// Practice applying sorting algorithms
+// Practice applying sorting algorithms - bubble sort
 
 #include <cs50.h>
 #include <stdio.h>
@@ -62,6 +62,8 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-  
+
+    
+
     return;
 }
