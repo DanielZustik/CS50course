@@ -71,10 +71,10 @@ void sort_cities(void)
     {
         for (int i = j; i < NUM_CITIES; i++)
         {
-            if (temps[i] > max_temp)
+            if (temps[i].temp > max_temp)
             {
                 max_i = i;
-                max_temp = temps[i];
+                max_temp = temps[i].temp;
             }
         }
         hlp[j] = temps[j];
