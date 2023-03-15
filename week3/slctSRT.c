@@ -1,10 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
 
+const N = 10;
+
 int main(void)
 {
-
-    int prvky[10];
+    int prvky[N];
 
     prvky[0] = 9;
     prvky[1] = 11;
@@ -21,11 +22,11 @@ int main(void)
     int max_i;
 
 
-    for (int j = 0; j < NUM_CITIES; j++)
+    for (int j = 0; j < N; j++)
     {
-        for (int i = j; i < NUM_CITIES; i++)
+        for (int i = j; i < N; i++)
         {
-            if (temps[i].temp > max_temp)
+            if (prvky[i] > max)
             {
                 max_i = i;
                 max_temp = temps[i].temp;
