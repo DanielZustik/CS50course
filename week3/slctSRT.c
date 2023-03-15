@@ -7,6 +7,7 @@ int main(void)
 {
     int prvky[N];
 
+
     prvky[0] = 9;
     prvky[1] = 11;
     prvky[2] = 21;
@@ -20,6 +21,7 @@ int main(void)
 
     int max = prvky[0];
     int max_i;
+    int hlp;
 
 
     for (int j = 0; j < N; j++)
@@ -29,14 +31,14 @@ int main(void)
             if (prvky[i] > max)
             {
                 max_i = i;
-                max_temp = temps[i].temp;
+                max = prvky[i];
             }
         }
-        max_temp = temps[j + 1].temp; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
+        max = prvky[j + 1]; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
 
-        hlp[0] = temps[j]; //uložení do pomocné proměnné
-        temps[j] = temps[max_i];
-        temps[max_i] = hlp[0];
+        hlp = prvky[j]; //uložení do pomocné proměnné
+        prvky[j] = prvky[max_i];
+        prvky[max_i] = hlp;
     }
 
 }
