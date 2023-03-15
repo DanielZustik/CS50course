@@ -79,6 +79,7 @@ void sort_cities(void)
         }
         hlp[j] = temps[j];
         temps[j] = temps[max_i];
+        printf("%s, %i" temps[j].city, temps[j].temp);
         temps[max_i] = hlp[j];
     }
 }
