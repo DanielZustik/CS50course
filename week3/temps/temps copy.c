@@ -63,7 +63,17 @@ int main(void)
 void sort_cities(void)
 {
 
-    
+    int swap_c = -1;
+
+    while (swap_c <> 0)
+    {
+        swap_c = 0;
+        for (int i = 0; i < NUM_CITIES; i++)
+        {
+            if (temps.)
+            swap_c +=;
+        }
+    }
 
     return;
 }
