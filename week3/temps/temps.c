@@ -75,9 +75,9 @@ void sort_cities(void)
             {
                 max_i = i;
             }
-            hlp[j] = temps[j];
-            temps[j] = temps[max];
-            temps[max] = hlp[j];
+            hlp[i] = temps[i];
+            temps[i] = temps[max];
+            temps[max] = hlp[i];
         }
     }
 }
