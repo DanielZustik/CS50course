@@ -83,4 +83,5 @@ void sort_cities(void)
         temps[j] = temps[max_i];
         temps[max_i] = hlp[j];
     }
+return;
 }
