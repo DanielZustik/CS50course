@@ -33,7 +33,7 @@ int main(void)
             else
             {
                 hlp = prvky[i];
-                prvky[i] = prvky[i + 1]
+                prvky[i] = prvky[i + 1];
                 swap_c +=;
             }
         }
