@@ -62,6 +62,12 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    for (int i = 0; i < NUM_CITIES)
-
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        if (temps[i] > max)
+        {
+            max = i;
+        }
+        
+    }
 }
