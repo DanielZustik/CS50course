@@ -80,7 +80,6 @@ void sort_cities(void)
         max_temp = temps[j + 1].temp; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
         hlp[j] = temps[j];
         temps[j] = temps[max_i];
-        printf("%s, %i" temps[j].city, temps[j].temp);
         temps[max_i] = hlp[j];
     }
 }
