@@ -40,5 +40,6 @@ int main(void)
         prvky[j] = prvky[max_i];
         prvky[max_i] = hlp;
     }
-
+    for (int i = 0; i < N; i++)
+        printf("prvek %i: %i", i, prvky[i]);
 }
