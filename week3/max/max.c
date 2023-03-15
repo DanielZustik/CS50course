@@ -30,6 +30,10 @@ int max(int array[], int n)
 
     int max = array[0];
 
-    
-    return 0;
+    for (int i = 0; i < n - 1; i ++)
+    {
+        if (array[i] > max)
+            max = array[i];
+    }
+    return max;
 }
