@@ -74,10 +74,11 @@ void sort_cities(void)
             if (temps[i] > max_temp)
             {
                 max_i = i;
+                max_temp = temps[i];
             }
-            hlp[i] = temps[i];
-            temps[i] = temps[max];
-            temps[max] = hlp[i];
         }
+        hlp[i] = temps[i];
+        temps[i] = temps[max];
+        temps[max] = hlp[i];
     }
 }
