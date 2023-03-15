@@ -28,13 +28,14 @@ int main(void)
     {
         for (int i = j; i < N; i++)
         {
-            if (prvky[i] > max)
+            if (prvky[i] = max)
             {
                 max_i = i;
                 max = prvky[i];
             }
         }
         max = prvky[j + 1]; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
+        max_i = j + 1; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku, musí se také udělat, jinak zůstane stará pozice a nepřeuloží se, pokud se nenajde v poli už žádný větší
 
         hlp = prvky[j]; //uložení do pomocné proměnné
         prvky[j] = prvky[max_i];
