@@ -21,8 +21,9 @@ int main(void)
 
 
     int swap_c = -1;
+    int hlp = 0;
 
-    while (swap_c <> 0)
+    while (swap_c != 0)
     {
         swap_c = 0;
         for (int i = 0; i < N - 1; i++)
@@ -34,8 +35,10 @@ int main(void)
             {
                 hlp = prvky[i];
                 prvky[i] = prvky[i + 1];
-                swap_c +=;
+                swap_c ++;
             }
         }
     }
+    for (int i = 0; i < N; i++)
+        printf("prvek %i: %i\n", i, prvky[i]);
 }
