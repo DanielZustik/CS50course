@@ -34,12 +34,11 @@ int main(void)
                 max = prvky[i];
             }
         }
-        max = prvky[j + 1]; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
-
         hlp = prvky[j]; //uložení do pomocné proměnné
         prvky[j] = prvky[max_i];
         prvky[max_i] = hlp;
 
+        max = prvky[j + 1]; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
         max_i = j + 1; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku, musí se také udělat, jinak zůstane stará pozice a nepřeuloží se, pokud se nenajde v poli už žádný větší
     }
     for (int i = 0; i < N; i++)
