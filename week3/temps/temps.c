@@ -67,14 +67,17 @@ void sort_cities(void)
     int max_i;
 
 
-    for (int i = 0; i < NUM_CITIES; i++)
+    for (int j = 0; j < NUM_CITIES; i++)
     {
-        if (temps[i] > max_temp)
+        for (int i = 0; i < NUM_CITIES; i++)
         {
-            max_i = i;
+            if (temps[i] > max_temp)
+            {
+                max_i = i;
+            }
+            hlp[j] = temps[j];
+            temps[j] = temps[max];
+            temps[max] = hlp[j];
         }
-        hlp[i] = temps[i];
-        temps[i] = temps[max];
-        temps[max] = hlp[i];
     }
 }
