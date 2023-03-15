@@ -78,7 +78,8 @@ void sort_cities(void)
             }
         }
         max_temp = temps[j + 1].temp; //zresetování max temp na hodnotu dalšího prvku v pořadí ze začátku
-        hlp[j] = temps[j];
+
+        hlp[j] = temps[j]; //uložení do pomocné proměnné
         temps[j] = temps[max_i];
         temps[max_i] = hlp[j];
     }
