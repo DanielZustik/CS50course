@@ -68,6 +68,7 @@ void sort_cities(void)
     while (swap_c != 0)
     {
         swap_c = 0;
+
         for (int i = 0; i < 10 - 1; i++)
         {
             if (temps[i].temp >= temps[i + 1].temp)
@@ -78,10 +79,10 @@ void sort_cities(void)
                 hlp[0] = temps[i];
                 temps[i] = temps[i + 1];
                 temps[i + 1] = hlp[0];
+
                 swap_c ++;
             }
         }
     }
-
     return;
 }
