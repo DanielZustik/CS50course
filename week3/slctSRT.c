@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-const N = 10;
+int const N = 10;
 
 int main(void)
 {
@@ -41,5 +41,5 @@ int main(void)
         prvky[max_i] = hlp;
     }
     for (int i = 0; i < N; i++)
-        printf("prvek %i: %i", i, prvky[i]);
+        printf("prvek %i: %i\n", i, prvky[i]);
 }
