@@ -9,14 +9,14 @@ int main(void)
 
 
     prvky[0] = 9;
-    prvky[1] = 11;
+    prvky[1] = 10;
     prvky[2] = 21;
-    prvky[3] = 13;
+    prvky[3] = 14;
     prvky[4] = 5;
     prvky[5] = 0;
-    prvky[6] = 8;
+    prvky[6] = 1;
     prvky[7] = 6;
-    prvky[8] = 12;
+    prvky[8] = 10;
     prvky[9] = 4;
 
 
@@ -35,6 +35,7 @@ int main(void)
             {
                 hlp = prvky[i];
                 prvky[i] = prvky[i + 1];
+                prvky[i + 1] = hlp;
                 swap_c ++;
             }
         }
