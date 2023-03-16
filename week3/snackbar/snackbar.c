@@ -74,8 +74,18 @@ int main(void)
 // Add at least the first for items to the menu array
 void add_items(void)
 {
-    
-    return;
+    menu[0].item ="Burger";
+    menu[0].price = 9.5;
+    menu[1].item ="Vegan Burger";
+    menu[1].price = 11;
+    menu[2].item ="Hot Dog";
+    menu[2].price = 5;
+    menu[3].item ="Soda";
+    menu[3].price = 2;
+    menu[4].item ="Fries";
+    menu[4].price = 5;
+
+    //return;
 }
 
 // Search through the menu array to find an item's cost
