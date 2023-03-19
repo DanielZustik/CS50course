@@ -21,3 +21,16 @@ int rek(int n)
         return n * rek(n - 1);
     }
 }
+
+int main(int argc, string argv[])
+{
+    if (argc != 2)
+        printf..
+
+    int *file = fopen(argv[1], r);
+    if (file == NULL)
+        printf
+        return;
+
+    fread(arra[], 1, 3, file)
+}
