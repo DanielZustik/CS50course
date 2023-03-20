@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     while (fread(&data, sizeof(int16_t), 1, input))
     {
         data *= factor;
-        fwrite(data, sizeof(int16_t), 1, output);
+        fwrite(&data, sizeof(int16_t), 1, output);
     }
 
     // Close files
