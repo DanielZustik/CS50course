@@ -37,20 +37,13 @@ int main(int argc, char *argv[])
 
     uint8_t header[44];
 
-    printf("%p\n", header);
-
     fread(header, 1, HEADER_SIZE, input);
 
     fwrite(header, 1, HEADER_SIZE, output);
 
-    printf("%p\n", header);
-
     // TODO: Read samples from input file and write updated data to output file
 
-     uint16_t data[1];
-
-    input += 44;
-    output += 44;
+    uint16_t data[1];
 
     for(int i = 0; i < 10; i++)
     {
