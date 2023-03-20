@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
 
 
 
-    
+
 
     // TODO: Copy header from input file to output file
 
-    uint8_t header[4];
+    uint8_t header[44];
 
     for(int i = 0; i < 11; i++)
         fread(buffer, 1, 4, input);
