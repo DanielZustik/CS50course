@@ -45,8 +45,10 @@ int main(int argc, char *argv[])
 
     uint8_t header[44];
 
-    for(int i = 0; i < 11; i++)
-        fread(buffer, 1, 4, input);
+    fread(header, 1, 44, input);
+
+    for (int i = 0; i < 44; i++)
+        printf("%i ", header[i]);
 
     // TODO: Read samples from input file and write updated data to output file
 
