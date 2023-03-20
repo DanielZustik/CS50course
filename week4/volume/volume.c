@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     fread(header, 1, 44, input);
 
     for (int i = 0; i < 44; i++)
-        printf("%i ", header[i]);
+        //printf("%i ", header[i]);
 
     // TODO: Read samples from input file and write updated data to output file
 
