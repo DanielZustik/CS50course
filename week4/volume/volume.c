@@ -35,7 +35,9 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
 
-    fread(outuput, 1, 44, input)
+    int buffer[44];
+
+    fread(buffer, 1, 44, input)
 
     // TODO: Read samples from input file and write updated data to output file
 
