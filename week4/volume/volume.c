@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
     for(int i = 0; i < 11; i++)
         fread(buffer, 1, 4, input);
-        fread(output, 1, 4, buffer);
+        fwrite(buffer, 1, 4, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
