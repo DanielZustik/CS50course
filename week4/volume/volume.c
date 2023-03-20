@@ -35,9 +35,11 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
 
-    int buffer[44];
+    int buffer[4];
 
-    fread(buffer, 1, 44, input)
+    for(int i = 0; i < 11; i++)
+        fread(buffer, 1, 4, input);
+        fread(buffer, 1, 4, input);
 
     // TODO: Read samples from input file and write updated data to output file
 
