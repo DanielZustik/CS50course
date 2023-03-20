@@ -37,18 +37,22 @@ int main(int argc, char *argv[])
 
     uint8_t header[44];
 
+    printf("%p\n", header);
+
     fread(header, 1, HEADER_SIZE, input);
 
     fwrite(header, 1, HEADER_SIZE, output);
 
+    printf("%p\n", header);
+
     // TODO: Read samples from input file and write updated data to output file
 
-     int16_t data[1];
+     uint16_t data[1];
 
-    input =+ 44;
-    output =+ 44;
+    input += 44;
+    output += 44;
 
-    for(int i = 0; i < ; i++)
+    for(int i = 0; i < 10; i++)
     {
         fread(data, 2, 1, input);
         data[0] = data [0] * factor;
