@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     uint16_t data[1];
 
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < sizeof(input - 44); i++)
     {
         fread(data, 2, 1, input);
         data[0] = data [0] * factor;
