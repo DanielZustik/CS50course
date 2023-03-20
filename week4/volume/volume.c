@@ -46,12 +46,22 @@ int main(int argc, char *argv[])
     uint8_t header[44];
 
     fread(header, 1, 44, input);
+
     fwrite(header, 1, 44, output);
 
-    for (int i = 0; i < 44; i++)
-        //printf("%i ", header[i]);
-
     // TODO: Read samples from input file and write updated data to output file
+
+     int16_t data[1];
+
+    input =+ 44;
+    output =+ 44;
+
+    for(int i = 0; i < ; i++)
+    {
+        fread(data, 2, 1, input);
+        fwrite(data, 2, 1, output);
+    }
+
 
     // Close files
     fclose(input);
