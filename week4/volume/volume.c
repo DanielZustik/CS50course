@@ -33,14 +33,6 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-
-
-
-
-
-
-
-
     // TODO: Copy header from input file to output file
 
     uint8_t header[44];
@@ -59,9 +51,9 @@ int main(int argc, char *argv[])
     for(int i = 0; i < ; i++)
     {
         fread(data, 2, 1, input);
+        data[0] = data [0] * factor;
         fwrite(data, 2, 1, output);
     }
-
 
     // Close files
     fclose(input);
