@@ -6,7 +6,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
 
     //nacteni image
-    data[BITMAPINFOHEADER + BITMAPFILEHEADER]
+    int data[BITMAPINFOHEADER + BITMAPFILEHEADER];
     RGBTRIPLE data1[1][1];
 
     FILE *image1 = fopen("courtyard.bmp", "r");
