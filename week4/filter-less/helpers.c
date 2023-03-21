@@ -1,15 +1,17 @@
 #include "helpers.h"
+#include <stdio.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
 
     //nacteni image
-    fopen("courtyard.bmp", r);
 
-    
-    read
-    write
+    int *image1 = fopen("courtyard.bmp", r);
+
+
+    //read
+    //write
 
     return;
 }
