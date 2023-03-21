@@ -15,8 +15,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
     fread(header1, 14, 1, imagein);
     fread(header2, 40, 1, imagein);
-    fwrite(co, 14, 1, output.bmp)
-    fwrite()
+    fwrite(header1, 14, 1, output.bmp);
+    fwrite(header2, 40, 1, output.bmp);
 
     fread(data1, 3, 1, image1);
 
