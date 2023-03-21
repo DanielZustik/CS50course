@@ -5,24 +5,7 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
 
-    //nacteni image
-    BITMAPINFOHEADER header1;
-    BITMAPFILEHEADER header2;
-    RGBTRIPLE data1[1][1];
-
-    FILE *imagein = fopen("courtyard.bmp", "r");
-    FILE *imageout = fopen("out.bmp", "w");
-
-    fread(&header1, 14, 1, imagein);
-    fread(&header2, 40, 1, imagein);
-
-    fwrite(&header1, 14, 1, imageout);
-    fwrite(&header2, 40, 1, imageout);
-
-    //fread(data1, 3, 1, imagein);
-
-    //read
-    //write
+    
 
     return;
 }
