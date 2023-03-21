@@ -7,8 +7,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
     //nacteni image
 
-    int *image1 = fopen("courtyard.bmp", r);
-
+    FILE *image1 = fopen("courtyard.bmp", "r");
+    fread(output, x, z, input)
 
     //read
     //write
