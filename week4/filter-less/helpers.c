@@ -3,10 +3,13 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    //pixel jsou 3 byty, kde kazdy bajt je cilso od 0 do 255, ktere reprezentuje hodnotu red/gree/blue
-    //smycka pozmenenim hodnot techto pixulu je mozne preformatovat image do jineho vzhledu
-    //
 
+    //nacteni image
+    fopen("courtyard.bmp", r);
+
+    
+    read
+    write
 
     return;
 }
