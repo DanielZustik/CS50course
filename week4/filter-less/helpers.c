@@ -11,7 +11,11 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE data1[1][1];
 
     FILE *image1 = fopen("courtyard.bmp", "r");
-    fread(data, sizeof(BITMAPINFOHEADER + BITMAPFILEHEADER), 1, image1);
+    fread(header1, 14, 1, image1);
+    fread(header2, 40, 1, image1);
+    fwrite
+    fwrite
+
     fread(data1, 3, 1, image1);
 
     //read
