@@ -13,8 +13,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     FILE *image1 = fopen("courtyard.bmp", "r");
     fread(header1, 14, 1, image1);
     fread(header2, 40, 1, image1);
-    fwrite
-    fwrite
+    fwrite(co, x, y, kam)
+    fwrite()
 
     fread(data1, 3, 1, image1);
 
