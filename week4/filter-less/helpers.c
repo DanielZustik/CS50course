@@ -53,8 +53,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE hlp;
-    //roydleni na dvjmo tato udela to hlavni
+    RGBTRIPLE copy[height][width];
+
+     for(int i = 1; i < height; i++)
+        for(int j = 1; j < width; j++)
+        {
+            
+        }
+
+
+
+    //roydleni na dvjmo, tato udela to hlavni, neudela konce a rohy proto height/width - 1
      for(int i = 1; i < height - 1; i++)
         for(int j = 1; j < width - 1; j++)
         {
