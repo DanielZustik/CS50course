@@ -28,7 +28,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 255 : round(0.349 * image[i][j].rgbtBlue+ 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtRed);
 
             image[i][j].rgbtRed = (round(0.393 * image[i][j].rgbtBlue + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtRed) >= 255) ?
-            255 : round(0.393 * image[i][j].rgbtBLue + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtRed);
+            255 : round(0.393 * image[i][j].rgbtBlue + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtRed);
         }
     return;
 }
