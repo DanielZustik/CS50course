@@ -72,13 +72,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[height - 1][0].rgbtGreen = (image[height - 1][0].rgbtGreen + image[height - 2][0].rgbtGreen + image[height - 2][1].rgbtGreen + image[height - 1][1].rgbtGreen) / 4;
     image[height - 1][0].rgbtRed = (image[height - 1][0].rgbtRed + image[height - 2][0].rgbtRed + image[height - 2][1].rgbtRed + image[height - 1][1].rgbtRed) / 4;
 
-    image[height - 1][width - 1].rgbtBlue = image[height - 1][width - 2].rgbtBlue + image[height - 2][width - 2].rgbtBlue + image[height - 2][width - 1].rgbtBlue + image[height - 1][width - 1].rgbtBlue;
-    image[height - 1][width - 1].rgbtGreen = image[height - 1][width - 2].rgbtGreen + image[height - 2][width - 2].rgbtGreen + image[height - 2][width - 1].rgbtGreen + image[height - 1][width - 1].rgbtGreen;
-    image[height - 1][width - 1].rgbtRed = image[height - 1][width - 2].rgbtRed + image[height - 2][width - 2].rgbtRed + image[height - 2][width - 1].rgbtRed + image[height - 1][width - 1].rgbtRed;
+    image[height - 1][width - 1].rgbtBlue = (image[height - 1][width - 2].rgbtBlue + image[height - 2][width - 2].rgbtBlue + image[height - 2][width - 1].rgbtBlue + image[height - 1][width - 1].rgbtBlue) / 4;
+    image[height - 1][width - 1].rgbtGreen = (image[height - 1][width - 2].rgbtGreen + image[height - 2][width - 2].rgbtGreen + image[height - 2][width - 1].rgbtGreen + image[height - 1][width - 1].rgbtGreen) / 4;
+    image[height - 1][width - 1].rgbtRed = (image[height - 1][width - 2].rgbtRed + image[height - 2][width - 2].rgbtRed + image[height - 2][width - 1].rgbtRed + image[height - 1][width - 1].rgbtRed) / 4;
 
-    image[0][width - 1].rgbtBlue = image[0][width - 1].rgbtBlue
-    image[0][width - 1].rgbtGreen = image[0][width - 1].rgbtGreen
-    image[0][width - 1].rgbtRed = image[0][width - 1].rgbtRed
+    image[0][width - 1].rgbtBlue = (image[0][width - 1].rgbtBlue + image[1][width - 2].rgbtBlue + image[0][width - 2].rgbtBlue + image[1][width - 1].rgbtBlue) / 4;
+    image[0][width - 1].rgbtGreen = (image[0][width - 1].rgbtGreen + image[1][width - 2].rgbtGreen + image[0][width - 2].rgbtGreen + image[1][width - 1].rgbtGreen) / 4;
+    image[0][width - 1].rgbtRed = (image[0][width - 1].rgbtRed + image[1][width - 2].rgbtRed + image[0][width - 2].rgbtRed + image[1][width - 1].rgbtRed) / 4;
 
 
     ///for(int i = 0; i < height; i++)
