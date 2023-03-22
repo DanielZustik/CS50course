@@ -89,6 +89,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     //vzreseni koncu
 
+        for(int i = 1; i < height - 1; i++)
+        {
+
+        }
+
 
     return;
 }
