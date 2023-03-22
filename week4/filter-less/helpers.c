@@ -63,7 +63,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = round((image[i - 1][j - 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i][j].rgbtRed + image[i + 1][j].rgbtRed + image[i][j + 1].rgbtRed + image[i - 1][j].rgbtRed + image[i][j - 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i - 1][j + 1].rgbtRed)) / 9;
 
         }
-    //vzreseni rohu a koncu
+    //vzreseni rohu
+    
+
     ///for(int i = 0; i < height; i++)
       // for(int j = 0; j < width; j++)
       // {
