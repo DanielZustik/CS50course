@@ -55,8 +55,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
 
-     for(int i = 1; i < height; i++)
-        for(int j = 1; j < width; j++)
+     for(int i = 0; i < height; i++)
+        for(int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
         }
@@ -71,21 +71,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         }
     //vzreseni rohu
-    image[0][0].rgbtBlue = (copy[0][0].rgbtBlue + copy[0][1].rgbtBlue + copy[1][1].rgbtBlue + copy[1][0].rgbtBlue) / 4;
-    image[0][0].rgbtGreen = (copy[0][0].rgbtGreen + copy[0][1].rgbtGreen + copy[1][1].rgbtGreen + copy[1][0].rgbtGreen) / 4;
-    image[0][0].rgbtRed = (copy[0][0].rgbtRed + copy[0][1].rgbtRed + copy[1][1].rgbtRed + copy[1][0].rgbtRed) / 4;
+    image[0][0].rgbtBlue = round((copy[0][0].rgbtBlue + copy[0][1].rgbtBlue + copy[1][1].rgbtBlue + copy[1][0].rgbtBlue) / 4);
+    image[0][0].rgbtGreen = round((copy[0][0].rgbtGreen + copy[0][1].rgbtGreen + copy[1][1].rgbtGreen + copy[1][0].rgbtGreen) / 4);
+    image[0][0].rgbtRed = round((copy[0][0].rgbtRed + copy[0][1].rgbtRed + copy[1][1].rgbtRed + copy[1][0].rgbtRed) / 4);
 
-    image[height - 1][0].rgbtBlue = (copy[height - 1][0].rgbtBlue + copy[height - 2][0].rgbtBlue + copy[height - 2][1].rgbtBlue + copy[height - 1][1].rgbtBlue) / 4;
-    image[height - 1][0].rgbtGreen = (copy[height - 1][0].rgbtGreen + copy[height - 2][0].rgbtGreen + copy[height - 2][1].rgbtGreen + copy[height - 1][1].rgbtGreen) / 4;
-    image[height - 1][0].rgbtRed = (copy[height - 1][0].rgbtRed + copy[height - 2][0].rgbtRed + copy[height - 2][1].rgbtRed + copy[height - 1][1].rgbtRed) / 4;
+    image[height - 1][0].rgbtBlue = round((copy[height - 1][0].rgbtBlue + copy[height - 2][0].rgbtBlue + copy[height - 2][1].rgbtBlue + copy[height - 1][1].rgbtBlue) / 4);
+    image[height - 1][0].rgbtGreen = round((copy[height - 1][0].rgbtGreen + copy[height - 2][0].rgbtGreen + copy[height - 2][1].rgbtGreen + copy[height - 1][1].rgbtGreen) / 4);
+    image[height - 1][0].rgbtRed = round((copy[height - 1][0].rgbtRed + copy[height - 2][0].rgbtRed + copy[height - 2][1].rgbtRed + copy[height - 1][1].rgbtRed) / 4);
 
-    image[height - 1][width - 1].rgbtBlue = (copy[height - 1][width - 2].rgbtBlue + copy[height - 2][width - 2].rgbtBlue + copy[height - 2][width - 1].rgbtBlue + copy[height - 1][width - 1].rgbtBlue) / 4;
-    image[height - 1][width - 1].rgbtGreen = (copy[height - 1][width - 2].rgbtGreen + copy[height - 2][width - 2].rgbtGreen + copy[height - 2][width - 1].rgbtGreen + copy[height - 1][width - 1].rgbtGreen) / 4;
-    image[height - 1][width - 1].rgbtRed = (copy[height - 1][width - 2].rgbtRed + copy[height - 2][width - 2].rgbtRed + copy[height - 2][width - 1].rgbtRed + copy[height - 1][width - 1].rgbtRed) / 4;
+    image[height - 1][width - 1].rgbtBlue = round((copy[height - 1][width - 2].rgbtBlue + copy[height - 2][width - 2].rgbtBlue + copy[height - 2][width - 1].rgbtBlue + copy[height - 1][width - 1].rgbtBlue) / 4);
+    image[height - 1][width - 1].rgbtGreen = round((copy[height - 1][width - 2].rgbtGreen + copy[height - 2][width - 2].rgbtGreen + copy[height - 2][width - 1].rgbtGreen + copy[height - 1][width - 1].rgbtGreen) / 4);
+    image[height - 1][width - 1].rgbtRed = round((copy[height - 1][width - 2].rgbtRed + copy[height - 2][width - 2].rgbtRed + copy[height - 2][width - 1].rgbtRed + copy[height - 1][width - 1].rgbtRed) / 4);
 
-    image[0][width - 1].rgbtBlue = (copy[0][width - 1].rgbtBlue + copy[1][width - 2].rgbtBlue + copy[0][width - 2].rgbtBlue + copy[1][width - 1].rgbtBlue) / 4;
-    image[0][width - 1].rgbtGreen = (copy[0][width - 1].rgbtGreen + copy[1][width - 2].rgbtGreen + copy[0][width - 2].rgbtGreen + copy[1][width - 1].rgbtGreen) / 4;
-    image[0][width - 1].rgbtRed = (copy[0][width - 1].rgbtRed + copy[1][width - 2].rgbtRed + copy[0][width - 2].rgbtRed + copy[1][width - 1].rgbtRed) / 4;
+    image[0][width - 1].rgbtBlue = round((copy[0][width - 1].rgbtBlue + copy[1][width - 2].rgbtBlue + copy[0][width - 2].rgbtBlue + copy[1][width - 1].rgbtBlue) / 4);
+    image[0][width - 1].rgbtGreen = round((copy[0][width - 1].rgbtGreen + copy[1][width - 2].rgbtGreen + copy[0][width - 2].rgbtGreen + copy[1][width - 1].rgbtGreen) / 4);
+    image[0][width - 1].rgbtRed = round((copy[0][width - 1].rgbtRed + copy[1][width - 2].rgbtRed + copy[0][width - 2].rgbtRed + copy[1][width - 1].rgbtRed) / 4);
 
     //vzreseni koncu
 
