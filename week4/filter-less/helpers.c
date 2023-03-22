@@ -60,7 +60,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[i][j] = image[i][j];
         }
-
     //roydleni na dvjmo, tato udela to hlavni, neudela konce a rohy proto height/width - 1
      for(int i = 1; i < height - 1; i++)
         for(int j = 1; j < width - 1; j++)
@@ -68,7 +67,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue =  round((copy[i - 1][j - 1].rgbtBlue + copy[i + 1][j + 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i + 1][j - 1].rgbtBlue + copy[i - 1][j + 1].rgbtBlue) / 9);
             image[i][j].rgbtGreen = round((copy[i - 1][j - 1].rgbtGreen + copy[i + 1][j + 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i + 1][j - 1].rgbtGreen + copy[i - 1][j + 1].rgbtGreen) / 9);
             image[i][j].rgbtRed =   round((copy[i - 1][j - 1].rgbtRed + copy[i + 1][j + 1].rgbtRed + copy[i][j].rgbtRed + copy[i + 1][j].rgbtRed + copy[i][j + 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i + 1][j - 1].rgbtRed + copy[i - 1][j + 1].rgbtRed) / 9);
-
         }
     //vzreseni rohu
     image[0][0].rgbtBlue = round((copy[0][0].rgbtBlue + copy[0][1].rgbtBlue + copy[1][1].rgbtBlue + copy[1][0].rgbtBlue) / 4);
@@ -95,6 +93,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][0].rgbtGreen = round((copy[i + 1][1].rgbtGreen + copy[i + 1][0].rgbtGreen + copy[i][0].rgbtGreen + copy[i - 1][0].rgbtGreen + copy[i - 1][1].rgbtGreen + copy[i][1].rgbtGreen) / 6);
             image[i][0].rgbtRed = round((copy[i + 1][1].rgbtRed + copy[i + 1][0].rgbtRed + copy[i][0].rgbtRed + copy[i - 1][0].rgbtRed + copy[i - 1][1].rgbtRed + copy[i][1].rgbtRed) / 6);
         }
-
     return;
 }
