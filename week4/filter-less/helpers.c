@@ -23,18 +23,18 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
             //image[i][j].rgbtBlue = (round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue) >= 255) ?
                  //255 : round(0.272 * image[i][j].rgbtBlue + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtRed);
-                 if ((0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue) < 255)
-                    image[i][j].rgbtBlue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue);
+                 if ((0.272 * image[i][j].rgbtRed) + (0.534 * image[i][j].rgbtGreen) + (0.131 * image[i][j].rgbtBlue)) < 255)
+                    image[i][j].rgbtBlue = round((0.272 * image[i][j].rgbtRed) + (0.534 * image[i][j].rgbtGreen) + (0.131 * image[i][j].rgbtBlue));
                 else
                     image[i][j].rgbtBlue = 255;
 
-                if ((0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue) < 255)
-                    image[i][j].rgbtGreen = round(0.349 * image[i][j].rgbtBlue+ 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtRed);
+                if (((0.349 * image[i][j].rgbtRed) + (0.686 * image[i][j].rgbtGreen) + (0.168 * image[i][j].rgbtBlue)) < 255)
+                    image[i][j].rgbtGreen = round((0.349 * image[i][j].rgbtBlue)+ (0.686 * image[i][j].rgbtGreen) + (0.168 * image[i][j].rgbtRed));
                 else
                     image[i][j].rgbtGreen = 255;
 
-                if ((0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue) < 255)
-                    image[i][j].rgbtRed = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue);
+                if (((0.393 * image[i][j].rgbtRed) + (0.769 * image[i][j].rgbtGreen) + (0.189 * image[i][j].rgbtBlue)) < 255)
+                    image[i][j].rgbtRed = round((0.393 * image[i][j].rgbtRed) + (0.769 * image[i][j].rgbtGreen) + (0.189 * image[i][j].rgbtBlue));
                 else
                     image[i][j].rgbtRed = 255;
         }
