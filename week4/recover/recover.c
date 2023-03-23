@@ -12,13 +12,12 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
 
 
-    for(int i = 0; i < 512; i++) {
+    for(int i = 0; i < konec souboru; i++) {
         fread(&buffer, 512, 1, file);
         for(int j = 0; j < 512; j++) {
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255)
-                break z hledani
-        open new file
-        write
+            open/close file
+            write
     }
 
 }
