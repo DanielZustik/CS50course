@@ -33,9 +33,9 @@ int main(int argc, char *argv[])
 
                 file_open = true;
             }
-            else
-                if (file_open)
-                    fwrite(&buffer, 512, 1, newfile);
+
+            if (file_open)
+                fwrite(&buffer, 512, 1, newfile);
             //open/close file
             //write
     }
