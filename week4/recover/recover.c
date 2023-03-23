@@ -10,4 +10,6 @@ int main(int argc, char *argv[])
 
     fread(&buffer, 512, 1, file);
 
+    for (int i = 0; i < 512; i++)
+        printf("%c ", buffer[i]);
 }
