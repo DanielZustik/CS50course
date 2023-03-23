@@ -9,13 +9,13 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
-    BYTE buffer[512 * 10];
+    BYTE buffer[1036];
 
-    fread(&buffer, 512 * 10, 1, file);
+    fread(&buffer, 1036, 1, file);
 
-    for(int i = 0; i < 512 * 10; i++) {
+    for(int i = 0; i < 1036; i++) {
         if (buffer[i] == 255 && buffer[i + 1] == 216 && buffer[i + 2] == 255)
-            printf("%i", buffer[i]);
-        printf("%x", buffer[i]);
+            printf("%i ", buffer[i]);
+        //printf("%x ", buffer[i]);
     }
 }
