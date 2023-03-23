@@ -14,5 +14,6 @@ int main(int argc, char *argv[])
     fread(&buffer, 512, 1, file);
 
     for(int i = 0; i < 512; i++)
-        if (buffer[i] == 255 && buffer[i + 1] == 
+        if (buffer[i] == 255 && buffer[i + 1] == 216 && buffer[i + 2] == 255)
+            printf("%i", buffer[i]);
 }
