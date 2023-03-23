@@ -18,8 +18,9 @@ int main(int argc, char *argv[])
     char filename[64];
     FILE *newfile;
 
-    for(int i = 0; i < 3; i++) { // konec souboru
+    for(int i = 0; i < 100; i++) { // konec souboru
         fread(&buffer, 512, 1, file);
+
         for(int j = 0; j < 512; j++)
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255) {
                 if (file_open)
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
             }
             else
                 if (file_open)
-                    fwrite()
+                    fwrite(&buffer, 512, 1, newfile);
             //open/close file
             //write
     }
