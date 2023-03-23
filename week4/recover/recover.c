@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     for(int i = 0; i < 100; i++) { // konec souboru
         fread(&buffer, 512, 1, file);
 
-        for(int j = 0; j < 512; j++)
+        for(int j = 0; j < 512; j++) {
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255) { //chzbi posledni 4 rozeznavaci znak jpegu
                 if (file_open)
                     fclose(newfile);
@@ -33,9 +33,9 @@ int main(int argc, char *argv[])
 
                 file_open = true;
             }
-
-            if (file_open)
-                fwrite(&buffer, 512, 1, newfile);
+        }
+        if (file_open)
+            fwrite(&buffer, 512, 1, newfile);
             //open/close file
             //write
     }
