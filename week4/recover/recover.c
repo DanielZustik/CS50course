@@ -18,9 +18,7 @@ int main(int argc, char *argv[])
     char filename[64];
     FILE *newfile;
 
-    for(int i = 0; i < 100; i++) { // konec souboru
-        fread(&buffer, 512, 1, file);
-
+    while (fread(buffer, 512, 1, file)) { // konec souboru
         for(int j = 0; j < 512; j++) {
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255) { //chzbi posledni 4 rozeznavaci znak jpegu
                 if (file_open)
