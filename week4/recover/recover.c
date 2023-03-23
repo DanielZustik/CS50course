@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
 
                 file_open = true;
             }
+            else 
             //open/close file
             //write
     }
