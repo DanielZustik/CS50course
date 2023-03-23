@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
-    int buffer;
+    unsigned char buffer[512];
 
     fread(&buffer, 512, 1, file);
 
