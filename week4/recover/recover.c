@@ -10,5 +10,4 @@ int main(int argc, char *argv[])
 
     fread(&buffer, 512, 1, file);
 
-
 }
