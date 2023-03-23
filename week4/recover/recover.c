@@ -16,6 +16,6 @@ int main(int argc, char *argv[])
     for(int i = 0; i < 512 * 10; i++) {
         if (buffer[i] == 255 && buffer[i + 1] == 216 && buffer[i + 2] == 255)
             printf("%i", buffer[i]);
-        //printf("%x", buffer[i]);
+        printf("%x", buffer[i]);
     }
 }
