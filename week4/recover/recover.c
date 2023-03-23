@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     int file_count = 0;
     bool file_open = false;
     char filename[64];
+    FILE newfile;
 
     for(int i = 0; i < 3; i++) { // konec souboru
         fread(&buffer, 512, 1, file);
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
 
                 file_count ++; // po5adnik p5i4teni dalisoh otevrenoho filu
 
-                snprintf(filename, sizeof(filename), "%d.jpeg", file_count);
+                snprintf(filename, sizeof(filename), "%03d.jpeg", file_count);
                 FILE *newfile = fopen(filename, "w");
 
                 file_open = true;
