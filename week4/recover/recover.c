@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             }
             else
                 if (file_open)
-                    write
+                    fwrite()
             //open/close file
             //write
     }
