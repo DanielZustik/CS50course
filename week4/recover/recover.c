@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     for(int i = 0; i < 1036; i++) {
         if (buffer[i] == 255 && buffer[i + 1] == 216 && buffer[i + 2] == 255)
-            printf("%i ", buffer[i]);
+            printf("%i ", i);
         //printf("%x ", buffer[i]);
     }
 }
