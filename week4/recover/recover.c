@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255) {
                 file_count +=; // po5adnik p5i4teni dalisoh otevrenoho filu
                 snprintf(filename, sizeof(filename), "%d.jpeg", file_count);
-                FILE *newfile = fopen(file_count, "w");
+                FILE *newfile = fopen(filename, "w");
                 open_file = true;
             }
             //open/close file
