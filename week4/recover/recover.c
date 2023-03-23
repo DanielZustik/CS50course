@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
         fread(&buffer, 512, 1, file);
         for(int j = 0; j < 512; j++) {
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255)
-                open new file
-                write
-                naleyeni noveho jpeg
+                break z hledani
+        open new file
+        write
     }
 
 }
