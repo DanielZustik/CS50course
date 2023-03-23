@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
 
     BYTE buffer[512];
 
-
-    for(int i = 0; i < konec souboru; i++) {
+    for(int i = 0; i < 3; i++) {
         fread(&buffer, 512, 1, file);
-        for(int j = 0; j < 512; j++) {
+        for(int j = 0; j < 512; j++)
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255)
-            open/close file
-            write
+                printf("%i", i);
+            //open/close file
+            //write
     }
 
 }
