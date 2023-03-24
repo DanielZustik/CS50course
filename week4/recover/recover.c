@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
                 newfile = fopen(filename, "w");
 
                 file_open = true;
+                file_count ++; // po5adnik p5i4teni dalisoh otevrenoho filu
             }
         }
         if (file_open)
