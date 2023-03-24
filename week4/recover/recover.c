@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     int file_count = 0;
     bool file_open = false;
-    char filename[64];
+    char filename[8];
     FILE *newfile;
 
     while (fread(buffer, 512, 1, file)) { // konec souboru
