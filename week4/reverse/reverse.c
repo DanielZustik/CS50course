@@ -53,11 +53,12 @@ int check_format(WAVHEADER header)
     // TODO #4
     char *wave = "WAVE";
 
-    for (int i = 0, i < 4; i++)
-        if (header.format[i] == *wave[i])
+    for (int i = 0; i < 4; i++)
+        if (header.format[i] == wave[i])
             return true;
         else
             return false;
+    return 1;
 }
 
 int get_block_size(WAVHEADER header)
