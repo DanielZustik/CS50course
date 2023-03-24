@@ -11,14 +11,14 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
-    if (argc != 3) {
+    if (argc != 4) {
         printf("not proper usage, use:...");
         return 1;
     }
 
     // Open input file for reading
     // TODO #2
-    FILE *infile = fopen("input.wav", r);
+    FILE *infile = fopen(argv{2}, r);
 
     if (infile == NULL) {
         printf("could not open file");
