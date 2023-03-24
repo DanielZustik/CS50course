@@ -39,13 +39,14 @@ int main(int argc, char *argv[])
     // TODO #5
     FILE *outfile = fopen(argv[2], "w");
 
-    if (outfile = NULL) {
+    if (outfile == NULL) {
         printf("could not create outfile");
         return 1;
     }
 
     // Write header to file
     // TODO #6
+    fwrite(&header, sizeof(header), 1, outfile);
 
 
     // Use get_block_size to calculate size of block
