@@ -54,7 +54,7 @@ int check_format(WAVHEADER header)
     char *wave = "WAVE";
 
 
-    if (strcmp(&header.format, wave) == 0)
+    if (strcmp(&header.format, *wave) == 0)
         return true;
     else
         return false;
