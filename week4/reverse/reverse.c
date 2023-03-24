@@ -52,12 +52,12 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
     char *wave = "WAVE";
+    char(header.format);
 
-
-    if (strcmp(&header.format, *wave) == 0)
-        return true;
+    if ()
+        return 1;
     else
-        return false;
+        return 0;
 }
 
 int get_block_size(WAVHEADER header)
