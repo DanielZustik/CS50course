@@ -8,8 +8,17 @@ typedef uint8_t  BYTE;
 
 int main(int argc, char *argv[])
 {
+    if (argc != 2) {
+        printf("usage ./recover card.raw");
+        return 1;
+    }
 
     FILE *file = fopen(argv[1], "r");
+
+    if (file == null) {
+        printf("could not open file");
+        return 1;
+    }
 
     BYTE buffer[512];
 
