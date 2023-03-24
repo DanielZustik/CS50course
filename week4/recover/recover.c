@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
                 file_count ++; // po5adnik p5i4teni dalisoh otevrenoho filu
 
-                snprintf(filename, sizeof(filename), "%03d.jpeg", file_count);
+                snprintf(filename, sizeof(filename), "%03d.jpg", file_count);
                 newfile = fopen(filename, "w");
 
                 file_open = true;
