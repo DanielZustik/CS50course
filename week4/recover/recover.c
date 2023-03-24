@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
-    if (file == null) {
+    if (file == NULL) {
         printf("could not open file");
         return 1;
     }
