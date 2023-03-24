@@ -37,9 +37,16 @@ int main(int argc, char *argv[])
 
     // Open output file for writing
     // TODO #5
+    FILE *outfile = fopen(argv[2], "w");
+
+    if (outfile = NULL) {
+        printf("could not create outfile");
+        return 1;
+    }
 
     // Write header to file
     // TODO #6
+
 
     // Use get_block_size to calculate size of block
     // TODO #7
