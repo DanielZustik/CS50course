@@ -50,7 +50,12 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    string wave = "WAVE";
     for ()
+        if (strcmp(header.format, wave) == 0)
+            return true;
+        else
+            return false;
     return 0;
 }
 
