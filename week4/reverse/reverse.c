@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     // Read header
     // TODO #3
     WAVHEADER header;
-    fread(header, chunk, numb, infile)
+    fread(&header, sizeof(WAVHEADER), 1, infile);
 
     // Use check_format to ensure WAV format
     // TODO #4
