@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
-    if (argc != 3) {
+    if (argc ==! 3) {
         printf("not proper usage, use:...");
         return 1;
     }
