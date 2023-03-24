@@ -18,7 +18,12 @@ int main(int argc, char *argv[])
 
     // Open input file for reading
     // TODO #2
-    fopen()
+    FILE *infile = fopen("input.wav", r);
+
+    if (infile == NULL) {
+        printf("could not open file");
+        return 1;
+    }
 
     // Read header
     // TODO #3
