@@ -32,9 +32,7 @@ int main(int argc, char *argv[])
             if (buffer[j] == 255 && buffer[j + 1] == 216 && buffer[j + 2] == 255 && (buffer[j + 3] & 0xf0) == 0xe0) { //chzbi posledni 4 rozeznavaci znak jpegu
                 if (file_open)
                     fclose(newfile);
-
-                file_count ++; // po5adnik p5i4teni dalisoh otevrenoho filu
-
+                    
                 snprintf(filename, sizeof(filename), "%03d.jpg", file_count);
                 newfile = fopen(filename, "w");
 
