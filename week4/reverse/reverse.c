@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "wav.h"
 
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    checkformat(header);
+    check_format(header);
 
     // Open output file for writing
     // TODO #5
@@ -51,12 +52,11 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
     char *wave = "WAVE";
-    for ()
-        if (strcmp(header.format, wave) == 0)
-            return true;
-        else
-            return false;
-    return 0;
+
+    if (strcmp(header.format, wave) == 0)
+        return true;
+    else
+        return false;
 }
 
 int get_block_size(WAVHEADER header)
