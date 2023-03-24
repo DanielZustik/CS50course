@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdbool.h>
 
 #include "wav.h"
 
@@ -52,12 +52,12 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
     char *wave = "WAVE";
-    char(header.format);
 
-    if ()
-        return 1;
-    else
-        return 0;
+    for (int i = 0, i < 4; i++)
+        if (header.format[i] == *wave[i])
+            return true;
+        else
+            return false;
 }
 
 int get_block_size(WAVHEADER header)
