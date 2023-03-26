@@ -59,8 +59,8 @@ int main(int argc, char *argv[])
 
     BYTE block[block_size];
 
-    while (fread(block, block_size,1,infile))
-
+    //while (fread(block, block_size,1,infile))
+    printf("%i", header.bitsPerSample);
 
 }
 
