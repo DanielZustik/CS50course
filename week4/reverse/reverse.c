@@ -72,6 +72,7 @@ int main(int argc, char *argv[])
     }
     fclose(outfile);
     fclose(infile);
+return 0;
 }
 
 bool check_format(WAVHEADER header)
