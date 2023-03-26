@@ -59,9 +59,9 @@ int main(int argc, char *argv[])
 
     BYTE block[block_size];
 
-    while (fread(block, block_size,1,infile))
+    //while (fread(block, block_size,1,infile))
 
-    fseek(infile, block_size, SEEK_END)
+    fseek(infile, -block_size, SEEK_END);
 }
 
 int check_format(WAVHEADER header)
