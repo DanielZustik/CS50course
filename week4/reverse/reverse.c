@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
     while (ftell(infile) != begining) {
         fread(block, block_size, 1, infile);
         fwrite(block, block_size, 1, outfile);
-        fseek(infile, -2 * block_size, SEEK_END);
+        fseek(infile, -2 * block_size, SEEK_CUR);
     }
 }
 
