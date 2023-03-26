@@ -62,11 +62,11 @@ int main(int argc, char *argv[])
 
     fseek(infile, -block_size, SEEK_END);
 
-    while ()
+    while (ftell() != begining) {
         fread(block, block_size, 1, infile);
         fwrite(block, block_size, 1, outfile);
         fseek(infile, -2 * block_size, SEEK_END);
-
+    }
 }
 
 int check_format(WAVHEADER header)
