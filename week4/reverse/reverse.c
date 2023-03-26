@@ -5,7 +5,7 @@
 
 #include "wav.h"
 
-int check_format(WAVHEADER header);
+bool check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
 int main(int argc, char *argv[])
@@ -34,7 +34,10 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    check_format(header);
+    if (check_format(header) != true) {
+        printf("not the right wav format");
+        return 1;
+        }
 
     // Open output file for writing
     // TODO #5
@@ -71,7 +74,7 @@ int main(int argc, char *argv[])
     fclose(infile);
 }
 
-int check_format(WAVHEADER header)
+bool check_format(WAVHEADER header)
 {
     // TODO #4
     char *wave = "WAVE";
