@@ -67,6 +67,8 @@ int main(int argc, char *argv[])
         fwrite(block, block_size, 1, outfile);
         fseek(infile, -2 * block_size, SEEK_CUR);
     }
+    fclose(outfile);
+    fclose(infile);
 }
 
 int check_format(WAVHEADER header)
