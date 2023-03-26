@@ -90,6 +90,6 @@ bool check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    WORD block_size;
+    int block_size;
     return block_size = header.bitsPerSample * header.numChannels / 8;
 }
