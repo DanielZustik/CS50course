@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
 
-    block = fread(buffer, block_size,1,asd)
+    block = fread(buffer, block_size,1,infile)
 
 
 }
