@@ -17,5 +17,9 @@ int main(void)
             s_count++;
     }
 
-    
+    int c_count = l_text - w_count - s_count;
+
+    int L = 
+
+    int index = 0.0588 *
 }
