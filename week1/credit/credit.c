@@ -20,7 +20,7 @@ int main(void)
         cifer = cifer + 1;
     }
     while (number >= 10);
-    printf("počet cifer: %i\n", cifer);
+    printf("INVALID");
 
     int asd = number2 % 10;
     int sum = asd;
