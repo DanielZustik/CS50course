@@ -5,7 +5,8 @@ faster with presorted data
 sort2 uses: TODO
 merge sort
 How do you know?: TODO
-
+fastest with random inputs
 sort3 uses: TODO
 selection sort
 How do you know?: TODO
+slower on presorted data thane sort1
