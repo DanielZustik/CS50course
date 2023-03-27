@@ -1,9 +1,9 @@
 sort1 uses: TODO
 bubble sort
 How do you know?: TODO
-
+faster with presorted data
 sort2 uses: TODO
-
+merge sort
 How do you know?: TODO
 
 sort3 uses: TODO
