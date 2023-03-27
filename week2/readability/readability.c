@@ -24,7 +24,14 @@ int main(void)
     float L = c_count / w_count * 100;
     float S = s_count / w_count * 100;
 
-    int index = round(0.0588 * L - 0.296 * S - 15.8);
+    int x = round(0.0588 * L - 0.296 * S - 15.8);
 
-    printf("%i\n", index);
+    if (x <= 16)
+        printf("Grade: %i\n", x);
+    else if (x < 1)
+        printf("Before grade 1");
+    else
+        printf("Grade: 16+");
+
+return 0;
 }
