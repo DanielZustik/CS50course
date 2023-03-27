@@ -1,5 +1,5 @@
 sort1 uses: TODO
-
+bubble sort
 How do you know?: TODO
 
 sort2 uses: TODO
@@ -7,5 +7,5 @@ sort2 uses: TODO
 How do you know?: TODO
 
 sort3 uses: TODO
-
+selection sort
 How do you know?: TODO
