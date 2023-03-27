@@ -12,19 +12,20 @@ int main(void)
 
     int w_count = 1;
     int s_count = 0;
+    int l_count = 0;
     for (int i = 0; i < l_text; i++) {
         if (text[i] == ' ')
             w_count++;
         if (text[i] == '.'|| text[i] == '?' || text[i] == '!')
             s_count++;
+        if (text[i] >= 65 && text[i] <= 90 || text[i] >= 97 && text[i] <= 122)
+            l_count++;
     }
 
-    int c_count = l_text - w_count - s_count;
-
-    float L = c_count / w_count * 100;
+    float L = l_count / w_count * 100;
     float S = s_count / w_count * 100;
 
-    printf("letters %i\n words %i\n senteces %i\n", c_count, w_count, s_count);
+    printf("letters %i\n words %i\n senteces %i\n", l_count, w_count, s_count);
 
     int x = round(0.0588 * L - 0.296 * S - 15.8);
 
