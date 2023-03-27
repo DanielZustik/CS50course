@@ -19,7 +19,7 @@ int main(void)
 
     int c_count = l_text - w_count - s_count;
 
-    int L = c_count / w_count
+    float L = c_count / w_count * 100;
 
-    int index = 0.0588 *
+    int index = 0.0588 * L - 0.296 *
 }
