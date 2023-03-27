@@ -37,6 +37,6 @@ int main(void)
         printf("Before grade 1\n");
     else
         printf("Grade: 16+\n");
-
+        
 return 0;
 }
