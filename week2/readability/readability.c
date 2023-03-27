@@ -31,12 +31,12 @@ int main(void)
 
     int x = round(0.0588 * L - 0.296 * S - 15.8);
 
-    if (x <= 16)
+    if (x <= 16 && x >= 1)
         printf("Grade %i\n", x);
     else if (x < 1)
-        printf("Before grade 1\n");
+        printf("Before Grade 1\n");
     else
-        printf("Grade: 16+\n");
+        printf("Grade 16+\n");
 
 return 0;
 }
