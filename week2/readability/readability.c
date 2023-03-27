@@ -18,7 +18,9 @@ int main(void)
             w_count++;
         if (text[i] == '.'|| text[i] == '?' || text[i] == '!')
             s_count++;
-        if (text[i] >= 65 && text[i] <= 90 || text[i] >= 97 && text[i] <= 122)
+        if (text[i] >= 65 && text[i] <= 90)
+            l_count++;
+        else if (text[i] >= 97 && text[i] <= 122)
             l_count++;
     }
 
