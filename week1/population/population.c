@@ -31,5 +31,5 @@ int main(void)
     // TODO: Print number of years
  }
 
- printf("Konečná populace bude dosažena za %i let\n", y);
+ printf("Years: %i\n", y);
 }
