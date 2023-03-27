@@ -10,7 +10,7 @@ int main(void)
 
     int l_text = strlen(text);
 
-    int w_count = 0;
+    int w_count = 1;
     int s_count = 0;
     for (int i = 0; i < l_text; i++) {
         if (text[i] == ' ')
