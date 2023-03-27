@@ -27,7 +27,7 @@ int main(void)
     float L = l_count / w_count * 100;
     float S = s_count / w_count * 100;
 
-    printf("letters %i\n words %i\n senteces %i\n", l_count, w_count, s_count);
+    //printf("letters %i\n words %i\n senteces %i\n", l_count, w_count, s_count);
 
     int x = round(0.0588 * L - 0.296 * S - 15.8);
 
