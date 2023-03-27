@@ -10,9 +10,9 @@ int main(void)
 
     int l_text = strlen(text);
 
-    int w_count = 1;
-    int s_count = 0;
-    int l_count = 0;
+    float w_count = 1;
+    float s_count = 0;
+    float l_count = 0;
     for (int i = 0; i < l_text; i++) {
         if (text[i] == ' ')
             w_count++;
@@ -37,6 +37,6 @@ int main(void)
         printf("Before grade 1\n");
     else
         printf("Grade: 16+\n");
-        
+
 return 0;
 }
