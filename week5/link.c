@@ -24,5 +24,5 @@ int main (void)
 
     //now pointing the new one to older one, connecting it actualy
     n -> ptrs = list;
-
+    list = n;
 }
