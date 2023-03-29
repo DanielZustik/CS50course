@@ -11,7 +11,7 @@ int main (void)
 
     node *list = NULL;
     node *n = malloc(sizeof(node));
-    n -> values[0] = 1;
+    n -> values[0] = 1; // or (n*).
     n -> values[1] = 1;
     n -> ptrs = NULL;
     list = n;
@@ -22,6 +22,7 @@ int main (void)
     n -> values[1] = 2;
     n -> ptrs = NULL;
 
-    // or (n*).
+    //now pointing the new one to older one, connecting it actualy
+    n -> ptrs = list;
 
 }
