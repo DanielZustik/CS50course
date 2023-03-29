@@ -9,5 +9,5 @@ bool search (node *tree, int number) // vrat yda jsi nasel, hledane cislo nubmer
     else if (number > tree->number)
         return serach (tree->right, number);
     else if (number == tree->nubmer)
-     return true; // nalezeno
+        return true; // nalezeno
 }
