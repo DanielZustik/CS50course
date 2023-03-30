@@ -79,7 +79,7 @@ person *create_family(int generations)
                 p->alleles[0] = parent1->alleles[1];
         }
         // dle predesleho zda byl vzbran o nb 1 parent vzbrat druheho
-
+        
     }
 
     // If there are no generations left to create
