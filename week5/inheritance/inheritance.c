@@ -106,7 +106,8 @@ void free_family(person *p)
     if parents is NUll
     free p
     else
-    free family
+    free family (PARENT0)
+    free family (PARENT1)
     // TODO: Free parents recursively
 
     // TODO: Free child
