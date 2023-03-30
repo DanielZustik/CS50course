@@ -69,18 +69,12 @@ person *create_family(int generations)
             if (q == 0)
                 p->alleles[0] = parent1->alleles[0];
                 if (q == 0)
-                    p->alleles[1] = parent0->alleles[0]; // parent 
+                    p->alleles[1] = parent0->alleles[0]; // parent
                 else
                     p->alleles[1] = parent0->alleles[1];
             else
                 p->alleles[0] = parent1->alleles[1];
         // dle predesleho zda byl vzbran o nb 1 parent vzbrat druheho
-
-
-
-        p->alleles[0] =
-
-        p->alleles[1] = ;
 
     }
 
