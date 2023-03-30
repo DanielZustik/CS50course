@@ -79,7 +79,7 @@ person *create_family(int generations)
                 p->alleles[0] = parent1->alleles[1];
         }
         // dle predesleho zda byl vzbran o nb 1 parent vzbrat druheho
-        
+
     }
 
     // If there are no generations left to create
@@ -103,7 +103,7 @@ person *create_family(int generations)
 void free_family(person *p)
 {
     // TODO: Handle base case
-
+    if 
     // TODO: Free parents recursively
 
     // TODO: Free child
