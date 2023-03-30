@@ -54,20 +54,29 @@ person *create_family(int generations)
         p->parent[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        r = rand () % 2;
-        q = rand () % 2;
+        r = rand () % 2; // jestli parent o nb 1
+        q = rand () % 2; // jestli dle allele 0 nb 1
         if (r == 0)
             if (q == 0)
                 p->alleles[0] = parent0->alleles[0];
-            else
+                if (q == 0)
+                    p->alleles[1] = parent1->alleles[0]; // parent 0 je v allele o a tak parent 1 bude v allele 1
+                else
+                    p->alleles[1] = parent1->alleles[1];
+            else //q==1
                 p->alleles[0] = parent0->alleles[1];
-        else
+        else //r == 1
             if (q == 0)
                 p->alleles[0] = parent1->alleles[0];
+                if (q == 0)
+                    p->alleles[1] = parent0->alleles[0]; // parent 
+                else
+                    p->alleles[1] = parent0->alleles[1];
             else
                 p->alleles[0] = parent1->alleles[1];
+        // dle predesleho zda byl vzbran o nb 1 parent vzbrat druheho
 
-        
+
 
         p->alleles[0] =
 
