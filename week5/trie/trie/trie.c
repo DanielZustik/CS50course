@@ -110,8 +110,12 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    if (!isalpha(word))
+    smzcka if (!isalpha(word))
         printf("not aphabetical ")
+
+    converts everthing to lowercase
+
+    
 
     return false;
 }
