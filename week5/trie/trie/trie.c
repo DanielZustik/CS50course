@@ -26,6 +26,7 @@ void unloader(node *current);
 // Root of trie
 node *root;
 
+
 // Buffer to read dog names into
 char name[MAXCHAR];
 
@@ -53,7 +54,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-
+    node *p = root;
     root->is_word = false;
     for (int i = 0; i < SIZE_OF_ALPHABET; i++)
     {
@@ -110,20 +111,19 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    node *p = root;
     //base case when word, char is konec stringu tak konec, tak pak over, ze aktualni node vzkazuje boolean true, ze jde slovo
     if (p == NULL) //pro pripad ze vubec node neexistuje
         return false;
 
     if (word[0] == '\0') {
-        if (root->is_word)
+        if (p->is_word)
             return true;
         else
             return false;
     }
 
     int a = tolower(word[0]) - 97; // jdi na adresu wordu, tento char preved na lowercase, tuto hodnotu tam preved na integer a odecti 97, tim se ziska poradi v abecede
-    root = root->children[a]; // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
+    p = p->children[a]; // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
 
     return check(word + 1); //jen jedna, posledni instance,  z nich neco vrati, true nb false, hlavni funkci,  a tak se naplni podminka vraceni hodnoty ve vsech control path. vsechny ostatni nevrati nic, protoze nebudou vzhovovat if podmince
 }
