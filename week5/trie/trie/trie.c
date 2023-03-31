@@ -117,7 +117,8 @@ bool check(char* word)
 
     //base case when word, char is konec stringu tak konec
 
-    check(char)
+    // recursie case
+    check node
 
     return false;
 }
