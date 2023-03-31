@@ -121,7 +121,8 @@ bool check(char* word)
     else
         return false
     // recursie case
-    root.children
+    a = *word
+    node * p = root -> children[a]
     check (word + 1)
 
     return false;
