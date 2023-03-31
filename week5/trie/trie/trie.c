@@ -116,9 +116,10 @@ bool check(char* word)
     converts everthing to lowercase
 
     //base case when word, char is konec stringu tak konec
-
+    if word is \0 
     // recursie case
-    check node
+    root
+    check (word + 1)
 
     return false;
 }
