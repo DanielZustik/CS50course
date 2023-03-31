@@ -111,6 +111,9 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     //base case when word, char is konec stringu tak konec, tak pak over, ze aktualni node vzkazuje boolean true, ze jde slovo
+    if (root == NULL) //pro pripad ze vubec node neexistuje
+        return false;
+
     if (word[0] == '\0') {
         if (root->is_word)
             return true;
