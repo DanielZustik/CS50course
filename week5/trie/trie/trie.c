@@ -115,7 +115,9 @@ bool check(char* word)
 
     converts everthing to lowercase
 
-    
+    //base case when word, char is konec stringu tak konec
+
+    check(char)
 
     return false;
 }
