@@ -122,7 +122,8 @@ bool check(char* word)
     root = root -> children[a]; // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
 
     check(word + 1);
-
+    
+    return false;
 }
 
 // Unload trie from memory
