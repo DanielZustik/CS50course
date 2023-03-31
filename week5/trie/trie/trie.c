@@ -121,7 +121,7 @@ bool check(char* word)
     else
         return false
     // recursie case
-    root
+    root.children
     check (word + 1)
 
     return false;
