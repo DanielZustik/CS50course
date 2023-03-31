@@ -114,13 +114,14 @@ bool check(char* word)
      //   printf("not aphabetical ")
 
     //base case when word, char is konec stringu tak konec, tak pak over, ze aktualni node vzkazuje boolean true, ze jde slovo
-    if (word == \0)
+    if (word == '\0') {
         if (p->is_word)
-            return true
+            return true;
         else
-            return false
+            return false;
+    }
     // recursie case
-    int a = atoi(tolower(*word)) - 97; // jdi na adresu wordu, tento char preved na lowercase, tuto hodnotu tam preved na integer a odecti 97, tim se ziska poradi v abecede
+    int a = atoi(tolower(word)) - 97; // jdi na adresu wordu, tento char preved na lowercase, tuto hodnotu tam preved na integer a odecti 97, tim se ziska poradi v abecede
     node * p = root -> children[a] // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
     //tohle se bude rekurzivne opakovat pro vsechny pismena wordu
 
