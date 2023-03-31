@@ -110,13 +110,11 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    smzcka if (!isalpha(word))
-        printf("not aphabetical ")
-
-    converts everthing to lowercase
+    //smzcka if (!isalpha(word))
+     //   printf("not aphabetical ")
 
     //base case when word, char is konec stringu tak konec, tak pak over, ze aktualni node vzkazuje boolean true, ze jde slovo
-    if word is \0
+    if (word == \0)
         if (p->is_word)
             return true
         else
@@ -126,7 +124,7 @@ bool check(char* word)
     node * p = root -> children[a] // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
     //tohle se bude rekurzivne opakovat pro vsechny pismena wordu
 
-    check (word + 1)
+    check(word + 1);
 
 }
 
