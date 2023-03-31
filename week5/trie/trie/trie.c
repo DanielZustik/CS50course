@@ -119,10 +119,10 @@ bool check(char* word)
     }
 
     int a = tolower(word[0]) - 97; // jdi na adresu wordu, tento char preved na lowercase, tuto hodnotu tam preved na integer a odecti 97, tim se ziska poradi v abecede
-    root = root -> children[a]; // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
+    root = root->children[a]; // toto poradi odpovida abecede v nodu, a tak se na to okdaz a nalezeni adresu noveho nodu
 
     check(word + 1);
-    
+
     return false;
 }
 
