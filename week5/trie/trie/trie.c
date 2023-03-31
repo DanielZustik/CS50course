@@ -110,8 +110,9 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
+    node *p = root;
     //base case when word, char is konec stringu tak konec, tak pak over, ze aktualni node vzkazuje boolean true, ze jde slovo
-    if (root == NULL) //pro pripad ze vubec node neexistuje
+    if (p == NULL) //pro pripad ze vubec node neexistuje
         return false;
 
     if (word[0] == '\0') {
