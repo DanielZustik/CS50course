@@ -128,7 +128,6 @@ bool check(char* word)
 
     check (word + 1)
 
-    return false;
 }
 
 // Unload trie from memory
