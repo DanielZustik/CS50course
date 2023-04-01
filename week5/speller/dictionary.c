@@ -40,8 +40,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *file = fopen("/dictionaries/small", "r");
-    if (file != NULL)
+    FILE *file = fopen("dictionaries/small", "r");
+    if (file == NULL)
     {
         fclose(file);
         return false;
