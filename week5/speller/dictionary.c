@@ -44,11 +44,12 @@ bool load(const char *dictionary)
         return false;
     }
 
-    node *node = malloc(sizeof(node));
-    node->word = "";
-    node->next = NULL;
+    char *word[LENGTH + 1];
 
-    fscaf(file, "%s", node->word);
+    while (fscaf(file, "%s", word))
+        node *node = malloc(sizeof(node));
+        node->word = "";
+        node->next = NULL;
 
     return false;
 }
