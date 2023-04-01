@@ -48,12 +48,15 @@ bool load(const char *dictionary)
 
     while (fscaf(file, "%s", word) != EOF)
         node *node = malloc(sizeof(node));
+
         if (node == NULL)
             return false;
-        strcpy(node->word, word);
-        node->next = NULL;
 
-        hash
+        strcpy(node->word, word);
+
+        unsigned int index = hash(word);
+
+        node->next = table[index];
 
     return false;
 }
