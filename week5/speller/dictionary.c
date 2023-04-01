@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     node->word = "";
     node->next = NULL;
 
-    fread(node, )
+    fread(node.word, sizeof(node), 1, file);
 
     return false;
 }
