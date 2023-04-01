@@ -44,7 +44,12 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    
+    node *node = malloc(sizeof(node));
+    node->word = "";
+    node->next = NULL;
+
+    fread(node, )
+
     return false;
 }
 
