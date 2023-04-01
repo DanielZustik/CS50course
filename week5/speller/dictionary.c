@@ -46,9 +46,8 @@ bool load(const char *dictionary)
 
     char *word[LENGTH + 1];
 
-    while (fscaf(file, "%s", word) != EOF)
+    while (fscaf(file, "%s", word) != "EOF") {
         node *node = malloc(sizeof(node));
-
         if (node == NULL)
             return false;
 
@@ -58,7 +57,7 @@ bool load(const char *dictionary)
 
         node->next = table[index];
         table[index] = node;
-
+    }
 
     return false;
 }
