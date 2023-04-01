@@ -60,9 +60,10 @@ bool load(const char *dictionary)
 
         node->next = table[index];
         table[index] = node;
+
     }
 
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
