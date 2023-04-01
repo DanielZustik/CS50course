@@ -57,7 +57,7 @@ bool load(const char *dictionary)
         unsigned int index = hash(word);
 
         node->next = table[index];
-        table[index] = node->next;
+        table[index] = node;
 
 
     return false;
