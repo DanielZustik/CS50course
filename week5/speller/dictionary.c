@@ -41,7 +41,7 @@ bool load(const char *dictionary)
     if (file != NULL)
     {
         fclose(file);
-        return 1;
+        return false;
     }
 
     node *node = malloc(sizeof(node));
