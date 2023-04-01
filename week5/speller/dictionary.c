@@ -48,7 +48,9 @@ bool load(const char *dictionary)
 
     while (fscaf(file, "%s", word) != EOF)
         node *node = malloc(sizeof(node));
-        node->word = word;
+        if (node == NULL)
+            return false;
+        strcpy(node->word, word);
         node->next = NULL;
 
     return false;
