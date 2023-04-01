@@ -53,6 +53,8 @@ bool load(const char *dictionary)
         strcpy(node->word, word);
         node->next = NULL;
 
+        hash
+
     return false;
 }
 
