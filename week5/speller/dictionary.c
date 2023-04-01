@@ -2,6 +2,8 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -46,7 +48,7 @@ bool load(const char *dictionary)
 
     char *word[LENGTH + 1];
 
-    while (fscaf(file, "%s", word) != "EOF") {
+    while (fscanf(file, "%s", word) != "EOF") {
         node *node = malloc(sizeof(node));
         if (node == NULL)
             return false;
