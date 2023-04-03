@@ -50,7 +50,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1]; //buffer
 
     while (fscanf(file, "%s", word) != EOF) {
-        
+
         node *node = malloc(sizeof(node));
         if (node == NULL)
             return false;
@@ -63,7 +63,7 @@ bool load(const char *dictionary)
         table[index] = node;
 
     }
-
+    fclose(file);
     return true;
 }
 
