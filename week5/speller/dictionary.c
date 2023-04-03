@@ -40,14 +40,14 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *file = fopen("dictionaries/small", "r");
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         fclose(file);
         return false;
     }
 
-    char word[LENGTH + 1];
+    char word[LENGTH + 1]; //buffer
 
     while (fscanf(file, "%s", word) != EOF) {
         node *node = malloc(sizeof(node));
