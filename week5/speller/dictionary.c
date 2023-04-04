@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
 }
 
 // Loads dictionary into memory, returning true if successful, else false
-bool load(const char *dictionary)
+bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, big array nb aray of aray by bylo nej, potom i trie taky
 {
     // TODO
     FILE *file = fopen(dictionary, "r");
