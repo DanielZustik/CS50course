@@ -33,8 +33,8 @@ bool check(const char *word)
 unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, tim rychlejsi search
 {
     // TODO: Improve this hash function
-        for (in i = 0; i < M; i++)
-            table[M] = NULL;
+        //for (in i = 0; i < M; i++)
+        //    table[M] = NULL;
 
         int length[45];
         for (int i = 0; i < length; i++) {
