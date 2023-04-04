@@ -17,10 +17,10 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int M = 676, N = 6;
 
 // Hash table
-node *table[N];
+node *table[M][N];
 
 // Returns true if word is in  dictionary, else false
 bool check(const char *word)
