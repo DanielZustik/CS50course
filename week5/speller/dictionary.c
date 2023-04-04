@@ -57,10 +57,10 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
         strcpy(node->word, word);
 
-        unsigned int index = hash(word);
+        unsigned int MN = hash(word);
 
-        node->next = table[index];
-        table[index] = node;
+        node->next = table[MN];
+        table[MN] = node;
 
     }
     fclose(file);
