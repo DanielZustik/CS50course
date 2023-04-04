@@ -17,10 +17,10 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int M = 676, N = 6;
+const unsigned int M = 676;
 
 // Hash table
-node *table[M][N];
+node *table[M];
 
 // Returns true if word is in  dictionary, else false
 bool check(const char *word)
@@ -57,10 +57,10 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
         strcpy(node->word, word);
 
-        unsigned int MN = hash(word);
+        unsigned int index = hash(word);
 
-        node->next = table[MN];
-        table[MN] = node;
+        node->next = table[M];
+        table[M] = node;
 
     }
     fclose(file);
