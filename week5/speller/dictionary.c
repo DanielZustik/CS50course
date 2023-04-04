@@ -38,7 +38,7 @@ unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, t
 
         int lng[45];
         for (int i = 0; i < 45; i++) {
-            lng[i] = i * 10000;
+            lng[i] = i * 1000;
         }
         return lng[strlen(word)] * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
 
