@@ -33,7 +33,19 @@ bool check(const char *word)
 unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, tim rychlejsi search
 {
     // TODO: Improve this hash function
-    return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
+    return switch (strlen(word)) {
+        case 3: 3 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 4: 40 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 5: 500 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 6: 6000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 7: 70000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 8: 800000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 9: 9000000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 10: 1000000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 11: 11000000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        case 12: 120000000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+        default: 1300000000 * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'); break;
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
