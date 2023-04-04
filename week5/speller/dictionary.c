@@ -40,8 +40,8 @@ unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, t
         for (int i = 0; i < 45; i++) {
             lng[i] = i * 1000;
         }
-        return lng[strlen(word)] * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
-
+        unsigned int hash_value = (lng[strlen(word)] * (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'));
+        return hash_value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
