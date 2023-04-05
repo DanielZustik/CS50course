@@ -40,6 +40,11 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    for (int i = 0; i < N; i++)
+        {
+    table[i] = NULL;
+    }
+
  FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {

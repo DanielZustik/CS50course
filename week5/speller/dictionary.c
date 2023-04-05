@@ -17,10 +17,10 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int M = 31095;//ABC first letter, ABC second letter, lenght
+const unsigned int N = 31095;//ABC first letter, ABC second letter, lenght
 
 // Hash table
-node *table[M];
+node *table[N];
 
 // Returns true if word is in  dictionary, else false
 bool check(const char *word)
@@ -41,6 +41,11 @@ unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, t
 bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, big array nb aray of aray by bylo nej, potom i trie taky
 {
     // TODO
+    for (int i = 0; i < N; i++)
+        {
+    table[i] = NULL;
+    }
+
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
