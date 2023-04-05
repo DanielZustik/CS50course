@@ -106,7 +106,9 @@ bool unload(void)
     for (int i = 0; i < N; i++) {
         cursor = table[i];
         while (cursor != NULL) {
-            
+            tmp = cursor;
+            cursor = cursor->next;
+            free (tmp);
         }
 
     }
