@@ -56,16 +56,16 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
     while (fscanf(file, "%s", word) != EOF) {
 
-        node *node = malloc(sizeof(node));
-        if (node == NULL)
+        node *new_node = malloc(sizeof(node));
+        if (new_node == NULL)
             return false;
 
-        strcpy(node->word, word);
+        strcpy(new_node->word, word);
 
         unsigned int index = hash(word);
 
-        node->next = table[index];
-        table[index] = node;
+        new_node->next = table[index];
+        table[index] = new_node;
 
     }
     fclose(file);
