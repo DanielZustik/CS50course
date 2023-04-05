@@ -22,6 +22,8 @@ const unsigned int N = 31095;//ABC first letter, ABC second letter, lenght
 // Hash table
 node *table[N];
 
+int nodes = 0;
+
 // Returns true if word is in  dictionary, else false
 bool check(const char *word)
 {
@@ -54,8 +56,6 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
     char word[LENGTH + 1]; //buffer
 
-    int nodes = 0;
-
     while (fscanf(file, "%s", word) != EOF) {
 
         node *new_node = malloc(sizeof(node));
@@ -78,8 +78,7 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    unsigned int nodes = 
-    return 0;
+    return nodes;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
