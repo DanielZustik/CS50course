@@ -54,11 +54,14 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
     char word[LENGTH + 1]; //buffer
 
+    int nodes = 0;
+
     while (fscanf(file, "%s", word) != EOF) {
 
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
             return false;
+        nodes++;
 
         strcpy(new_node->word, word);
 
