@@ -100,6 +100,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    node *tmp = NULL;
+    node *cursor = NULL;
+
     
+
     return false;
 }
