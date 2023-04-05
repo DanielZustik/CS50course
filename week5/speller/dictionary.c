@@ -44,7 +44,6 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        fclose(file);
         return false;
     }
 
