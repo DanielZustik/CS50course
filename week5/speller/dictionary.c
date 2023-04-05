@@ -72,14 +72,13 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
     }
     fclose(file);
-    printf("%i \n", nodes);
     return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
+    unsigned int nodes = 
     return 0;
 }
 
