@@ -72,6 +72,7 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
     }
     fclose(file);
+    printf("%i \n", nodes);
     return true;
 }
 
