@@ -17,7 +17,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int M = 10000000;//ABC first letter, ABC second letter, lenght
+const unsigned int M = 26 * 26 * 45;//ABC first letter, ABC second letter, lenght
 
 // Hash table
 node *table[M];
@@ -33,7 +33,7 @@ bool check(const char *word)
 unsigned int hash(const char *word) // treba prvnich 10 pismen brat, cim vice, tim rychlejsi search
 {
     // TODO: Improve this hash function
-        unsigned int hash_value = (strlen(word) * 1000 + (toupper(word[0]) - 'A') * 26 + (toupper(word[1]) - 'A'));
+        unsigned int hash_value = (strlen(word) * 26 * 26 + (toupper(word[0]) - 'A') * 26 + (toupper(word[1]) - 'A'));
         return hash_value;
 }
 
