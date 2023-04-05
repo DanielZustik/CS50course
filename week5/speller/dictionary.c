@@ -29,7 +29,8 @@ bool check(const char *word)
 {
 
     int index = hash(word);
-    
+
+    strcasecmp(word, table[index]->word)
 
     return false;
 }
