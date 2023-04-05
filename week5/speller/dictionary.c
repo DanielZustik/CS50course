@@ -27,7 +27,10 @@ int nodes = 0;
 // Returns true if word is in  dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+
+    int index = hash(word);
+    
+
     return false;
 }
 
@@ -64,6 +67,8 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
         nodes++;
 
         strcpy(new_node->word, word);
+
+        new_node->next = NULL;
 
         unsigned int index = hash(word);
 
