@@ -76,7 +76,7 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
             if (table[index] == NULL)
                 create new node
             else
-                table[index]->
+                while ()table[index]->
 
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
