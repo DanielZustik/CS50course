@@ -73,7 +73,10 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
 
         for (int i = 2; i < strlen(word); i++)
             int index = hash(word);
-            if (table[index]->)
+            if (table[index] == NULL)
+                create new node
+            else
+                table[index]->
 
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
