@@ -72,7 +72,8 @@ bool load(const char *dictionary) // protoze jde o konsta DB, hlavni je search, 
     while (fscanf(file, "%s", word) != EOF) {
 
         for (int i = 2; i < strlen(word); i++)
-            word[i]
+            int index = hash(word);
+            if (table[index]->)
 
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
