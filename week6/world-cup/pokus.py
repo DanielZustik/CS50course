@@ -5,3 +5,5 @@ with open("2019w.csv", "r") as file:
 
     for row in csv_reader:
         print(row)
+
+    print(csv_reader[0])
