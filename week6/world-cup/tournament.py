@@ -58,8 +58,9 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     #"""Simulate a tournament. Return name of winning team."""
     #tODO
-    simulate_round(teams)
-
+    #opakuj dokud neni list velky jen jeden
+    while (len(winners) != 1):
+        winners = simulate_round(teams)
 
 if __name__ == "__main__":
     main()
