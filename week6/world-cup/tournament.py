@@ -27,8 +27,8 @@ def main():
     # tODO: Simulate N tournaments and keep track of win counts
     counts = {}
     for _ in range(N):
-        simulate_tournament(teams)
-        counts
+        if counts[simulate_tournament(teams)] in counts
+        if
 
 
     # Print each team's chances of winning, according to simulation
