@@ -17,7 +17,7 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
-        for row in file
+        for row in file:
             teams.append(row)
     print(teams)
 
