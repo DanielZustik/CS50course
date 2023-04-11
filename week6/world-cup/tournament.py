@@ -60,6 +60,7 @@ def simulate_tournament(teams):
     #opakuj dokud neni list velky jen jeden
     while (len(winners) != 1):
         winners = simulate_round(teams)
+        teams = winners
     print(winners)
 
 if __name__ == "__main__":
