@@ -64,3 +64,4 @@ def simulate_tournament(teams):
 
 if __name__ == "__main__":
     main()
+    simulate_tournament(teams)
