@@ -23,7 +23,6 @@ def main():
     for team in teams:
         int(team["rating"])
 
-    print(teams)
 
     counts = {}
     # tODO: Simulate N tournaments and keep track of win counts
@@ -61,6 +60,7 @@ def simulate_tournament(teams):
     #opakuj dokud neni list velky jen jeden
     while (len(winners) != 1):
         winners = simulate_round(teams)
+    print(winners)
 
 if __name__ == "__main__":
     main()
