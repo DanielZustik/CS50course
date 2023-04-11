@@ -19,8 +19,7 @@ def main():
     with open(sys.argv[1]) as file:
         for row in file
             teams.append(row)
-
-
+    print(teams)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
