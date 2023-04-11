@@ -20,14 +20,16 @@ def main():
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             teams.append(row)
-            
+
     for team in teams:
         team["rating"] = int(team["rating"])
 
-
-    counts = {}
-    simulate_tournament(teams)
     # tODO: Simulate N tournaments and keep track of win counts
+    counts = {}
+    for _ in range(N):
+        simulate_tournament(teams)
+        counts
+
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
