@@ -21,7 +21,7 @@ def main():
         for row in csv_reader:
             teams.append(row)
     for team in teams:
-        int(team["rating"])
+        team["rating"] = int(team["rating"])
 
 
     counts = {}
@@ -62,7 +62,10 @@ def simulate_tournament(teams):
     winners = teams
     while (len(winners) != 1):
         winners = simulate_round(winners)
-    return winners["team"]
+
+    print(winners[0]["team"])
+    return winners[0]["team"]
+
 
 if __name__ == "__main__":
     main()
