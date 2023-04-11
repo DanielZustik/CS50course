@@ -19,7 +19,7 @@ def main():
     with open(sys.argv[1]) as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader
-            teams[row]
+            teams[] = row
 
 
 
