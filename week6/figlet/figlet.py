@@ -1,5 +1,7 @@
 import sys
 from pyfiglet import Figlet
+import random
+
 figlet = Figlet()
 
 if len(sys.argv) != 1 or len(sys.argv) != 3:
@@ -9,6 +11,9 @@ if len(sys.argv) != 1 or len(sys.argv) != 3:
 s = input("insert ur text")
 
 if len(sys.argv) == 1:
-    
+    random.seed()
+    random.randint(0, 1)
+    print(figlet.renderText(s))
+
 elif len(sys.argv) == 3:
 
