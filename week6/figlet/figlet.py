@@ -12,12 +12,13 @@ s = input("insert ur text: ")
 
 if len(sys.argv) == 1:
     random.seed()
-    print(figlet.getFonts())
-    #i = random.randint(0, len(figlet.getFonts()))
-    #str font = random cislo in list figlet.getFonts()
+    fonts = figlet.getFonts()
+    print(fonts[0])
+    i = random.randint(0, len(fonts))
+    font = fonts[i]
 
-    #figlet.setFont(font=f)
-    #print(figlet.renderText(s))
+    figlet.setFont(font=font)
+    print(figlet.renderText(s))
 
 #elif len(sys.argv) == 3:
 
