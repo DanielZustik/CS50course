@@ -5,7 +5,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        return f"Jar with as many cookies as: {self.n}"
+        return f"Jar with as many cookies as: {self.size}"
 
     def deposit(self, n):
         self.n += n
