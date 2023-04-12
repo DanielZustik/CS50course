@@ -8,7 +8,7 @@ class Jar:
         return f"Jar with as many cookies as: {n}"
 
     def deposit(self, n):
-        ...
+        self.n += n
 
     def withdraw(self, n):
         ...
@@ -19,4 +19,3 @@ class Jar:
 
     @property
     def size(self):
-        
