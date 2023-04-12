@@ -3,6 +3,9 @@ while (True):
     if h in [1, 2, 3, 4, 5, 6, 7, 8]:
         break
 
+i = 1
 for _ in range(h):
-    for _ in range(h):
-        print("#")
+    print()
+    for _ in range(i):
+        print("#", end="")
+        i +=1
