@@ -1,5 +1,5 @@
 s = input("Hello, sir! <greet back:>")
-s = s.lower().
+s = s.lower().strip()
 
 if s == "hello":
     print("0 $")
