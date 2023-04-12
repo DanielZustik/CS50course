@@ -3,8 +3,9 @@ class Jar:
         if capacity < 0:
             raise ValueError('A very specific bad thing happened.')
         self.capacity = capacity
+
     def __str__(self):
-        ...
+        self.cooks = 0
 
     def deposit(self, n):
         ...
