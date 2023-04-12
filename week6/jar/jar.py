@@ -3,6 +3,7 @@ class Jar:
         if capacity < 0:
             raise ValueError('A very specific bad thing happened.')
         self.capacity = capacity
+        self.n = 0
 
     def __str__(self):
         return f"Jar with as many cookies as: {self.size}"
