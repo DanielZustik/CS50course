@@ -7,3 +7,6 @@ elif s[0] == "h":
     print("20 $")
 else:
     print("100 $")
+
+g = s.find("hello")
+print(f"{g}")
