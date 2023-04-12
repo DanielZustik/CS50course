@@ -19,5 +19,5 @@ if len(sys.argv) == 1:
     #figlet.setFont(font=f)
     #print(figlet.renderText(s))
 
-elif len(sys.argv) == 3:
+#elif len(sys.argv) == 3:
 
