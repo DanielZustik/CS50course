@@ -1,7 +1,7 @@
 s = input("Hello, sir! <greet back:>")
 s = s.lower().strip()
 
-if "hello" in s:
+if "hello" in s and :
     print("0 $")
 elif s[0] == "h":
     print("20 $")
