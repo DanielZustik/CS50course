@@ -4,15 +4,15 @@ import random
 
 figlet = Figlet()
 
-if len(sys.argv) != 1 or len(sys.argv) != 3:
+if len(sys.argv) != 0 or len(sys.argv) != 2:
     print("inproper usage...")
     sys.exit
 
 s = input("insert ur text")
 
-if len(sys.argv) == 1:
+if len(sys.argv) == 0:
     random.seed()
-
+    print("az tu")
     #i = random.randint(0, len(figlet.getFonts()))
     #str font = random cislo in list figlet.getFonts()
 
