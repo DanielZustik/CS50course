@@ -5,7 +5,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        self.cooks = 0
+        
 
     def deposit(self, n):
         ...
