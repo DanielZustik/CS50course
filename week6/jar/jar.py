@@ -2,7 +2,6 @@ def main():
     jar = Jar()
 
 
-
 class Jar:
     def __init__(self, capacity=12):
         if capacity < 0:
