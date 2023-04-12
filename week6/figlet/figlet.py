@@ -12,7 +12,10 @@ s = input("insert ur text")
 
 if len(sys.argv) == 1:
     random.seed()
-    random.randint(0, 1)
+    
+    figlet.getFonts()
+    i = random.randint(0, len(figlet.getFonts()))
+
     figlet.setFont(font=f)
     print(figlet.renderText(s))
 
