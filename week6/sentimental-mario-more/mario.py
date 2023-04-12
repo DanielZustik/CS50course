@@ -4,6 +4,5 @@ while (True):
         break
 
 for _ in range(h):
-    print("#")
     for _ in range(h):
         print("#")
