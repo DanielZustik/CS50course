@@ -16,6 +16,6 @@ if check[len(check) - 1:] == 0:
         print("MASTERCARD")
     else:
         print("INVALID")
-else
+else:
     print("INVALID")
 
