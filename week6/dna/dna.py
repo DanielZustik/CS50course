@@ -29,7 +29,7 @@ def main():
         runs[key] = longest_match(DNA, key)
 
     # TODO: Check database for matching profiles
-    comparin runs with STR
+    comparing runs with STR
     return
 
 
