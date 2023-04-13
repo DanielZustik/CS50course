@@ -5,9 +5,11 @@ while (True):
 
 
 for _ in range(h):
-    for __ in range(h - _):
+    for __ in range(h - _ - 1):
         print(" ", end="")
     for ___ in range(_ + 1):
         print("#", end="")
     print("  ", end="")
+    for ____ in range(_ + 1):
+        print("#", end="")
     print()
