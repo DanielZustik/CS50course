@@ -13,7 +13,7 @@ def checksum():
     check = str(check)
 
     if check[len(check) - 1:] == '0':
-        return  True
+        return True
     else:
         print("INVALID")
         sys.exit()
