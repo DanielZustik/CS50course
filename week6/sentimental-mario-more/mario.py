@@ -8,4 +8,4 @@ for _ in range(h):
     print()
     for _ in range(i):
         print("#", end="")
-        i +=1
+        i += 1
