@@ -15,7 +15,7 @@ def checksum():
     if check[len(check) - 1:] == '0':
         return  True
     else:
-        print("INVALID")
+        #print("INVALID")
         sys.exit
 
 if c [0] == '4' and len(c) == 13 or len(c) == 16:
