@@ -21,7 +21,7 @@ def main():
         DNA = dna_f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for i in 
+    for i in STR[]
         longest_match(DNA, [i])
 
     print(longest_match(DNA, STR))
