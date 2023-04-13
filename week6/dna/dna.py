@@ -15,8 +15,7 @@ def main():
         STR = []
         for row in dictcsv:
             STR.append(row)
-        for item in STR:
-            print(item)
+        print(STR)
 
     # TODO: Read DNA sequence file into a variable
 
