@@ -28,7 +28,6 @@ elif c [:2] in ['51', '52', '53', '54', '55'] and len(c) == 16:
     checksum()
     print("MASTERCARD")
 else:
-    checksum()
     print("INVALID")
 
 
