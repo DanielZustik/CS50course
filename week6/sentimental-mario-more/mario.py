@@ -6,7 +6,7 @@ while (True):
 
 for _ in range(h):
     for __ in range():
-        ...
+        
     print("  "end="")
     for ___ in range():
         print("#"end="")
