@@ -21,6 +21,9 @@ def main():
         DNA = dna_f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    for i in 
+        longest_match(DNA, [i])
+
     print(longest_match(DNA, STR))
 
     # TODO: Check database for matching profiles
