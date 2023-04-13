@@ -12,8 +12,8 @@ def main():
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as csv_f:
         dictcsv = csv.DictReader(csv_f)
-        text = dictcsv.reader()
-        print(text)
+        for row in dictcsv:
+            print(row["name"])
 
     # TODO: Read DNA sequence file into a variable
 
