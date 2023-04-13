@@ -29,8 +29,8 @@ def main():
         runs[key] = longest_match(DNA, key)
 
     # TODO: Check database for matching profiles
-    print(runs)
-
+    runs[keys]
+    
     return
 
 
