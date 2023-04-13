@@ -34,7 +34,7 @@ def main():
     for dicts in STR:
         for dicts__ in runs_l:
             for _ in range(len(STR[0])):
-                if dicts[_ + 1] == dicts__[_]:
+                if dicts[_] == dicts__[_]:
                     print("match")
 
     return
