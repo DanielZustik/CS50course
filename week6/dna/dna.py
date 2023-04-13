@@ -22,11 +22,12 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     keys_l = []
-    keys_l = STR[0][]
-    for key:1 in STR[0]:
-        keys_l.
-        longest_match(DNA, [key])
-        print(key)
+    keys_l = STR.keys()
+    print(keys_l)
+    keys_l[1:]
+    print(keys_l)
+    for key in keys_l:
+        longest_match(DNA, key)
 
     # TODO: Check database for matching profiles
 
