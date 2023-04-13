@@ -31,7 +31,7 @@ def main():
     # TODO: Check database for matching profiles
     for dict in STR:
         for values in dict.values():
-            print(values)
+            for results in 
 
     return
 
