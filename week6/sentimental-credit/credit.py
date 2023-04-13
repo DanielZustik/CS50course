@@ -6,10 +6,11 @@ def checksum():
     sum = 0
     sum_ = 0
     for d in range(len(c) - 2, -1, -2):
-        if int(c[d]) * 2 >= 10:
-            sum += (doubled // 10) + (doubled % 10)
+        doubl = int(c[d]) * 2
+        if doubl >= 10:
+            sum += (doubl // 10) + (doubl % 10)
         else:
-            sum += int(c[d]) * 2
+            sum += doubl
     for g in range(len(c) - 1, -1, -2):
         sum_ += int(c[g])
     check = sum + sum_
