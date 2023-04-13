@@ -28,6 +28,7 @@ def main():
         print(longest_match(DNA, key))
 
     # TODO: Check database for matching profiles
+    
 
     return
 
