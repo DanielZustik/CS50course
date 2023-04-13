@@ -31,6 +31,8 @@ def main():
     # TODO: Check database for matching profiles
     runs[keys]
     
+    if runs[keys] == STR[]
+
     return
 
 
