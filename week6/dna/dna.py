@@ -33,9 +33,9 @@ def main():
     comparing rows or dicts of runs with STR
 
     for dict in STR
-        for values in dict.(values)
-            if 
-
+        for values in range
+            if values.alpha()
+                if values ==
     return
 
 
