@@ -29,7 +29,11 @@ def main():
         runs[key] = longest_match(DNA, key)
 
     # TODO: Check database for matching profiles
-    comparing runs with STR
+    comparing rows or dicts of runs with STR
+
+    for dict in runs
+        for dict_ in STR
+
     return
 
 
