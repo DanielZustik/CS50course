@@ -1,7 +1,7 @@
 c = input("Credit card number: ")
 
-for d in c
-    sum += int(d) * 2
+for d in range(len(c) - 1, )
+    sum += int(c[d]) * 2
 for d in c
     sum_ += int(d)
 check = sum + sum_
