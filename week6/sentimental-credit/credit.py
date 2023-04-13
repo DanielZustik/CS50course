@@ -1,5 +1,8 @@
 c = input("Credit card number: ")
 
 if c [0] == '4'
-    if
-elif c [0] ==
+    ...
+elif c [:2] in ['34', '37']:
+    ...
+elif c [:2] in ['51', '52', '53', '54', '55']:
+    ...
