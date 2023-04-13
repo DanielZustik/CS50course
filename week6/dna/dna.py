@@ -32,10 +32,9 @@ def main():
     # TODO: Check database for matching profiles
     comparing rows or dicts of runs with STR
 
-    for dict in STR
-        for values in range
-            if values.alpha()
-                if values ==
+    for _ in range(1, len(dict))
+        STR[_] == runs
+
     return
 
 
