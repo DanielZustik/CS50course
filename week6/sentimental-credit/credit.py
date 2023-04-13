@@ -18,7 +18,7 @@ def checksum():
         print("INVALID")
         sys.exit()
 
-if c [0] == '4' and len(c) == 13 or len(c) == 16:
+if c [0] == '4' and (len(c) == 13 or len(c) == 16):
     checksum()
     print("VISA")
 elif c [:2] in ['34', '37'] and len(c) == 15:
