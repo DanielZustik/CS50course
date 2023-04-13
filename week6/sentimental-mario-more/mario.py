@@ -4,10 +4,10 @@ while (True):
         break
 
 for _ in range(h):
-    for __ in range (h - 1):
+    for __ in range (h - _):
         print("  ", end="")
     for ___ in range (_ + 1):
         print("#", end="")
-        print("  ", end="")
+            print("  ", end="")
         print("#", end="")
     print()
