@@ -34,7 +34,8 @@ def main():
 
     for dict in runs_l
         for dict_ in STR
-            if dict == dict_
+            dict_om = 
+            if dict == dict_om
     return
 
 
