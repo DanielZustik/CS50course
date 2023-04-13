@@ -6,4 +6,6 @@ while (True):
 for _ in range(h):
     for __ in range (_ + 1):
         print("#", end="")
+        print("  ", end="")
+        print("#", end="")
     print()
