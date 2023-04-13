@@ -22,17 +22,14 @@ def checksum():
         print("INVALID")
         sys.exit()
 
-if c [0] == '4' and (len(c) == 13 or len(c) == 16):
+if c[0] == '4' and (len(c) == 13 or len(c) == 16):
     checksum()
     print("VISA")
-elif c [:2] in ['34', '37'] and len(c) == 15:
+elif c[:2] in ['34', '37'] and len(c) == 15:
     checksum()
     print("AMEX")
-elif c [:2] in ['51', '52', '53', '54', '55'] and len(c) == 16:
+elif c[:2] in ['51', '52', '53', '54', '55'] and len(c) == 16:
     checksum()
     print("MASTERCARD")
 else:
     print("INVALID")
-
-
-
