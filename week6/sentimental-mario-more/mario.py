@@ -3,11 +3,11 @@ while (True):
     if h in [1, 2, 3, 4, 5, 6, 7, 8]:
         break
 
+
 for _ in range(h):
-    for __ in range (h - _):
-        print("  ", end="")
-    for ___ in range (_ + 1):
-        print("#", end="")
-            print("  ", end="")
-        print("#", end="")
-    print()
+    for __ in range():
+        ...
+    print("  "end="")
+    for ___ in range():
+        print("#"end="")
+    print("  "end="")
