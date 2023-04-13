@@ -1,6 +1,7 @@
 c = input("Credit card number: ")
 
-
+for d in c
+    sum += int(d) * 2
 
 if c [0] == '4' and len(c) == 13 or len(c) == 16:
     print("VISA")
