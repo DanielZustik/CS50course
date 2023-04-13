@@ -22,7 +22,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     keys_l = []
-    keys_l = STR.keys()
+    keys_l = STR[0].keys()
     print(keys_l)
     keys_l[1:]
     print(keys_l)
