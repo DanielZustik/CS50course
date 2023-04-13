@@ -1,6 +1,6 @@
 while (True):
     h = input("enter half s pyramid height: ")
-    if h in [1, 2, 3, 4, 5, 6, 7, 8]:
+    if h in ['1', '2', '3', '4', '5', '6', '7', '8']:
         h = int(h)
         break
 
