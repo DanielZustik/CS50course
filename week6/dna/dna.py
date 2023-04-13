@@ -32,9 +32,11 @@ def main():
     # TODO: Check database for matching profiles
     comparing rows or dicts of runs with STR
 
-    for dicts in STR
-        for _ in range(1, len(dict))
-            dicts[_] == runs
+    for dicts in STR:
+        for dicts__ in runs_l:
+            for _ in range(len(dicts)):
+                if dicts[_ + 1] == dicts__[_]:
+                    print("match")
 
     return
 
