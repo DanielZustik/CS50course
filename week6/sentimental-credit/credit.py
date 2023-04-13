@@ -7,14 +7,14 @@ for g in range(len(c) - 1, -1, -2):
 check = sum + sum_
 check = str(check)
 
-if check[len(check) - 1:] == 0
+if check[len(check) - 1:] == 0:
     if c [0] == '4' and len(c) == 13 or len(c) == 16:
         print("VISA")
     elif c [:2] in ['34', '37'] and len(c) == 15:
         print("AMEX")
     elif c [:2] in ['51', '52', '53', '54', '55'] and len(c) == 16:
         print("MASTERCARD")
-    else
+    else:
         print("INVALID")
 else
     print("INVALID")
