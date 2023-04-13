@@ -24,11 +24,13 @@ def main():
     keys_l = list(STR[0].keys())
     keys_l = keys_l[1:]
 
+    runs = {}
     for key in keys_l:
         print(longest_match(DNA, key))
+        runs{key}
 
     # TODO: Check database for matching profiles
-    
+
 
     return
 
