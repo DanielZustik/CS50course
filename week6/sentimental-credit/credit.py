@@ -12,7 +12,7 @@ def checksum():
     check = sum + sum_
     check = str(check)
 
-    if check[len(check) - 1:] == 0:
+    if check[len(check) - 1:] == '0':
         return  True
     else:
         print("INVALID")
