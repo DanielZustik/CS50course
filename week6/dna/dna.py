@@ -14,7 +14,7 @@ def main():
         dictcsv = csv.DictReader(csv_f)
         STR = []
         for row in dictcsv:
-            STR = STR.append(row)
+            STR.append(row)
         for item in STR:
             print(item)
 
