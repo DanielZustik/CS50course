@@ -26,10 +26,10 @@ def main():
     keys_l = keys_l[1:]
 
     profiles = {}
-    profiles_l = []
+    #profiles_l = []
     for key in keys_l:
         profiles[key] = longest_match(DNA, key)
-    profiles_l.append(profiles)
+    #profiles_l.append(profiles)
 
     # TODO: Check database for matching profiles
     for dicts in STR:
