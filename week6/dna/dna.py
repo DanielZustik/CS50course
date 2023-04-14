@@ -28,7 +28,7 @@ def main():
     profiles_l = []
     for key in keys_l:
         profiles[key] = longest_match(DNA, key)
-        profiles_l.append(runs)
+    profiles_l.append(profiles)
 
     # TODO: Check database for matching profiles
     for dicts in STR:
