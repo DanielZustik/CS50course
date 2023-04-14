@@ -44,7 +44,7 @@ def main():
             print(dict["name"])
             break
         elif dict == STR[-1]:
-            print("no match!")
+            print("No match")
 
     return
 
