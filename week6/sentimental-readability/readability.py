@@ -18,7 +18,7 @@ def main():
 def counting(text):
 
     letters = len(text)
-    words = len(list(text))
+    words = len(text.split())
     senteces = 0
 
     for c in text:
