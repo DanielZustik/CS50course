@@ -43,7 +43,7 @@ def main():
         if found == True:
             print(dict["name"])
             break
-        elif dict = :
+        elif dict == STR[-1]:
             print("no match!")
 
     return
