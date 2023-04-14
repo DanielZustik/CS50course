@@ -42,6 +42,7 @@ def main():
                 break
         if found == True:
             print(dict["name"])
+            break
         else:
             print("no match!")
 
