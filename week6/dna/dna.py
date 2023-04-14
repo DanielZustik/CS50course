@@ -34,7 +34,7 @@ def main():
     for dicts in STR:
         for dicts__ in runs_l:
             for _ in range(len(STR[0])):
-                if dicts[_] == dicts__[_]:
+                if dicts[_] == dicts__[_]: ## srovnani druheho key hjeho value s prvnim key valu druheho dictionary
                     print("match")
 
     return
