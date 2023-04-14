@@ -40,7 +40,7 @@ def main():
             else:
                 found = False
                 break
-    if found == true:
+    if found == True:
         print(dict["name"])
     else:
         print("no match!")
