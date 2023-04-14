@@ -1,10 +1,11 @@
 
 
-def main()
+def main():
 
-text = input("")
+text = input("Text: ")
 
-def counting(text)
+
+def counting(text):
 
 
 main()
