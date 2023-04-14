@@ -38,6 +38,18 @@ def main():
                 if dicts[_] == dicts__[_]: ## srovnani druheho key hjeho value s prvnim key valu druheho dictionary
                     print("match")
 
+    found = False
+    for dict in STR
+        for key in keys_l
+            if dict[key] == profile[key]:
+            else:
+                break
+    found = True
+    if found == true
+        print(name)
+    else:
+        print("no match!")
+
     return
 
 
