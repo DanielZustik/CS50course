@@ -21,8 +21,9 @@ def main():
         DNA = dna_f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    keys_l = list(STR[0].keys())
-    keys_l = keys_l[1:]
+    keys = STR[0].keys()
+    keys_l = list(keys)
+    keys_l = 
 
     profiles = {}
     profiles_l = []
