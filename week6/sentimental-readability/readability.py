@@ -22,6 +22,7 @@ def counting(text):
     for c in text:
         if c == "." or "!" or "?":
             senteces += 1
-    return 
+
+    return {"letters" : letters, "words" : words, "senteces" : senteces}
 
 main()
