@@ -24,11 +24,11 @@ def main():
     keys_l = list(STR[0].keys())
     keys_l = keys_l[1:]
 
-    runs = {}
-    runs_l = []
+    profiles = {}
+    profiles_l = []
     for key in keys_l:
-        runs[key] = longest_match(DNA, key)
-        runs_l.append(runs)
+        profiles[key] = longest_match(DNA, key)
+        profiles_l.append(runs)
 
     # TODO: Check database for matching profiles
     for dicts in STR:
