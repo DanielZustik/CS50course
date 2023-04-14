@@ -18,7 +18,10 @@ def counting(text):
 
     letters = len(text)
     words = len(list(text))
-    senteces
 
+    for c in text:
+        if c == "." or "!" or "?":
+            senteces += 1
+    return 
 
 main()
