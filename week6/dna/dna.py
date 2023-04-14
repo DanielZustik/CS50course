@@ -40,10 +40,10 @@ def main():
             else:
                 found = False
                 break
-    if found == True:
-        print(dict["name"])
-    else:
-        print("no match!")
+        if found == True:
+            print(dict["name"])
+        else:
+            print("no match!")
 
     return
 
