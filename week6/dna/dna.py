@@ -32,21 +32,16 @@ def main():
     #profiles_l.append(profiles)
 
     # TODO: Check database for matching profiles
-    for dicts in STR:
-        for dicts__ in runs_l:
-            for _ in range(len(STR[0])):
-                if dicts[_] == dicts__[_]: ## srovnani druheho key hjeho value s prvnim key valu druheho dictionary
-                    print("match")
-
-    found = False
-    for dict in STR
-        for key in keys_l
-            if dict[key] == profile[key]:
-            else:
-                break
     found = True
-    if found == true
-        print(name)
+    for dict in STR:
+        for key in keys_l:
+            if dict[key] == profile[key]:
+                found = True
+            else:
+                found = False
+                break
+    if found == true:
+        print(dict["name"])
     else:
         print("no match!")
 
