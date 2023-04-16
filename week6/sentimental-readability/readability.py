@@ -3,6 +3,7 @@ def main():
     text = input("Text: ")
 
     counts = counting(text)
+    index = 0.0588 * (counts["letters"] * 100)
 
     #grade = ...
     #if grade < 1:
