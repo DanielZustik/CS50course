@@ -3,16 +3,14 @@ def main():
     text = input("Text: ")
 
     counts = counting(text)
-    index = 0.0588 * (counts["letters"] / counts["words"] * 100) - 0.296 * (counts["senteces"] / counts["words"] * 100) - 15.8
-    print(index)
+    index = round(0.0588 * (counts["letters"] / counts["words"] * 100) - 0.296 * (counts["senteces"] / counts["words"] * 100) - 15.8)
 
-    #grade = ...
-    #if grade < 1:
-    #    print()
-    #elif grade <16:
-    #    print()
-    #else:
-    #    print()
+    if index < 1:
+        print("Before Grade 1")
+    elif index >= 16:
+        print("Grade 16+")
+    else:
+        print(f"Grade {index}")
 
 
 def counting(text):
