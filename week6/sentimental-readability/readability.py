@@ -1,11 +1,9 @@
-
-
 def main():
 
     text = input("Text: ")
 
     counts = counting(text)
-    print(counts)
+
     #grade = ...
     #if grade < 1:
     #    print()
