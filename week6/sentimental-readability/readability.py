@@ -18,10 +18,10 @@ def main():
 def counting(text):
 
     letters = 0
-    for c in text
-        if c => a and c =< z:
+    for c in text:
+        if c >= "a" and c <= "z":
             letters += 1
-        if c => A and c <= Z:
+        if c >= "A" and c <= "Z":
             letters += 1
     words = len(text.split()) #
     senteces = 0
