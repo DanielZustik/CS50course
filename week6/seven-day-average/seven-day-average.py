@@ -55,7 +55,7 @@ def calculate(reader):
     #    print(cases[key][-10:])
 
     for key in cases
-        
+        cases[key][-10:]
         print(cases[key][-10:])
 
 # TODO: Calculate and print out seven day average for given state
