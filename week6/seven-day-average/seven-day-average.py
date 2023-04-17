@@ -48,7 +48,9 @@ def calculate(reader):
     for dict in data:
         cases[dict["state"]].append(dict["cases"])
 
-    print(cases["Florida"][-10:])
+    for key in cases:
+        print(key)
+        print(cases[key][-10:])
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
