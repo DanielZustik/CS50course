@@ -14,7 +14,7 @@ cost = 0
 while True:
     try:
         item = input("Item: ")
-        item.capitalize()
+        item = item.capitalize()
         cost += menu[item]
         print(f"Total: {cost}")
     except EOFError:
