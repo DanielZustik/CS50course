@@ -10,8 +10,12 @@ def main():
     decoded_content = download.content.decode("utf-8")
     file = decoded_content.splitlines()
     reader = csv.DictReader(file)
+    states = set()
     for row in reader:
-        print(row["state"])
+        states.add(row["state"])
+
+    for state in states:
+        print(state)
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
