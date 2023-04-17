@@ -41,8 +41,9 @@ def calculate(reader):
         data.append(row)
         states.add(row["state"])
 
+    cases = {}
     for dict in data
-
+        cases[dict["state"]]
 
 
 
