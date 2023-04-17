@@ -16,7 +16,7 @@ while True:
         item = input("Item: ")
         item = item.lower()
         cost += menu[item]
-        print(f"Total: ${cost: .2f}")
+        print(f"Total: ${cost:.2f}")
     except EOFError:
         print()
         break
