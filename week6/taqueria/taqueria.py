@@ -10,6 +10,12 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-
-item = input("Item: ")
+cost = 0
+while True:
+    try:
+        item = input("Item: ")
+        cost += menu[item]
+        print(f"Total: {cost}")
+    except: EOFError:
+        break
 
