@@ -14,7 +14,7 @@ def main():
     for row in reader:
         list.append(row)
     for dict in list:
-        if dict["state"] == "Nebraska":
+        if dict["state"] == "Florida":
             print(dict)
 
 
