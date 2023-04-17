@@ -20,14 +20,14 @@ def main():
     print("Choose one or more states to view average COVID cases.")
     print("Press enter when done.\n")
 
-    while True:
-        state = input("State: ")
-        if state in new_cases:
-            states.append(state)
-        if len(state) == 0:
-            break
+    #while True:
+    #    state = input("State: ")
+    #    if state in new_cases:
+    #        states.append(state)
+    #    if len(state) == 0:
+    #        break
 
-    print(f"\nSeven-Day Averages")
+    #print(f"\nSeven-Day Averages")
 
     # Print out 7-day averages for this week vs last week
     comparative_averages(new_cases, states)
@@ -57,3 +57,4 @@ def comparative_averages(new_cases, states):
 
 
 main()
+
