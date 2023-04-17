@@ -43,7 +43,7 @@ def calculate(reader):
 
     cases = {}
     for dict in data
-        cases[dict["state"]] = 
+        cases[dict["state"]].append(dict["cases"])
 
 
 
