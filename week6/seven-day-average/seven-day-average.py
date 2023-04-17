@@ -10,13 +10,8 @@ def main():
     decoded_content = download.content.decode("utf-8")
     file = decoded_content.splitlines()
     reader = csv.DictReader(file)
-    list = []
     for row in reader:
-        list.append(row)
-    for dict in list:
-        if dict["state"] == "Florida":
-            print(dict)
-
+        print(row["Florida"])
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
@@ -42,7 +37,7 @@ def main():
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
     new_cases = {}
-    
+
 
 
 # TODO: Calculate and print out seven day average for given state
