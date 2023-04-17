@@ -42,8 +42,10 @@ def calculate(reader):
         states.add(row["state"])
 
     cases = {}
+    new_14d_cases = {}
     for state in states:
         cases[state] = [] #vytvoreni radku se staty, pricemz kazdy radek ma prazdny list
+        new_14d_cases[state] = []
 
     for dict in data:
         cases[dict["state"]].append(dict["cases"])
@@ -52,7 +54,6 @@ def calculate(reader):
     #    print(key)
     #    print(cases[key][-10:])
 
-    new_14d_cases = {}
     for key in cases
         
         print(cases[key][-10:])
