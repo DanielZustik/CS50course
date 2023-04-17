@@ -10,9 +10,7 @@ def main():
     decoded_content = download.content.decode("utf-8")
     file = decoded_content.splitlines()
     reader = csv.DictReader(file)
-    data = []
-    for row in reader:
-        data.append(row)
+
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
@@ -37,7 +35,11 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    new_cases = {}
+    data = []
+    for row in reader:
+        data.append(row)
+
+    
 
 
 
