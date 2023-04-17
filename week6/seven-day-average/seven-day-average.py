@@ -54,7 +54,7 @@ def calculate(reader):
     #    print(key)
     #    print(cases[key][-10:])
 
-    for key in cases
+    for key in cases:
         new_cases[key] = cases[key][-10:]
         print(new_cases[key])
 
