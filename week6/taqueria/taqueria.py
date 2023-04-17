@@ -19,4 +19,5 @@ while True:
     except EOFError:
         print()
         break
-
+    except KeyError:
+        continue
