@@ -42,10 +42,14 @@ def calculate(reader):
         states.add(row["state"])
 
     cases = {}
-    for dict in data
+    for state in states:
+        cases[state] = [] #vytvoreni radku se staty, pricemz kazdy radek ma prazdny list
+
+    for dict in data:
         cases[dict["state"]].append(dict["cases"])
 
-
+    for state in cases:
+        print(state)
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
