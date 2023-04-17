@@ -16,6 +16,7 @@ while True:
         item = input("Item: ")
         cost += menu[item]
         print(f"Total: {cost}")
-    except: EOFError:
+    except EOFError:
+        print()
         break
 
