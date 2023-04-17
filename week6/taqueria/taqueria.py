@@ -16,8 +16,7 @@ while True:
         item = input("Item: ")
         item = item.lower()
         cost += menu[item]
-        cost = float(format(cost, ".2f"))
-        print(cost)
+        print(f"Total: ${cost}")
     except EOFError:
         print()
         break
