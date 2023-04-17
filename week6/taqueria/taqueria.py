@@ -10,13 +10,13 @@ menu = {
     "tortilla salad": 8.00
 }
 
-cost = 0
+cost = 0.00
 while True:
     try:
         item = input("Item: ")
         item = item.lower()
         cost += menu[item]
-        cost = float(format(cost, ".1f"))
+        cost = float(format(cost, ".2f"))
         print(f"Total: {cost}")
     except EOFError:
         print()
