@@ -48,7 +48,7 @@ def calculate(reader):
     for dict in data:
         cases[dict["state"]].append(dict["cases"])
 
-    for state in cases:
+    for key_states in cases:
         print(state)
 
 # TODO: Calculate and print out seven day average for given state
