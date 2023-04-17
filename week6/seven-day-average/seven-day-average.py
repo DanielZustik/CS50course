@@ -39,7 +39,9 @@ def calculate(reader):
     for row in reader:
         data.append(row)
 
-    
+    cases = {}
+    for dict in data
+        
 
 
 
