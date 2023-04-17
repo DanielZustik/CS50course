@@ -13,7 +13,10 @@ def main():
     list = []
     for row in reader:
         list.append(row)
-    print(list["Nebraska"])
+    for dict in list:
+        if dict["state"] == "Nebraska":
+            print(dict)
+
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
