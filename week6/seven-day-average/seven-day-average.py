@@ -11,7 +11,7 @@ def main():
     file = decoded_content.splitlines()
     reader = csv.DictReader(file)
     for row in reader:
-        print(row[state]["Nebraska"])
+        row[0])
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
