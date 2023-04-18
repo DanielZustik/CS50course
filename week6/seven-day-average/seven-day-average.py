@@ -51,13 +51,13 @@ def calculate(reader):
         cases[dict["state"]].append(dict["cases"])
 
     for key in cases: #dictionary kde key je state a u kazdeho je list s 14 poslednimi stavy
-        new_cases[key] = cases[key][-15:]
+        new_cases[key] = cases[key][-14:]
 
     for key in new_cases:
         new_cases[key] = [int(case_count) for case_count in new_cases[key]]
 
     for key in new_cases:
-        for i in range(15, 1, -1):
+        for i in range(13, 0, -1):
             new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
 
 
