@@ -20,16 +20,16 @@ def main():
     print("Choose one or more states to view average COVID cases.")
     print("Press enter when done.\n")
 
-    #while True:
-    #    state = input("State: ")
-    #    if state in new_cases:
-    #        states.append(state)
-    #    if len(state) == 0:
-    #        break
+    while True:
+        state = input("State: ")
+        if state in new_cases:
+            states.append(state)
+        if len(state) == 0:
+            break
 
-    #print(f"\nSeven-Day Averages")
+    print(f"\nSeven-Day Averages")
 
-    # Print out 7-day averages for this week vs last week
+     #Print out 7-day averages for this week vs last week
     comparative_averages(new_cases, states)
 
 
@@ -60,22 +60,22 @@ def calculate(reader):
         for i in range(14, 0, -1):
             new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
 
-    return new_cases(-14:) #odebrani 15 teho pomocneho... snad se vraci skutecne poslednich 14 dnu kdy 14ty je nejnovejsi
+    return new_cases
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
 
     averages_w1 = {}
     averages_w2 = {}
-    for state in states
+    for state in states:
         averages_w1[state] = 0
         averages_w2[state] = 0
 
-    for state in new_cases
-        averages_w1[state] = sum(new_cases[state][7:14]) / 7
-        averages_w2[state] = sum(new_cases[state][0:7]) / 7
+    for state in new_cases:
+        averages_w1[state] = sum(new_cases[state][8:15]) / 7
+        averages_w2[state] = sum(new_cases[state][1:8]) / 7
 
-    for state in states
+    for state in states:
         print(f"{state} had a 7-day average of {averages_w1[state]} and incerease/decrease of {(averages_w1[state] - averages_w2[state]) / averages_w1[state] * 100}%")
 
 main()
