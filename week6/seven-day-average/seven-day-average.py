@@ -75,7 +75,9 @@ def comparative_averages(new_cases, states):
         averages_w1[state] = sum(new_cases[state][7:14]) / 7
         averages_w2[state] = sum(new_cases[state][0:7]) / 7
 
-    
+    print()
+    print()
+    print()
 
 main()
 
