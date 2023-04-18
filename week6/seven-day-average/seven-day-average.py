@@ -56,10 +56,9 @@ def calculate(reader):
     for key in new_cases:
         new_cases[key] = [int(case_count) for case_count in new_cases[key]]
 
-    i = 15
     for key in new_cases
-        new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
-        i -= 1
+        for i in range()
+            new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
