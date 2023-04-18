@@ -67,6 +67,10 @@ def comparative_averages(new_cases, states):
 
 averages_w1 = {}
 averages_w2 = {}
+for state in states
+    averages_w1[state] = {}
+    averages_w2[] = {}
+
     for state in new_cases
         averages_w1[state] = sum(new_cases[state][7:14])
         averages_w2[state] = sum(new_cases[state][0:7])
