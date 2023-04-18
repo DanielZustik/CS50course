@@ -68,7 +68,7 @@ def comparative_averages(new_cases, states):
     for state in new_cases
         for i in range()
             sum(new_cases[state][i])
-
+    
 
 main()
 
