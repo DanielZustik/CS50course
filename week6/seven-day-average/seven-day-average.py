@@ -60,7 +60,7 @@ def calculate(reader):
         for i in range(14, 0, -1):
             new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
 
-    return new_cases
+    return new_cases(-14:) #odebrani 15 teho pomocneho... snad se vraci skutecne poslednich 14 dnu kdy 14ty je nejnovejsi
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
