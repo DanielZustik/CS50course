@@ -65,16 +65,17 @@ def calculate(reader):
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
 
-averages_w1 = {}
-averages_w2 = {}
-for state in states
-    averages_w1[state] = {}
-    averages_w2[] = {}
+    averages_w1 = {}
+    averages_w2 = {}
+    for state in states
+        averages_w1[state] = 0
+        averages_w2[state] = 0
 
     for state in new_cases
-        averages_w1[state] = sum(new_cases[state][7:14])
-        averages_w2[state] = sum(new_cases[state][0:7])
+        averages_w1[state] = sum(new_cases[state][7:14]) / 7
+        averages_w2[state] = sum(new_cases[state][0:7]) / 7
 
+    
 
 main()
 
