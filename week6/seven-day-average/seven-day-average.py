@@ -51,16 +51,16 @@ def calculate(reader):
         cases[dict["state"]].append(dict["cases"])
 
     for key in cases: #dictionary kde key je state a u kazdeho je list s 14 poslednimi stavy
-        new_cases[key] = cases[key][-14:]
+        new_cases[key] = cases[key][-15:]
 
     for key in new_cases:
         new_cases[key] = [int(case_count) for case_count in new_cases[key]]
 
     for key in new_cases:
-        for i in range(13, 0, -1):
+        for i in range(14, 0, -1):
             new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
 
-
+    return new_cases
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
