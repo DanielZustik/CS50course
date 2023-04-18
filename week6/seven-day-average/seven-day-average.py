@@ -41,8 +41,8 @@ def calculate(reader):
         data.append(row)
         states.add(row["state"])
 
-    cases = {}
-    new_cases = {}
+    cases = {} #celkova DB setridana dle statu
+    new_cases = {} #pouze poslednich 15 dnu
     for state in states:
         cases[state] = [] #vytvoreni radku se staty, pricemz kazdy radek ma prazdny list
         new_cases[state] = []
@@ -50,11 +50,16 @@ def calculate(reader):
     for dict in data:
         cases[dict["state"]].append(dict["cases"])
 
-    for key in cases: #dictionary kde key je state a u kazdeho je list s 10 poslednimi stavy
-        new_cases[key] = cases[key][-14:]
+    for key in cases: #dictionary kde key je state a u kazdeho je list s 14 poslednimi stavy
+        new_cases[key] = cases[key][-15:]
 
     for key in new_cases:
         new_cases[key] = [int(case_count) for case_count in new_cases[key]]
+
+    i = 15
+    for key in new_cases
+        new_cases[key][i] = new_cases[key][i] - new_cases[key][i - 1]
+        i -= 1
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
