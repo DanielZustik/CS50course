@@ -75,9 +75,8 @@ def comparative_averages(new_cases, states):
         averages_w1[state] = sum(new_cases[state][7:14]) / 7
         averages_w2[state] = sum(new_cases[state][0:7]) / 7
 
-    while True
-        for state in states
-            print(f"{state} had a 7-day average of {averages_w1[state]} and incerease/decrease of {(averages_w1[state] - averages_w2[state]) / averages_w1[state] * 100:.2f}%")
+    for state in states
+        print(f"{state} had a 7-day average of {averages_w1[state]} and incerease/decrease of {(averages_w1[state] - averages_w2[state]) / averages_w1[state] * 100}%")
 
 main()
 
