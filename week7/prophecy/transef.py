@@ -1,7 +1,30 @@
 from cs50 import SQL
 import csv
+import sqlite3
 
-db = SQL("sqlite:///newww.db")
+db = sqlite3.connect("new.db")
+
+db.execute = ("
+CREATE TABLE houses (
+    id INTEGER,
+    house_name TEXT,
+    PRIMARY KEY(id)
+);
+CREATE TABLE students (
+    id INTEGER,
+    student_name TEXT,
+    house_id INTEGER,
+    PRIMARY KEY(id),
+    FOREIGN KEY(house_id) REFERENCES houses(id)
+);
+CREATE TABLE heads (
+    id INTEGER,
+    head_name TEXT,
+    house_id INTEGER,
+    PRIMARY KEY(id),
+    FOREIGN KEY(house_id) REFERENCES houses(id)
+);
+")
 
 with open('students.csv', "r") as csv_f:
     dictcsv = csv.DictReader(csv_f)
@@ -12,3 +35,5 @@ with open('students.csv', "r") as csv_f:
         values = dict["student_name"]
         db.execute("INSERT INTO students (student_name) VALUES (?)", (values,))
 
+db.commit()
+db.close()
