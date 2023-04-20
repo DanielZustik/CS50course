@@ -2,9 +2,18 @@ CREATE TABLE students (
     id INTEGER,
     student_name TEXT,
     PRIMARY KEY(id)
-)
-CREATE TABLE students (
+);
+CREATE TABLE houses (
     id INTEGER,
-    student_name TEXT,
-    PRIMARY KEY(id)
-)
+    house_name TEXT,
+    student_id INTEGER,
+    PRIMARY KEY(id),
+    SECONDARY KEY(student_id)
+);
+CREATE TABLE heads (
+    id INTEGER,
+    head_name TEXT,
+    house_id INTEGER,
+    PRIMARY KEY(id),
+    SECONDARY KEY(house_id)
+);
