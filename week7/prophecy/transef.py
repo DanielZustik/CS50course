@@ -8,3 +8,4 @@ with open('students.csv', "r") as csv_f:
         STR.append(row)
 
 db = SQL("sqlite:///newww.db")
+db.execute("")
