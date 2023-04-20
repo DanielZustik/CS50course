@@ -8,12 +8,12 @@ CREATE TABLE houses (
     house_name TEXT,
     student_id INTEGER,
     PRIMARY KEY(id),
-    SECONDARY KEY(student_id)
+    FOREIGN KEY(student_id) REFERENCES students(id)
 );
 CREATE TABLE heads (
     id INTEGER,
     head_name TEXT,
     house_id INTEGER,
     PRIMARY KEY(id),
-    SECONDARY KEY(house_id)
+    FOREIGN KEY(house_id) REFERENCES houses(id)
 );
