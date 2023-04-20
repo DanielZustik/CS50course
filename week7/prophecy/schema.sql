@@ -2,7 +2,7 @@ CREATE TABLE students (
     id INTEGER,
     student_name TEXT,
     house_id INTEGER,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
 CREATE TABLE houses (
@@ -17,6 +17,6 @@ CREATE TABLE heads (
     PRIMARY KEY(id),
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
-INSERT INTO students (student_name) VALUES ('Adelaide Murto'), ('Adrian Pucey'), ('Anthony Goldstein'), ('Blaise Zabini');
+INSERT INTO students (student_name, house_id) VALUES ('Adelaide Murto', 1), ('Adrian Pucey', 1), ('Anthony Goldstein', 2), ('Blaise Zabini', 1);
 INSERT INTO houses (house_name) VALUES ('Slytherin'), ('Ravenclaw'), ('Hufflepuff'), ('Gryffindor');
-INSERT INTO heads (head_name) VALUES ('Severus Snape'), ('Filius Flitwick'), ('Pomona Sprout'), ('Minerva McGonagall');
+INSERT INTO heads (head_name, house_id) VALUES ('Severus Snape', 1), ('Filius Flitwick', 2), ('Pomona Sprout', 3), ('Minerva McGonagall', 4);
