@@ -38,13 +38,13 @@ with open('students.csv', "r") as csv_f:
     for dict in STR:
         values = dict["student_name"]
         if dict["house"] == "Slytherin":
-            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?)", (values, 1))
+            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?, ?)", (values, 1))
         elif dict["house"] == "Ravenclaw":
-            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?)", (values, 2))
+            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?, ?)", (values, 2))
         elif dict["house"] == "Hufflepuff":
-            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?)", (values, 3))
+            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?, ?)", (values, 3))
         elif dict["house"] == "Gryffindor":
-            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?)", (values, 4))
+            cursor.execute("INSERT INTO students (student_name, house_id) VALUES (?, ?)", (values, 4))
 
 db.commit()
 db.close()
