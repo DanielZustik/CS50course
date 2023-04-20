@@ -17,4 +17,4 @@ CREATE TABLE heads (
     PRIMARY KEY(id),
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
-INSERT INTO students (student_name) VALUES (SELECT student_name FROM students)
+INSERT INTO students (student_name) SELECT student_name FROM students;
