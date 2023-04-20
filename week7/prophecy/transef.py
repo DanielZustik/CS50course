@@ -50,3 +50,5 @@ with open('students.csv', "r") as csv_f:
 
 db.commit()
 db.close()
+#zobrazeni vysledku, stejna db jako puvodni, ale rozdelena na tri tably s realacemi vuci sobe
+# select * from students join houses on students.house_id = houses.id join heads on houses.id = heads.house_id;
