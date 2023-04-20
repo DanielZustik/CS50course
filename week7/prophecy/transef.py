@@ -1,4 +1,4 @@
-import sqlite3
+from cs50 import SQL
 import csv
 
 with open('students.csv', "r") as csv_f:
@@ -7,3 +7,4 @@ with open('students.csv', "r") as csv_f:
     for row in dictcsv:
         STR.append(row)
 
+db = SQL("sqlite:///newww.db")
