@@ -3,13 +3,16 @@ import csv
 import sqlite3
 
 db = sqlite3.connect("new.db")
+cursor = db.cursor()
 
-db.execute = ("
+cursor.execute("""
 CREATE TABLE houses (
     id INTEGER,
     house_name TEXT,
     PRIMARY KEY(id)
 );
+""")
+cursor.execute("""
 CREATE TABLE students (
     id INTEGER,
     student_name TEXT,
@@ -17,6 +20,8 @@ CREATE TABLE students (
     PRIMARY KEY(id),
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
+""")
+cursor.execute("""
 CREATE TABLE heads (
     id INTEGER,
     head_name TEXT,
@@ -24,7 +29,7 @@ CREATE TABLE heads (
     PRIMARY KEY(id),
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
-")
+""")
 
 with open('students.csv', "r") as csv_f:
     dictcsv = csv.DictReader(csv_f)
@@ -33,7 +38,7 @@ with open('students.csv', "r") as csv_f:
         STR.append(row)
     for dict in STR:
         values = dict["student_name"]
-        db.execute("INSERT INTO students (student_name) VALUES (?)", (values,))
+        cursor.execute("INSERT INTO students (student_name) VALUES (?)", (values,))
 
 db.commit()
 db.close()
