@@ -29,6 +29,8 @@ CREATE TABLE heads (
     FOREIGN KEY(house_id) REFERENCES houses(id)
 );
 """)
+cursor.execute("""INSERT INTO houses (house_name) VALUES ('Slytherin'), ('Ravenclaw'), ('Hufflepuff'), ('Gryffindor');""")
+cursor.execute("""INSERT INTO heads (head_name, house_id) VALUES ('Severus Snape', 1), ('Filius Flitwick', 2), ('Pomona Sprout', 3), ('Minerva McGonagall', 4);""")
 
 with open('students.csv', "r") as csv_f:
     dictcsv = csv.DictReader(csv_f)
