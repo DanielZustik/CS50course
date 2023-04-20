@@ -8,7 +8,7 @@ with open('students.csv', "r") as csv_f:
     STR = []
     for row in dictcsv:
         STR.append(row)
-    for dict in STR
+    for dict in STR:
         values = dict["student_name"]
         db.execute("INSERT INTO students (student_name) VALUES (?)", (values,))
 
