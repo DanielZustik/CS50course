@@ -1,0 +1,1 @@
+SELECT name FROM people JOIN stars ON people.id = stars.person_id(SELECT year FROM people ORDER BY year)
