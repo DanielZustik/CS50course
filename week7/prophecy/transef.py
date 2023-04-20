@@ -10,5 +10,5 @@ with open('students.csv', "r") as csv_f:
         STR.append(row)
     for dict in STR
         values = dict["student_name"]
-        db.execute("INSERT INTO students (student_name, house_id) VALUES (?)", values)
+        db.execute("INSERT INTO students (student_name) VALUES (?)", (values,))
 
