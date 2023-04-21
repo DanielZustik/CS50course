@@ -5,3 +5,4 @@ SELECT * from crime_scene_report; -- seeing more info into case, conections
 SELECT name FROM interviews WHERE name LIKE "%CS50%"; -- hopefully finding cs50 interview
 SELECT name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND day = 28;
 SELECT id, name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND day = 28;
+SELECT * FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10; -- trying recognizing plate
