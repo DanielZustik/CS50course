@@ -18,3 +18,6 @@ JOIN people ON bank_accounts.person_id = people.id
 WHERE atm_transactions.atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28 AND month = 7;-- diana
 SELECT * FROM phone_calls WHERE caller LIKE "(770) 555-1861" AND month = 7 AND day = 28;
 SELECT * FROM people WHERE phone_number LIKE "(725) 555-3243";-- philip a
+SELECT * from passengers
+JOIN flights ON passengers.flight_id = flights.id
+JOIN airports ON airports.id = flights.origin_airport_id
