@@ -29,3 +29,5 @@ JOIN airports ON airports.id = flights.origin_airport_id
 WHERE flights.year = 2021 AND flights.day = 29 AND flights.month = 7
 AND passengers.passport_number = (SELECT passport_number FROM people WHERE name = "Philip");
 SELECT * FROM airports WHERE id = 6;
+
+SELECT * FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE city = "Fiftyville") AND day = 29 AND month = 7;
