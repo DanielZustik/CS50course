@@ -21,3 +21,10 @@ SELECT * FROM people WHERE phone_number LIKE "(725) 555-3243";-- philip a
 SELECT * from passengers
 JOIN flights ON passengers.flight_id = flights.id
 JOIN airports ON airports.id = flights.origin_airport_id
+WHERE flights.year = 2021 AND flights.day = 29 AND flights.month = 7
+AND passengers.passport_number = (SELECT passport_number FROM people WHERE name = "Diana");
+SELECT * from passengers
+JOIN flights ON passengers.flight_id = flights.id
+JOIN airports ON airports.id = flights.origin_airport_id
+WHERE flights.year = 2021 AND flights.day = 29 AND flights.month = 7
+AND passengers.passport_number = (SELECT passport_number FROM people WHERE name = "Philip");
