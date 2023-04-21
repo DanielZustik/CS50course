@@ -15,4 +15,6 @@ SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND transac
 SELECT * FROM atm_transactions
 JOIN bank_accounts ON bank_accounts.account_number = atm_transactions.account_number
 JOIN people ON bank_accounts.person_id = people.id
-WHERE atm_transactions.atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28 AND month = 7;
+WHERE atm_transactions.atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28 AND month = 7;-- diana
+SELECT * FROM phone_calls WHERE caller LIKE "(770) 555-1861" AND month = 7 AND day = 28;
+SELECT * FROM people WHERE phone_number LIKE "(725) 555-3243";
