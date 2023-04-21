@@ -8,3 +8,5 @@ SELECT id, name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND 
 SELECT * FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10; -- trying recognizing plate
 SELECT * FROM bakery_security_logs WHERE license_plate = "322W7JE"; -- seeign if car roolled in same dame little sooner than theft happend
 SELECT * FROM bakery_security_logs WHERE license_plate = "0NTHK55"
+SELECT * FROM people WHERE license_plate = "0NTHK55";
+SELECT * FROM people WHERE license_plate = "322W7JE";
