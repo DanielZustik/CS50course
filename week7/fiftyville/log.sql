@@ -12,7 +12,7 @@ SELECT * FROM people WHERE license_plate = "0NTHK55"; -- Kelsey
 SELECT * FROM people WHERE license_plate = "322W7JE"; -- Diana
 SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street";
 SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28 AND month = 7;
-SELECT * FROM atm_transactions, bank_accounts, people
+SELECT * FROM atm_transactions
 JOIN bank_accounts ON bank_accounts.account_number = atm_transactions.account_number
 JOIN people ON bank_accounts.person_id = people.id
 WHERE atm_transactions.atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28 AND month = 7;
