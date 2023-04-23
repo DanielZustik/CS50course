@@ -56,6 +56,6 @@ AND phone_calls.caller = (SELECT phone_number FROM people WHERE name = "Bruce");
 
 SELECT seat FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Bruce");
 #4A
-SELECT seat, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE name IN ("Robin", "Deborah", "Gregoru", "Carl"))
+SELECT seat, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE name IN ("Robin", "Deborah", "Gregory", "Carl"))
 AND  flight_id = (SELECT flight_id FROM passengers JOIN flights ON flights.id = passengers.flight_id WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Bruce")
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29);
