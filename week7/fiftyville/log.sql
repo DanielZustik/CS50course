@@ -37,5 +37,7 @@ JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account
 WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28
 AND atm_transactions.atm_location = "Leggett Street" and atm_transactions.transaction_type = "withdraw"
 AND people.license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25)
-AND 
+AND people.passport_number IN (SELECT passport_number FROM passengers JOIN flights ON flights.id = passengers.flight_id
+WHERE flights.year = 2021 AND flights.month = 7 AND flights.day = 29)
 # 4 suspects: Diana, Iman, Luca, Bruce
+# 3 also flying next day Bruce, Diana a Luca
