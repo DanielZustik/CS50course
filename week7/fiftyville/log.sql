@@ -44,7 +44,11 @@ AND people.phone_number IN (SELECT caller FROM phone_calls WHERE year = 2021 AND
 # 3 also flying next day Bruce, Diana a Luca
 # 2 ALSO calling on 28 th Bruce and Diana
 
-SELECT city FROM airports JOIN flights on airports.id = flights.destionation_airport_id
-JOIN passengers ON passengers.flight_id = flight.id
+SELECT city FROM airports JOIN flights on airports.id = flights.destination_airport_id
+JOIN passengers ON passengers.flight_id = flights.id
 WHERE passengers.passport_number = (SELECT passport_number FROM people WHERE name = "Bruce")
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
+
+SELECT name FROM people JOIN phone_calls ON phone_calls.receiver = people.phone_number
+WHERE people.phone_number = phone_calls.receiver AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28
+AND phone_calls.caller = (SELECT phone_number FROM people WHERE name = "Bruce");
