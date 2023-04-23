@@ -52,3 +52,7 @@ AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 SELECT name FROM people JOIN phone_calls ON phone_calls.receiver = people.phone_number
 WHERE people.phone_number = phone_calls.receiver AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28
 AND phone_calls.caller = (SELECT phone_number FROM people WHERE name = "Bruce");
+# Robin, Deborah, Greogory, Carl
+
+SELECT name FROM people
+WHERE passport_number = 
