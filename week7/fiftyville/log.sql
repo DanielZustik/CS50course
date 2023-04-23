@@ -30,9 +30,10 @@ JOIN airports ON airports.id = flights.origin_airport_id
 WHERE flights.year = 2021 AND flights.day = 29 AND flights.month = 7
 AND passengers.passport_number = (SELECT passport_number FROM people WHERE name = "Philip");
 SELECT * FROM airports WHERE id = 6;
-SELECT * FROM people
+
+SELECT name, phone_number, passport_number FROM people
 JOIN bank_accounts ON bank_accounts.person_id = people.id
 JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
 WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28
-AND atm_transactions.atm_location = "Leggett Street" and atm_transactions.transaction_type = "withdraw";
-SELECT * FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE city = "Fiftyville") AND day = 29 AND month = 7;
+AND atm_transactions.atm_location = "Leggett Street" and atm_transactions.transaction_type = "withdraw"
+AND people.license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25);
