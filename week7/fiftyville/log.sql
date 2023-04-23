@@ -34,5 +34,5 @@ SELECT * FROM people
 JOIN bank_accounts ON bank_accounts.person_id = people.id
 JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.person_id
 WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28
-AND atm_transactions.atm_location = "Leggett Street" and atm_transactions.transaction_type = "withdraw";
+AND atm_transactions.atm_location LIKE "Leggett Street";
 SELECT * FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE city = "Fiftyville") AND day = 29 AND month = 7;
