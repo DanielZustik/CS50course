@@ -56,4 +56,5 @@ AND phone_calls.caller = (SELECT phone_number FROM people WHERE name = "Bruce");
 
 SELECT seat FROM passengers WHERE passport_number = (SELECT passport_number FROM people WHERE name = "Bruce");
 #4A
-SELECT seat FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE name IN ("Robin" ));
+SELECT seat FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE name IN ("Robin" ))
+AND  flight_id = (SELECT );
