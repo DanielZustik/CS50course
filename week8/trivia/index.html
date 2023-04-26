@@ -17,9 +17,9 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Who sang the title song for the latest Bond film, No Time to Die?</h3>
-                <button id="first" onclick= "aler(event)">Adele</button>
-                <button id="second">Sam Smith</button>
-                <button id="third">Billie Eilish</button>
+                <button id="firstB" onclick= "aler(event)">Adele</button>
+                <button id="secondB" onclick= "aler(event)">Sam Smith</button>
+                <button id="thirdB" onclick= "aler(event)">Billie Eilish</button>
             </div>
 
             <div class="section">
@@ -30,14 +30,16 @@
         </div>
         <script>
             // TODO: Add code to check answers to questions
-            let firstbutton = document.querySelector('#first');
-            firstbutton.addEventListener('click', function() {
-                firstbutton.style.backgroundColor = 'red';
-            });
             function aler(event) {
                 var trigger = event.srcElement;
                 alert(trigger.id)
             };
+            if trigger.id == "firstB"
+                document.querySelector('#firstB').style.backgroundColor = 'red';
+            if trigger.id == "secondB"
+                document.querySelector('#secondB').style.backgroundColor = 'red';
+            if trigger.id == "thirdB"
+                document.querySelector('#thirdB').style.backgroundColor = 'red';
         </script>
     </body>
 </html>
