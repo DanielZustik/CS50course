@@ -28,6 +28,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Who is considered to be the founder of the frozen-food industry?</h3>
+                <div id="secondD"></div>
                 <input>
                 <button id="fourhB">Check answer</button>
             </div>
@@ -53,10 +54,12 @@
             };
 
             document.querySelector('#fourhB').addEventListener('click', function() {
-                if (document.querySelector('input').value) === "Clarence Birdseye" {
+                if (document.querySelector('input').value === "Clarence Birdseye") {
                     document.querySelector('input').style.backgroundColor = 'green';
+                    document.querySelector('#secondD').innerHTML = "Correct!"
                 } else {
                     document.querySelector('input').style.backgroundColor = 'red';
+                    document.querySelector('#secondD').innerHTML = "Wrong!"
                 }
             });
 
