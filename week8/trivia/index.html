@@ -53,11 +53,10 @@
             };
 
             document.querySelector('#fourhB').addEventListener('click', function() {
-                if (document.querySelector('input').value) == "Clarence Birdseye" {
-                    document.querySelector('input').backgroundColor = 'green';
-                }
-                else {
-                    document.querySelector('input').backgroundColor = 'red';
+                if (document.querySelector('input').value) === "Clarence Birdseye" {
+                    document.querySelector('input').style.backgroundColor = 'green';
+                } else {
+                    document.querySelector('input').style.backgroundColor = 'red';
                 }
             });
 
