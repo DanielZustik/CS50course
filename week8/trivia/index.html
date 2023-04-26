@@ -17,7 +17,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Who sang the title song for the latest Bond film, No Time to Die?</h3>
-                <button id="first" onclick= "alertName(event)">Adele</button>
+                <button id="first" onclick= "aler(event)">Adele</button>
                 <button id="second">Sam Smith</button>
                 <button id="third">Billie Eilish</button>
             </div>
@@ -34,7 +34,7 @@
             firstbutton.addEventListener('click', function() {
                 firstbutton.style.backgroundColor = 'red';
             });
-            function alertName(event) {
+            function aler(event) {
                 var trigger = event.srcElement;
                 alert(trigger.id)
             };
