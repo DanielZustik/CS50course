@@ -8,13 +8,13 @@ a  {
     color:grey;
 
 }
-#menu:hover {
+.menu:hover {
     color: red;
     background-color: transparent;
     text-decoration: underline;
   }
 
-  #menu:link, #menu:visited {
+  .menu:link, .menu:visited {
     background-color: #f44336;
     color: white;
     padding: 15px 25px;
@@ -23,6 +23,6 @@ a  {
     display: inline-block;
   }
 
-  #menu:hover, #menu:active {
+  .menu:hover, .menu:active {
     background-color: red;
   }
