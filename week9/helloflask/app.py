@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
+from CS50 import SQL
 
 app = Flask(__name__)
+
+db = SQL("sqlite:///db.db")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
