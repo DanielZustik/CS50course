@@ -12,4 +12,5 @@ def index():
     else:
         print("form submitted")
         color = request.form.get("color")
-        return render_template("color.html", color=color)
+        input = request.form.get("name")
+        return render_template("color.html", color=color, input=input)
