@@ -9,7 +9,7 @@ db = SQL("sqlite:///db.db")
 def index():
     if request.method == "GET":
         db.execute("INSERT into db () VALUES (?)", 1)
-        db.execute("SELECT COUNT(*) FROM db")
+        refreshes = db.execute("SELECT COUNT(*) FROM users")
         return render_template("index.html", refreshes=refreshes)
     else:
         print("form submitted")
