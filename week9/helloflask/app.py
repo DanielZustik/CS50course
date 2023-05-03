@@ -10,7 +10,7 @@ def index():
     if request.method == "GET":
         db.execute("INSERT INTO users (NAME) VALUES (?)", 1)
         refreshes = db.execute("SELECT COUNT(*) FROM users")
-        return render_template("index.html", refreshes=refreshes["COUNT(*)"])
+        return render_template("index.html", refreshes=refreshes)
     else:
         print("form submitted")
         color = request.form.get("color")
