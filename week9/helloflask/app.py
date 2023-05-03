@@ -8,7 +8,7 @@ db = SQL("sqlite:///db.db")
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
-        db.execute("INSERT into db () VALUES (?)", 1)
+        db.execute("INSERT INTO users (AGE) VALUES (?)", 1)
         refreshes = db.execute("SELECT COUNT(*) FROM users")
         return render_template("index.html", refreshes=refreshes)
     else:
