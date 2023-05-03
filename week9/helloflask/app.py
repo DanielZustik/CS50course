@@ -8,7 +8,9 @@ db = SQL("sqlite:///db.db")
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
-        return render_template("index.html")
+        db.execute("INSERT into db () VALUES (?)", 1)
+        db.execute("SELECT COUNT(*) FROM db")
+        return render_template("index.html", refreshes=refreshes)
     else:
         print("form submitted")
         color = request.form.get("color")
