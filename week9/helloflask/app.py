@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from CS50 import SQL
+from cs50 import SQL
 
 app = Flask(__name__)
 
