@@ -30,7 +30,9 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for row in data %}
-                            <tr> {{ row }} </tr>
+                            <tr>
+                                <td> {{ row }} </td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
