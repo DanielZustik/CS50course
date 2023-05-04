@@ -30,10 +30,11 @@ def index():
         name = request.form.get("name")
         month = request.form.get("month")
         day = request.form.get("day")
+        delete = request.form.get("id")
 
         #db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (?, ?, ?)", (name, month, day))
         db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
-
+        db.execute("DELETE FROM BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name,
 
         return redirect("/")
 
