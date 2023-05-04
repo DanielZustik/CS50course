@@ -29,6 +29,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Birthday</th>
                         </tr>
@@ -37,6 +38,7 @@
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for dict in data %}
                             <tr>
+                                <td> {{ dict["id"] }} </td>
                                 <td> {{ dict["name"] }} </td>
                                 <td> {{ dict["day"] }}. {{ dict["month"] }}. </td>
                             </tr>
