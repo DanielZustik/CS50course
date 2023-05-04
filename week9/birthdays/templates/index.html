@@ -32,13 +32,9 @@
                         {% for dict in data %}
                             <tr>
                                 <td> {{ dict["name"] }} </td>
+                                <td> {{ dict["day"] }} </td>
                             </tr>
                         {% endfor %}
-                        {% for dict in data %}
-                        <tr>
-                            <td> {{ dict["day"] }} </td>
-                        </tr>
-                    {% endfor %}
                     </tbody>
                 </table>
             </div>
