@@ -34,10 +34,10 @@ def index():
         print(id)
 
         #db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (?, ?, ?)", (name, month, day))
-        if name != "":
+        if name and month and day:
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
-        if id != "":
-            db.execute("DELETE FROM BIRTHDAYS WHERE id = :id, id=id")
+        if id:
+            db.execute("DELETE FROM BIRTHDAYS WHERE id = :id", id=int(id))
 
         return redirect("/")
 
