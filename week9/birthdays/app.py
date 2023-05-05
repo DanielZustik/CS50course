@@ -31,6 +31,7 @@ def index():
         month = request.form.get("month")
         day = request.form.get("day")
         id = request.form.get("id")
+        id_ = request.form.get("id_")
         addoredit = request.form.get("addoredit")
         print(id)
 
@@ -39,7 +40,7 @@ def index():
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
         if id and name and month and day and addoredit == "edit" :
             db.execute("UPDATE birthdays SET name = name, month = month, day = day WHERE id = id")
-        if id and addoredit == "add":
+        if id_:
             db.execute("DELETE FROM BIRTHDAYS WHERE id = :id", id=int(id))
 
         return redirect("/")
