@@ -41,7 +41,7 @@ def index():
         if id and name and month and day and addoredit == "edit" :
             db.execute("UPDATE birthdays SET name = name, month = month, day = day WHERE id = id")
         if id_:
-            db.execute("DELETE FROM BIRTHDAYS WHERE id = :id", id=int(id))
+            db.execute("DELETE FROM BIRTHDAYS WHERE id = :id_", id_=int(id_))
 
         return redirect("/")
 
