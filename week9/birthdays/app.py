@@ -28,8 +28,8 @@ def index():
 
         # TODO: Add the user's entry into the database
         name = request.form.get("name")
-        month = int(request.form.get("month"))
-        day = int(request.form.get("day"))
+        month = int(request.form.get("month")) if request.form.get("month") else None
+        day = int(request.form.get("day")) if request.form.get("day") else None
         id = int(request.form.get("id")) if request.form.get("id") else None
         id_ = request.form.get("id_")
         addoredit = request.form.get("addoredit")
@@ -38,7 +38,7 @@ def index():
         #db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (?, ?, ?)", (name, month, day))
         if name and month and day and addoredit == "add" :
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
-        if id and name and month and day and addoredit == "edit" :
+        if id and addoredit == "edit" :
               db.execute("UPDATE birthdays SET name = :name, month = :month, day = :day WHERE id = :id",
                {"name": name, "month": month, "day": day, "id": id})
         if id_:
