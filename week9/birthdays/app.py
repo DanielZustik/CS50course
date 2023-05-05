@@ -28,8 +28,8 @@ def index():
 
         # TODO: Add the user's entry into the database
         name = request.form.get("name")
-        month = request.form.get("month")
-        day = request.form.get("day")
+        month = int(request.form.get("month"))
+        day = int(request.form.get("day"))
         id = request.form.get("id")
         id_ = request.form.get("id_")
         addoredit = request.form.get("addoredit")
