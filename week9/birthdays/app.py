@@ -39,7 +39,7 @@ def index():
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
         if id and name and month and day and addoredit == "edit" :
             db.execute("UPDATE birthdays SET name = name, month = month, day = day WHERE id = id")
-        if id:
+        if id and addoredit == "add":
             db.execute("DELETE FROM BIRTHDAYS WHERE id = :id", id=int(id))
 
         return redirect("/")
