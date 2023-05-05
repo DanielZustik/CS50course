@@ -31,11 +31,15 @@ def index():
         month = request.form.get("month")
         day = request.form.get("day")
         id = request.form.get("id")
+        addoredit = request.form.get("addoredit")
         print(id)
 
         #db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (?, ?, ?)", (name, month, day))
-        if name and month and day:
+        if name and month and day and addoredit == "add" :
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
+        if id and name and month and day and addoredit == "edit" :
+            db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
+
         if id:
             db.execute("DELETE FROM BIRTHDAYS WHERE id = :id", id=int(id))
         if id and name and month and day:
