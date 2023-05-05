@@ -39,7 +39,8 @@ def index():
         if name and month and day and addoredit == "add" :
             db.execute("INSERT INTO BIRTHDAYS (name, month, day) VALUES (:name, :month, :day)", name=name, month=month, day=day)
         if id and name and month and day and addoredit == "edit" :
-            db.execute("UPDATE birthdays SET name = name, month = month, day = day WHERE id = id")
+              db.execute("UPDATE birthdays SET name = :name, month = :month, day = :day WHERE id = :id",
+               {"name": name, "month": month, "day": day, "id": id})
         if id_:
             db.execute("DELETE FROM BIRTHDAYS WHERE id = :id_", id_=int(id_))
 
