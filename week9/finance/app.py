@@ -115,6 +115,7 @@ def quote():
 def register():
     """Register user"""
     if request.method == 'POST':
+        pass = request.form.get("password")
         #possible errors
             #inserting new user into db
         return apology("TODO")
