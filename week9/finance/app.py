@@ -120,8 +120,6 @@ def register():
         return apology("TODO")
     else:
         return render_template("registration.html")
-    return apology("TODO")
-
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
