@@ -117,8 +117,9 @@ def register():
     if request.method == 'POST':
         #possible errors
             #inserting new user into db
+        return apology("TODO")
     else:
-        #return render_template("registration.html")
+        return render_template("registration.html")
     return apology("TODO")
 
 
