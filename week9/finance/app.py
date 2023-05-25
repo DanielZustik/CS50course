@@ -118,6 +118,8 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confpassword = request.form.get("password")
+        if not username or password or confpassword:
+            return redirect("/registration")
         #possible errors
             #inserting new user into db
         return apology("TODO")
