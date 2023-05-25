@@ -115,12 +115,15 @@ def quote():
 def register():
     """Register user"""
     if request.method == 'POST':
+
         username = request.form.get("username")
         password = request.form.get("password")
         confpassword = request.form.get("password")
-        if not username or password or confpassword:
+
+        if not username or not password or not confpassword:
             return redirect("/registration")
-        #possible errors
+        if not password == confpassword:
+            return redirect("/registration")
             #inserting new user into db
         return apology("TODO")
     else:
