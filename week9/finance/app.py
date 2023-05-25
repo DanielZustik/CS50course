@@ -121,9 +121,9 @@ def register():
         confpassword = request.form.get("password")
 
         if not username or not password or not confpassword:
-            return redirect("/registration")
+            return redirect("/register")
         if not password == confpassword:
-            return redirect("/registration")
+            return redirect("/register")
             #inserting new user into db
         return apology("TODO")
     else:
