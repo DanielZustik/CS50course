@@ -18,7 +18,38 @@
 
         <title>C$50 Finance: {% block title %}{% endblock %}</title>
 
-        <script></script>
+        <style>
+        .input-error {
+            border: 1px solid red;
+        }
+        </style>
+
+        <script>
+            document.querySelector('#register-form').addEventListener('submit', function(event) {
+                var username = document.querySelector('#username');
+                var password = document.querySelector('#password');
+                var confpassword = document.querySelector('#confpassword');
+
+                // Remove the error class from all fields
+                username.classList.remove('input-error');
+                password.classList.remove('input-error');
+                confpassword.classList.remove('input-error');
+
+                // Check each field and add the error class if it's empty
+                if (!username.value) {
+                    username.classList.add('input-error');
+                    event.preventDefault();
+                }
+                if (!password.value) {
+                    password.classList.add('input-error');
+                    event.preventDefault();
+                }
+                if (!confpassword.value) {
+                    confpassword.classList.add('input-error');
+                    event.preventDefault();
+                }
+            });
+        </script>
 
     </head>
 
