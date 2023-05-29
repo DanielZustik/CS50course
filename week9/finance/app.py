@@ -122,7 +122,7 @@ def register():
 
         if not username or not password or not confpassword:
             return redirect("/register")
-        if not password == confpassword:
+        if password != confpassword:
             return redirect("/register")
             #inserting new user into db
         return apology("TODO")
