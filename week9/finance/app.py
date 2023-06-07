@@ -50,8 +50,15 @@ def buy():
         if not symbol:
             return apology("Stock doesnt exists")
 
+        try:
+        # Convert the input to an integer
+            price = int(price)
+        # Check if the number is positive
         if price < 0:
-            return apology("Non valid number of shares")
+            return apology("Invalid number of shares")
+        except ValueError:
+        # The input could not be converted to an integer
+            return apology("Invalid number of shares")
 
         return redirect("/")
 
