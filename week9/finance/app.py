@@ -45,6 +45,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
         price = lookup(symbol["price"])
 
         if not symbol:
@@ -63,6 +64,8 @@ def buy():
         except ValueError:
         # The input could not be converted to an integer
                 return apology("Invalid number of shares")
+
+        ......
 
         return redirect("/")
 
