@@ -50,9 +50,7 @@ def buy():
         if not symbol:
             return apology("Stock symbol required")
 
-
         quote = lookup(symbol)
-
         if quote is None:
             return apology("Invalid stock symbol")
 
