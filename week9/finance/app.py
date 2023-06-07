@@ -48,15 +48,21 @@ def buy():
         price = lookup(symbol["price"])
 
         if not symbol:
-            return apology("Stock doesnt exists")
+            return apology("Stock symbol required")
+
+
+        quote = lookup(symbol)
+
+        if quote is None:
+            return apology("Invalid stock symbol")
 
         try:
         # Convert the input to an integer
-            price = int(price)
+            shares = int(shares)
         # Check if the number is positive
-        if price < 0:
-            return apology("Invalid number of shares")
-            except ValueError:
+            if shares <= 0:
+                return apology("Invalid number of shares")
+        except ValueError:
         # The input could not be converted to an integer
                 return apology("Invalid number of shares")
 
