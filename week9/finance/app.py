@@ -116,14 +116,14 @@ def register():
         confpass = request.form.get("confirmation")
 
         if not username or not password or not confpass:
-            return "choose fill in all inputs!"
+            return apology("choose fill in all inputs!")
 
         if not password == confpass:
-            return "password and its confirmation do not match"
+            return apology("password and its confirmation do not match")
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
         if len(rows) > 0:
-            return "user already exists"
+            return apology("user already exists")
 
         passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
