@@ -43,7 +43,20 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        price = lookup(symbol["price"])
+
+        if not symbol:
+            return apology("Stock doesnt exists")
+
+        if price < 0:
+            return apology("Non valid number of shares")
+
+        return redirect("/")
+
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
