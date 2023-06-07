@@ -56,9 +56,9 @@ def buy():
         # Check if the number is positive
         if price < 0:
             return apology("Invalid number of shares")
-        except ValueError:
+            except ValueError:
         # The input could not be converted to an integer
-            return apology("Invalid number of shares")
+                return apology("Invalid number of shares")
 
         return redirect("/")
 
