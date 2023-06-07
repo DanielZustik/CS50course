@@ -110,7 +110,26 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    return apology("TODO")
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confpass = request.form.get("confirmation")
+
+        if not username or not password or not confpass:
+            return "choose fill in all inputs!"
+
+        if not password == confpass:
+            return "password and its confirmation do not match"
+
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        if len(rows) > 0:
+            return "user already exists"
+
+        passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
+        return "User registered successfully"
+    else:
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
