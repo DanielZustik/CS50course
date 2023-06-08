@@ -38,7 +38,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     db_portfolio = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    for title in portfolio
+    for title in db_portfolio
         portfolio["title"]lookup(title)
 
     portfolio = {}
