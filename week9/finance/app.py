@@ -37,9 +37,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    db.execute(SELECT )
-
-    return render_template("index.html")
+    portfolio = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
+    return render_template("index.html", portfolio=portfolio)
 
 
 @app.route("/buy", methods=["GET", "POST"])
