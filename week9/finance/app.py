@@ -70,6 +70,8 @@ def buy():
         if cash < (price * shares):
             return apology("Not enough money")
 
+        
+
         return redirect("/")
 
     else:
