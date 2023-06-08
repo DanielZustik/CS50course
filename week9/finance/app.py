@@ -65,7 +65,7 @@ def buy():
         # The input could not be converted to an integer
                 return apology("Invalid number of shares")
 
-        ......
+        db.execute("SELECT cash FROM users WHERE username")
 
         return redirect("/")
 
