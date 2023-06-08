@@ -39,7 +39,8 @@ def index():
     """Show portfolio of stocks"""
     title = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
     shares = db.execute("SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    return render_template("index.html", title=title[0]["symbol"], shares=shares[0]["total_shares"])
+    current_price = lookup(symbol)
+    return render_template("index.html", title=title[0]["symbol"], shares=shares[0]["total_shares"], current_price=current_price)
 
 
 @app.route("/buy", methods=["GET", "POST"])
