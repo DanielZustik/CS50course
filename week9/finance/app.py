@@ -46,7 +46,8 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        price = lookup(symbol["price"])
+        price = lookup(symbol)
+        price = price["price"]
 
         if not symbol:
             return apology("Stock symbol required")
