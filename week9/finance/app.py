@@ -21,6 +21,7 @@ Session(app)
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
+db.execute("PRAGMA foreign_keys = ON;")
 
 
 @app.after_request
@@ -36,7 +37,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    db.execute(SELECT )
+
+    return render_template("index.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -67,12 +70,15 @@ def buy():
                 return apology("Invalid number of shares")
 
         cash = db.execute("SELECT cash FROM users WHERE ID = ?", session["user_id"])
+        print(cash)
+        cash = int(cash[0]["cash"])
         if cash < (price * shares):
             return apology("Not enough money")
         else:
-            db.execute(UPDATE cash )
+            db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash - price * shares), session["user_id"])
 
-
+        total_price = price * shares
+        db.execute("INSERT INTO transactions (user_id, symbol, price) VALUES (?, ?, ?)", int(session["user_id"]), symbol, total_price)
 
         return redirect("/")
 
