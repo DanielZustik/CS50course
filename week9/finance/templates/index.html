@@ -15,14 +15,17 @@
 
     <table class="center-table">
         <tr>
-            <th> Title </th>
-            <th> Shares </th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Total Shares</th>
         </tr>
+        {% for item in portfolio %}
         <tr>
-            <td> {{ portfolio }} </td>
+            <td>{{ item.symbol }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.total_shares }}</td>
         </tr>
-
-
+        {% endfor %}
     </table>
 
 
