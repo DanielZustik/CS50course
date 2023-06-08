@@ -40,7 +40,7 @@ def index():
     db_portfolio = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
     for title in db_portfolio
         info = lookup(title["symbol"])
-        title[""]
+        title["name"] = info
 
     portfolio = {}
     return render_template("index.html", portfolio=portfolio)
