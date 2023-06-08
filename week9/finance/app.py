@@ -38,7 +38,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    return render_template("index.html", portfolio=portfolio)
+    shares = db.execute("SELECT SUM shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
+    return render_template("index.html", portfolio=portfolio, shares=shares)
 
 
 @app.route("/buy", methods=["GET", "POST"])
