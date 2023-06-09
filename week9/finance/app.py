@@ -190,6 +190,6 @@ def sell():
 
     symbols = []
     for symbol in owned_shares:
-        symbols.append(symbol[0])
+        symbols.append(symbol["symbol"])
 
     return render_template("sell.html", symbols=symbols)
