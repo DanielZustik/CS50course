@@ -186,23 +186,28 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
 
-    symbols = []
-    for symbol in owned_shares:
-        symbols.append(symbol["symbol"])
+    if request.method == "GET":
+        owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
 
-    sell_stock = request.form.get("the_option")
-    sell_shares = request.form.get("shares")
-    try:
-        int(sell_shares)
-    except ValueError:
-        return apology("")
+        symbols = []
+        for symbol in owned_shares:
+            symbols.append(symbol["symbol"])
 
-    for shares in owned_shares:
-        if shares["symbol"] == sell_stock and shares["shares"] >= sell_shares:
-            db.execute("")
-        else:
-            apology("not enough shares")
+        return render_template("sell.html", symbols=symbols)
 
-    return render_template("sell.html", symbols=symbols)
+    else:
+        sell_stock = request.form.get("the_option")
+        sell_shares = request.form.get("shares")
+        try:
+            int(sell_shares)
+        except ValueError:
+            return apology("")
+
+        for shares in owned_shares:
+            if shares["symbol"] == sell_stock and shares["shares"] >= sell_shares:
+                db.execute("")
+            else:
+                apology("not enough shares")
+
+        return redirect("/")
