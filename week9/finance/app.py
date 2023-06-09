@@ -194,7 +194,12 @@ def sell():
 
     sell_stock = request.form.get("the_option")
     sell_shares = request.form.get("shares")
+    try:
+        int(sell_shares)
+    except:
 
-    
+    for shares in owned_shares:
+        if shares["symbol"] == sell_stock and shares["shares"] => sell_shares:
+
 
     return render_template("sell.html", symbols=symbols)
