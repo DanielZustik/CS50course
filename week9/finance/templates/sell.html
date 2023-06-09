@@ -11,7 +11,7 @@
             <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol of stock">
                 <option disabled></option>
                 {% for symbol in symbols %}
-                    <option value="{{ symbol.symbol }}"> {{ symbol.symbol }}</option>
+                    <option value="{{ symbol }}"> {{ symbol }}</option>
             {% endfor %}
             </select>
         </div>

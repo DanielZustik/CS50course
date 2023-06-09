@@ -188,6 +188,8 @@ def sell():
     """Sell shares of stock"""
     owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
 
-    symbols = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
+    symbols = []
+    for symbol in owned_shares:
+        symbols.append(symbol)
 
     return render_template("sell.html", symbols=symbols)
