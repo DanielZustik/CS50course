@@ -201,7 +201,7 @@ def sell():
         sell_stock = request.form.get("the_option")
         sell_shares = request.form.get("shares")
         try:
-            int(sell_shares)
+            sell_shares = int(sell_shares)
         except ValueError:
             return apology("")
 
