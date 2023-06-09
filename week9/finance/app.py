@@ -42,7 +42,9 @@ def index():
         info = lookup(title["symbol"])
         title["price"] = info["price"]
 
-    return render_template("index.html", portfolio=portfolio)
+    cash = db.execute("SELECT cash FROM users WHERE ID = ?", session["user_id"])
+
+    return render_template("index.html", portfolio=portfolio, cash=cash[0]["cash"])
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -184,4 +186,6 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    symbols = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
+
+    return render_template("sell.html", symbols=symbols)
