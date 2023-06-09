@@ -186,8 +186,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    owned_shares = db.execute("SELECT SUM (shares) FROM transactions WHERE SUM (shares) > 0 GROUP BY symbol;")
-    for
+    owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
 
     symbols = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
 
