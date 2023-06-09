@@ -192,6 +192,9 @@ def sell():
     for symbol in owned_shares:
         symbols.append(symbol["symbol"])
 
-    request.
+    sell_stock = request.form.get("the_option")
+    sell_shares = request.form.get("shares")
+
+    
 
     return render_template("sell.html", symbols=symbols)
