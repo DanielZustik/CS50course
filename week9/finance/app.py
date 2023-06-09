@@ -206,7 +206,7 @@ def sell():
 
         for shares in owned_shares:
             if shares["symbol"] == sell_stock and shares["shares"] >= sell_shares:
-                db.execute("")
+                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), symbol, price, shares)
             else:
                 apology("not enough shares")
 
