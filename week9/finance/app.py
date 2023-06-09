@@ -186,6 +186,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    db.execute("SELECT SUM symbol FROM transactions GROUP BY symbol;")
+
     symbols = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
 
     return render_template("sell.html", symbols=symbols)
