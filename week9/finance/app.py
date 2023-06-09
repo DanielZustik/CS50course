@@ -220,4 +220,6 @@ def sell():
             else:
                 apology("not enough shares")
 
+        #total_welth
+        #if 0 share sb.execute(delete)
         return redirect("/")
