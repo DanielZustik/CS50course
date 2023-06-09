@@ -197,6 +197,7 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
     else:
+        owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
         sell_stock = request.form.get("the_option")
         sell_shares = request.form.get("shares")
         try:
