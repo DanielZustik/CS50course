@@ -196,10 +196,13 @@ def sell():
     sell_shares = request.form.get("shares")
     try:
         int(sell_shares)
-    except:
+    except ValueError:
+        return apology("")
 
     for shares in owned_shares:
-        if shares["symbol"] == sell_stock and shares["shares"] => sell_shares:
-
+        if shares["symbol"] == sell_stock and shares["shares"] >= sell_shares:
+            db.execute("")
+        else:
+            apology("not enough shares")
 
     return render_template("sell.html", symbols=symbols)
