@@ -213,7 +213,8 @@ def sell():
                 price = lookup(sell_stock)
                 price = price["price"]
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
-                cash = cash["cash"]
+                print(cash)
+                cash = int(cash["cash"])
                 db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
                 db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash - price * shares["SUM(shares)"]), session["user_id"])
             else:

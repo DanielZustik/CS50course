@@ -8,10 +8,10 @@
     <form action="/sell" method="POST">
         <div class="mb-3">
             <label for ="symbol">Stock symbol</label>
-            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol of stock">
+            <select name="the_option" autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol of stock">
                 <option disabled selected></option>
                 {% for symbol in symbols %}
-                    <option name="the_option" value="{{ symbol }}"> {{ symbol }}</option>
+                    <option value="{{ symbol }}"> {{ symbol }}</option>
             {% endfor %}
             </select>
         </div>
