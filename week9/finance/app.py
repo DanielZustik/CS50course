@@ -200,19 +200,20 @@ def sell():
         owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
         sell_stock = request.form.get("the_option")
         sell_shares = request.form.get("shares")
+        print(owned_shares)
         try:
             sell_shares = int(sell_shares)
         except ValueError:
             return apology("")
 
         for shares in owned_shares:
-            if shares["symbol"] == sell_stock and shares["shares"] >= sell_shares:
+            if shares["symbol"] == sell_stock and shares["SUM(shares)"] >= sell_shares:
                 price = lookup(sell_stock)
                 price = price["price"]
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = cash["cash"]
-                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["shares"])
-                db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash - price * shares["shares"]), session["user_id"])
+                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
+                db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash - price * shares["SUM(shares)"]), session["user_id"])
             else:
                 apology("not enough shares")
 
