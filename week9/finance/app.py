@@ -186,7 +186,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    db.execute("SELECT SUM (shares) FROM transactions GROUP BY symbol;")
+    owned_shares = db.execute("SELECT SUM (shares) FROM transactions GROUP BY symbol;")
+    for 
 
     symbols = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
 
