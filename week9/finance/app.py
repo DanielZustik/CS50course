@@ -221,11 +221,6 @@ def sell():
         if match == False:
                 return apology("not enough shares")
 
-        for shares in owned_shares:
-            if shares["SUM(shares)"] == 0:
-                db.execute("DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
-")
-
 
         #total_welth
         print(shares["SUM(shares)"])
