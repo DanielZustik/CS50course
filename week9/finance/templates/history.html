@@ -30,6 +30,7 @@
             <th>Shares</th>
             <th>Transaction amount</th>
             <th>Purchase or sell</th>
+            <th>Transaction time</th>
         </tr>
         {% for item in transactions %}
         <tr>
@@ -42,6 +43,7 @@
                 {% else %}
                     <td>Sell</td>
                 {% endif %}
+                <td>{{ item.transaction_time }}</td>
         </tr>
         {% endfor %}
     </table>
