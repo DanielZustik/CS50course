@@ -208,10 +208,10 @@ def sell():
         except ValueError:
             return apology("")
 
-        match = FALSE
+        match = False
         for shares in owned_shares:
             if shares["symbol"] == sell_stock and shares["SUM(shares)"] >= sell_shares:
-                match = TRUE
+                match = True
                 price = lookup(sell_stock)
                 price = price["price"]
                 print("YES")
@@ -219,8 +219,8 @@ def sell():
                 cash = int(cash[0]["cash"])
                 db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
                 db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash + price * shares["SUM(shares)"]), session["user_id"])
-        if match == FALSE:
-                apology("not enough shares")
+        if match == False:
+                return apology("not enough shares")
 
         #total_welth
         print(shares["SUM(shares)"])
