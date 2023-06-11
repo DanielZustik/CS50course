@@ -215,11 +215,11 @@ def sell():
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = int(cash[0]["cash"])
                 db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
-                db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash - price * shares["SUM(shares)"]), session["user_id"])
+                db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash + price * shares["SUM(shares)"]), session["user_id"])
             else:
                 apology("not enough shares")
 
         #total_welth
-        
+
         #if 0 share sb.execute(delete)
         return redirect("/")
