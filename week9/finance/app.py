@@ -214,7 +214,6 @@ def sell():
                 match = True
                 price = lookup(sell_stock)
                 price = price["price"]
-                print("YES")
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = int(cash[0]["cash"])
                 db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
@@ -222,6 +221,11 @@ def sell():
         if match == False:
                 return apology("not enough shares")
 
+        for shares in owned_shares:
+            if shares["SUM(shares)"] == 0:
+                db.execute("")
+
+                
         #total_welth
         print(shares["SUM(shares)"])
         #if 0 share sb.execute(delete)
