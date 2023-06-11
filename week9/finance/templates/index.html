@@ -32,13 +32,15 @@
             <th>Total Value hold</th>
         </tr>
         {% for item in portfolio %}
+        {% if item.total_shares > 0 %}
         <tr>
-            <td>{{ item.symbol }}</td>
-            <td>{{ item.price }}</td>
-            <td>{{ "%.0f"|format(item.total_shares) }}</td>
-            <td>{{ "%.2f"|format(item.total_shares * item.price) }}</td>
+                <td>{{ item.symbol }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ "%.0f"|format(item.total_shares) }}</td>
+                <td>{{ "%.2f"|format(item.total_shares * item.price) }}</td>
         </tr>
         {% set ns.total_welth = ns.total_welth + (item.total_shares * item.price) %}
+        {% endif %}
         {% endfor %}
     </table>
 
