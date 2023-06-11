@@ -212,6 +212,7 @@ def sell():
             if shares["symbol"] == sell_stock and shares["SUM(shares)"] >= sell_shares:
                 price = lookup(sell_stock)
                 price = price["price"]
+                print("YES")
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = int(cash[0]["cash"])
                 db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -shares["SUM(shares)"])
