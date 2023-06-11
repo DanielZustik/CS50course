@@ -223,9 +223,10 @@ def sell():
 
         for shares in owned_shares:
             if shares["SUM(shares)"] == 0:
-                db.execute("")
+                db.execute("DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+")
 
-                
+
         #total_welth
         print(shares["SUM(shares)"])
         #if 0 share sb.execute(delete)
