@@ -220,6 +220,6 @@ def sell():
                 apology("not enough shares")
 
         #total_welth
-
+        print(shares["SUM(shares)"])
         #if 0 share sb.execute(delete)
         return redirect("/")
