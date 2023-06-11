@@ -227,4 +227,3 @@ def sell():
 
         return redirect("/")
 
-@app.route("/password_change")
