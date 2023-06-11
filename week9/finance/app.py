@@ -226,3 +226,5 @@ def sell():
                 return apology("not enough shares")
 
         return redirect("/")
+
+@app.route("/password_change")
