@@ -216,7 +216,7 @@ def sell():
                 price = price["price"]
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = int(cash[0]["cash"])
-                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, sell_shares)
+                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -sell_shares)
                 db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash + price * sell_shares), session["user_id"])
         if match == False:
                 return apology("not enough shares")
