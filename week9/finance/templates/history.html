@@ -25,17 +25,23 @@
     </style>
     <table class="center-table">
         <tr>
+            <th>ID</th>
             <th>Symbol</th>
-            <th>Current price/share</th>
-            <th>Total Shares</th>
-            <th>Total Value hold</th>
+            <th>Shares</th>
+            <th>Transaction amount</th>
+            <th>Purchase or sell</th>
         </tr>
-        {% for item in portfolio %}
+        {% for item in transactions %}
         <tr>
+                <td>{{ item.transaction_id }}</td>
                 <td>{{ item.symbol }}</td>
-                <td>{{ item.price }}</td>
-                <td>{{ "%.0f"|format(item.total_shares) }}</td>
-                <td>{{ "%.2f"|format(item.total_shares * item.price) }}</td>
+                <td>{{ "%.0f"|format(item.shares) }}</td>
+                <td>{{ "%.2f"|format(item.shares * item.price_per_share) }}</td>
+                {% if item.shares > 0 %}
+                    <td>Buy</td>
+                {% else %}
+                    <td>Sell</td>
+                {% endif %}
         </tr>
         {% endfor %}
     </table>
