@@ -94,6 +94,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    
+
     return apology("TODO")
 
 
@@ -178,7 +180,7 @@ def register():
         passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
 
-        
+
         return redirect("/")
     else:
         return render_template("register.html")
