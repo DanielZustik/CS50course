@@ -164,8 +164,12 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        value_symbol = lookup(symbol)
 
-        return render_template("quoted.html", symbols=lookup(symbol))
+        if value_symbol == None:
+            return apology("symbol doesnt exists")
+
+        return render_template("quoted.html", symbols=symbol)
 
     else:
         return render_template("quote.html")
