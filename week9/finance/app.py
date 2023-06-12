@@ -227,3 +227,31 @@ def sell():
 
         return redirect("/")
 
+@app.route("/change_password", methods=["GET", "POST"])
+@login_required
+def change_password():
+    if request.method == "GET":
+        return render_template("change_password.html")
+
+    else:
+        password = request.form.get("password")
+        new_password = request.form.get("new_password")
+        new_password_again = request.form.get("new_password_again")
+
+        if not password ==
+            return apology("")
+
+        if not new_password
+            return apology("")
+
+        if not new_password == new_password_again
+            return apology("")
+
+        passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
+        rows = db.execute
+        check_password_hash(rows[0]["hash"], request.form.get("password")):
+
+        ulozeni hasehe noveho update namsito stareho
+
+        return redirect("/")
