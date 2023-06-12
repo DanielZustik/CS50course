@@ -238,7 +238,8 @@ def change_password():
         new_password = request.form.get("new_password")
         new_password_again = request.form.get("new_password_again")
 
-        if not password ==
+        rows = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])
+        if not check_password_hash(rows[0]["hash"], password):
             return apology("")
 
         if not new_password
@@ -249,8 +250,8 @@ def change_password():
 
         passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
-        rows = db.execute
-        check_password_hash(rows[0]["hash"], request.form.get("password")):
+
+
 
         ulozeni hasehe noveho update namsito stareho
 
