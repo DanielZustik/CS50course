@@ -37,7 +37,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    if request.method == "GET"
+    if request.method == "GET":
         portfolio = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
         for title in portfolio:
             info = lookup(title["symbol"])
