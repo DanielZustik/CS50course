@@ -169,7 +169,7 @@ def quote():
         if value_symbol == None:
             return apology("symbol doesnt exists")
 
-        return render_template("quoted.html", symbols=symbol)
+        return render_template("quoted.html", symbols=value_symbol)
 
     else:
         return render_template("quote.html")
