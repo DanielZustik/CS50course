@@ -240,19 +240,18 @@ def change_password():
 
         rows = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])
         if not check_password_hash(rows[0]["hash"], password):
-            return apology("")
+            return apology("wrongly added password")
 
         if not new_password:
-            return apology("")
+            return apology("type in new password")
 
         if not new_password == new_password_again:
-            return apology("")
+            return apology("new password doesnt match check")
+
+        if len(new_password) < 5:
+            return apology("new password must be at lest 5 characters long")
 
         passhash = generate_password_hash(new_password, method='pbkdf2:sha256', salt_length=8)
-        db.execute("INSERT INTO users (hash) WHERE id = ? VALUES(?)", session["user_id"], passhash)
-
-
-
-        ulozeni hasehe noveho update namsito stareho
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", passhash, session["user_id"])
 
         return redirect("/")
