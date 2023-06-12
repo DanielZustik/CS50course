@@ -242,14 +242,14 @@ def change_password():
         if not check_password_hash(rows[0]["hash"], password):
             return apology("")
 
-        if not new_password
+        if not new_password:
             return apology("")
 
-        if not new_password == new_password_again
+        if not new_password == new_password_again:
             return apology("")
 
-        passhash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, passhash)
+        passhash = generate_password_hash(new_password, method='pbkdf2:sha256', salt_length=8)
+        db.execute("INSERT INTO users (hash) WHERE id = ? VALUES(?)", session["user_id"], passhash)
 
 
 
