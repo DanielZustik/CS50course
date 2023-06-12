@@ -55,7 +55,7 @@ def index():
             return apology("")
 
         current_funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        funds = funds + current_funds
+        funds = funds + current_funds[0]["cash"] 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds, session["user_id"])
         return redirect ("/")
 
