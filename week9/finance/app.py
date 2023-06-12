@@ -33,19 +33,31 @@ def after_request(response):
     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     """Show portfolio of stocks"""
-    portfolio = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    for title in portfolio:
-        info = lookup(title["symbol"])
-        title["price"] = info["price"]
+    if request.method == "GET"
+        portfolio = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol", session["user_id"])
+        for title in portfolio:
+            info = lookup(title["symbol"])
+            title["price"] = info["price"]
 
-    cash = db.execute("SELECT cash FROM users WHERE ID = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE ID = ?", session["user_id"])
 
-    return render_template("index.html", portfolio=portfolio, cash=cash[0]["cash"])
+        return render_template("index.html", portfolio=portfolio, cash=cash[0]["cash"])
+    else:
+        funds = request.form.get("funds")
 
+        try:
+            funds = int(funds)
+        except ValueError:
+            return apology("")
+
+        current_funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        funds = funds + current_funds
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", funds, session["user_id"])
+        return redirect ("/")
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
