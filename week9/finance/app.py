@@ -55,7 +55,7 @@ def index():
             return apology("")
 
         current_funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        funds = funds + current_funds[0]["cash"] 
+        funds = funds + current_funds[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds, session["user_id"])
         return redirect ("/")
 
@@ -216,9 +216,6 @@ def sell():
         owned_shares = db.execute("SELECT symbol, SUM(shares) FROM transactions GROUP BY symbol HAVING SUM(shares) > 0;")
         sell_stock = request.form.get("the_option")
         sell_shares = request.form.get("shares")
-        print(owned_shares)
-        print(sell_shares)
-        print(sell_stock)
         try:
             sell_shares = int(sell_shares)
         except ValueError:
@@ -232,7 +229,7 @@ def sell():
                 price = price["price"]
                 cash = db.execute("SELECT cash FROM users WHERE ID = ?",  session["user_id"])
                 cash = int(cash[0]["cash"])
-                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, -price, -sell_shares)
+                db.execute("INSERT INTO transactions (user_id, symbol, price_per_share, shares) VALUES (?, ?, ?, ?)", int(session["user_id"]), sell_stock, price, -sell_shares)
                 db.execute("UPDATE users SET cash = ? WHERE ID = ?", (cash + price * sell_shares), session["user_id"])
         if match == False:
                 return apology("not enough shares")
