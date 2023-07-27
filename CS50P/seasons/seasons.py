@@ -3,6 +3,7 @@ import sys
 import inflect
 
 def main():
+    get_birth()
     print(inflect.engine().number_to_words(minutes_elapsed(birthday), andword="").capitalize(), "minutes")
 
 
