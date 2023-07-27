@@ -1,6 +1,6 @@
 from datetime import date
 import sys
-
+import inflect
 
 def main():
     try:
@@ -8,6 +8,7 @@ def main():
     except ValueError:
         sys.exit()
     print("u are ", minutes_elapsed(birthday), "minutes old")
+
 
 
 def minutes_elapsed(birthday):
