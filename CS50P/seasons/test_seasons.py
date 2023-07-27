@@ -1,11 +1,11 @@
-from seasons import main
+from seasons import minutes_elapsed
 
 def main():
-    test_dates()
+    test_elapsed_time()
 
 
-def test_dates():
-    if
+def test_elapsed_time():
+    if 
 
 
 if __name__ = "__main__":
