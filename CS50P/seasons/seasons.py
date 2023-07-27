@@ -7,7 +7,7 @@ def main():
         birthday = date.fromisoformat(input("type date of ur birth in YYYY-MM-DD: "))
     except ValueError:
         sys.exit()
-    print(inflect.engine().number_to_words(minutes_elapsed(birthday)), "minutes.")
+    print(capitalize(inflect.engine().number_to_words(minutes_elapsed(birthday)), "minutes."))
 
 
 def minutes_elapsed(birthday):
