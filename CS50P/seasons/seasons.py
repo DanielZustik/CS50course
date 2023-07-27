@@ -13,7 +13,7 @@ def main():
 def minutes_elapsed(birthday):
     today = date.today()
     daysFromBirth = today - birthday
-    return (daysFromBirth * 24 * 60).days
+    return daysFromBirth.days * 24 * 60
 
 
 if __name__ == "__main__":
