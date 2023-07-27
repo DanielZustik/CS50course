@@ -1,8 +1,12 @@
 from datetime import date
+import sys
 
 
 def main():
-    birthday = input("type date of ur birth in YYYY-MM-DD: ")
+    try:
+        birthday = date.fromisoformat(input("type date of ur birth in YYYY-MM-DD: "))
+    except: Error
+        sys.exit
     print("u are ", minutes_elapsed(birthday), "minutes old")
 
 
