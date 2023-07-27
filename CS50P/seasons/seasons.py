@@ -2,18 +2,15 @@ from datetime import date
 
 
 def main():
-
-    today = date.today()
     birthday = date(2000,1,1)
-    print(today) #returns current local date
     print(birthday)
+    print(minutes_elapsed(birthday))
 
+
+def minutes_elapsed(birthday):
+    today = date.today()
     days = today - birthday
     print(days.days * 24 * 60)
-
-
-
-...
 
 
 if __name__ == "__main__":
