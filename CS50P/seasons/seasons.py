@@ -15,7 +15,7 @@ def minutes_elapsed(birthday):
     daysFromBirth = today - birthday
     return daysFromBirth.days * 24 * 60
 
-sys.exit(0)
+return 0
 
 if __name__ == "__main__":
     main()
