@@ -5,7 +5,7 @@ import sys
 def main():
     try:
         birthday = date.fromisoformat(input("type date of ur birth in YYYY-MM-DD: "))
-    except Exception:
+    except ValueError:
         sys.exit
     print("u are ", minutes_elapsed(birthday), "minutes old")
 
