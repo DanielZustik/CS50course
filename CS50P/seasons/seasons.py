@@ -2,13 +2,14 @@ from datetime import date
 
 
 def main():
-    print(date.today()) #returns current local date
-    print(date(2029,1,1))
+
     today = date.today()
     birthday = date(2000,1,1)
+    print(today) #returns current local date
+    print(birthday)
 
-    minutes = today - birthday
-    print(minutes.mins)
+    days = today - birthday
+    print(days.days * 24 * 60)
 
 
 
