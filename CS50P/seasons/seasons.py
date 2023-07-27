@@ -2,9 +2,8 @@ from datetime import date
 
 
 def main():
-    
-    birthday = date(2000,1,1)
-    print(minutes_elapsed(birthday))
+    birthday = input("type date of ur birth in YYYY-MM-DD: ")
+    print("u are ", minutes_elapsed(birthday), "minutes old")
 
 
 def minutes_elapsed(birthday):
