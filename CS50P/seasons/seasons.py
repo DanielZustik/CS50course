@@ -3,13 +3,13 @@ import sys
 import inflect
 
 def main():
-    get_birth()
-    print(inflect.engine().number_to_words(minutes_elapsed(birthday), andword="").capitalize(), "minutes")
+    birth = get_birth()
+    print(inflect.engine().number_to_words(minutes_elapsed(birth), andword="").capitalize(), "minutes")
 
 
 def get_birth():
     try:
-        birthday = date.fromisoformat(input("type date of ur birth in YYYY-MM-DD: "))
+        return date.fromisoformat(input("type date of ur birth in YYYY-MM-DD: "))
     except ValueError:
         sys.exit(1)
 
