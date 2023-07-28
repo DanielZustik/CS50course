@@ -35,5 +35,3 @@ class Jar:
     @property
     def size(self):
         self.size = 0
-
-jar = Jar(10)
