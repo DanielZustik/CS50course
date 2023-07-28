@@ -25,7 +25,7 @@ class Jar:
 
 
     @capacity.setter
-    def capacity(self,capacity):
+    def capacity(self, capacity):
         if capacity < 0:
             raise ValueError("capcity must be positive int")
         self._capacity = capacity
