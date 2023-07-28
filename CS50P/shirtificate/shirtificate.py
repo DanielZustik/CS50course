@@ -10,7 +10,7 @@ def create_pdf(name):
     pdf = fpdf.FPDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
-    pdf.cell(20,50, "CS50 Shirtificate", align='C')
+    pdf.cell(10,100, "CS50 Shirtificate", align='C', )
     pdf.cell(50,20, f"{name} took CS50", align='C')
     pdf.output("shirtificate.pdf")
 
