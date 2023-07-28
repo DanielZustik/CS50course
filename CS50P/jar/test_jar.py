@@ -19,5 +19,9 @@ def test_str():
     assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
 
 
+def test_deposit():
+    jar = Jar()
+    
+
 if __name__ == "__main__":
     main()
