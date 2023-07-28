@@ -21,8 +21,10 @@ def test_str():
 
 def test_deposit():
     jar = Jar()
-    
-
+    jar.deposit(10)
+    assert jar.size == 10
+    jar.deposit(2)
+    assert jar.size == 12
 
 if __name__ == "__main__":
     main()
