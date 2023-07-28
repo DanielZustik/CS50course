@@ -1,4 +1,4 @@
-from fpdf import FPDF
+import fpdf
 
 
 def main():
@@ -7,7 +7,8 @@ def main():
 
 
 def create_pdf(name):
-    pdf = FPDF()
+    fpdf.Align()
+    pdf = fpdf.FPDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(50,10, "CS50 Shirtificate")
