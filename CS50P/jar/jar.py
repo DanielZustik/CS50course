@@ -4,7 +4,7 @@ class Jar:
             raise ValueError("capcity must be positive int")
         self.capacity = capacity
     def __str__(self):
-        ...
+        return print(self.size * "🍪", " in the jar")
 
 
     def deposit(n):
