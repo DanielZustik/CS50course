@@ -1,4 +1,7 @@
 from jar import Jar
 
 
-def test_
+def test_init():
+    jar = Jar()
+    if jar.capacity != 12:
+        raise 
