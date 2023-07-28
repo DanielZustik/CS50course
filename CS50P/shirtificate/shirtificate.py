@@ -13,7 +13,7 @@ def create_pdf(name):
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(190,20, "CS50 Shirtificate", align='C',new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("helvetica", "B", 12)
-    self.set_text_color(220, 50, 50)
+    pdf.set_text_color(220, 50, 50)
     pdf.cell(190,50, f"{name} took CS50", align='C')
     pdf.output("shirtificate.pdf")
 
