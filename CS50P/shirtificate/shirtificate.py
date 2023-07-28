@@ -7,7 +7,7 @@ def main():
 
 
 def create_pdf(name):
-    fpdf.Align()
+    fpdf.Align("C")
     pdf = fpdf.FPDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
