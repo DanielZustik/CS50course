@@ -9,6 +9,7 @@ def main():
 def create_pdf(name):
     pdf = fpdf.FPDF()
     pdf.add_page()
+    pdf.image("../docs/fpdf2-logo.png", 10, 8, 33)
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(190,20, "CS50 Shirtificate", align='C',new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("helvetica", "B", 12)
