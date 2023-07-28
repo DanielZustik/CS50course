@@ -1,8 +1,8 @@
 class Jar:
     def __init__(self, capacity = 12):
+        if capacity < 0:
+            raise ValueError("capcity must be positive int")
         self.capacity = capacity
-        if ... raise ValueError
-
     def __str__(self):
         ...
 
@@ -22,4 +22,4 @@ class Jar:
     def size(self):
         ...
 
-jar = Jar()
+jar = Jar(10)
