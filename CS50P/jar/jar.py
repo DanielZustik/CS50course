@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity = 12):
         ...
-
+        if ... raise ValueError
 
     def __str__(self):
         ...
