@@ -22,3 +22,4 @@ class Jar:
     def size(self):
         ...
 
+jar = Jar()
