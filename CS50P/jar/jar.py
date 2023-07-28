@@ -5,7 +5,7 @@ class Jar:
 
 
     def __str__(self):
-        return f"self.size * '🍪'"
+        return {self.size} * '🍪'
 
 
     def deposit(self, n):
