@@ -25,8 +25,14 @@ def test_deposit():
     assert jar.size == 10
     jar.deposit(2)
     assert jar.size == 12
-    jar.deposit(5)
-    assert ValueError
+
+
+def test_withdraw():
+    jar = Jar()
+    jar.deposit(10)
+    jar.withdraw(8)
+    assert jar.size == 2
+
 
 if __name__ == "__main__":
     main()
