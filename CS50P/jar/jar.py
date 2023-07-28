@@ -8,11 +8,15 @@ class Jar:
 
 
     def deposit(n):
-        ...
+        if (self.size + n) > self.capacity:
+            raise ValueError("capactity was overreached")
+        self.size += n
 
 
     def withdraw(n):
-        ...
+        if (self.size - n) < 0:
+            raise ValueError("not enough cookies in the jar")
+        self.size -= n
 
     @property
     def capacity(self):
