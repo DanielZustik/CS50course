@@ -1,4 +1,4 @@
-import fpdf
+from fpdf import FPDF
 
 
 def main():
