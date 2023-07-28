@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity = 12):
         self.capacity = capacity
-        self._size = 0 
+        self._size = 0
 
     def __str__(self):
         return '🍪' * self.size
@@ -9,7 +9,7 @@ class Jar:
 
     def deposit(self, n):
         if (self.size + n) > self.capacity:
-            raise ValueError("capactity was overreached")
+            raise ValueError
         self.size += n
 
 

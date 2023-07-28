@@ -25,6 +25,8 @@ def test_deposit():
     assert jar.size == 10
     jar.deposit(2)
     assert jar.size == 12
+    jar.deposit(5)
+    assert ValueError
 
 if __name__ == "__main__":
     main()
