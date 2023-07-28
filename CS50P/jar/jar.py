@@ -5,7 +5,7 @@ class Jar:
 
 
     def __str__(self):
-        return print(self.size * "🍪" + " in the jar")
+        return f"self.size * '🍪'"
 
 
     def deposit(self, n):
@@ -19,6 +19,7 @@ class Jar:
             raise ValueError("not enough cookies in the jar")
         self.size -= n
 
+
     @property
     def capacity(self):
         return self._capacity
@@ -29,7 +30,6 @@ class Jar:
         if capacity < 0:
             raise ValueError("capcity must be positive int")
         self._capacity = capacity
-
 
 
     @property
