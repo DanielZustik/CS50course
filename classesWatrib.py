@@ -4,7 +4,7 @@ class Student:
             raise ValueError("missing name")
         if house not in ["Pr", "Kac", "Sra"]:
             raise ValueError("not correct house")
-        #######| atributes |#######
+        #######| atributes |########
         self.name = name
         self.house = house
         self.patronus = patronus
@@ -16,11 +16,13 @@ class Student:
 
 
     #getter
+    @property
     def street(self):
         return self.street
 
 
     #setter
+    @street.setter
     def street(self, street):
         if street not in ["Hol", "Dul", "Hav"]:
             raise ValueError("not correct street")
