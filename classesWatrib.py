@@ -8,7 +8,7 @@ class Student:
         self.name = name
         self.house = house
         self.patronus = patronus
-        self.street = street
+        self.street = street #calls also setter before setting
 
 
     def __str__(self):
@@ -37,6 +37,7 @@ class Student:
                 return ">O"
             case _:
                 return "xF"
+
 
 #####################| MAIN |############################
 def main():
