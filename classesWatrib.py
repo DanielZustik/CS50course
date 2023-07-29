@@ -9,7 +9,7 @@ class Student:
         self.house = house
         self.patronus = patronus
         self.street = street
-        
+
 
     def __str__(self):
         return f"a student with name {self.name} and house {self.house} with patronus {self.patronus} on the street {self.street()}"
@@ -22,6 +22,8 @@ class Student:
 
     #setter
     def street(self, street):
+        if street not in ["Hol", "Dul", "Hav"]:
+            raise ValueError("not correct street")
         self.street = street
 
 
