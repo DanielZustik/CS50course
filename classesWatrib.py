@@ -32,7 +32,7 @@ def main():
         print(student)
         print("Expecto patronum!", student.charm())
     except ValueError:
-        print("creating of a student failed")
+        print("=" *5 + "creating of a student failed ://" + "=" *5)
 
 #####################| KONEC |###########################
 main()
