@@ -18,7 +18,7 @@ class Student:
     #getter
     @property
     def street(self):
-        return self.street
+        return self._street
 
 
     #setter
@@ -26,7 +26,7 @@ class Student:
     def street(self, street):
         if street not in ["Hol", "Dul", "Hav"]:
             raise ValueError("not correct street")
-        self.street = street
+        self._street = street
 
 
     def charm(self):
