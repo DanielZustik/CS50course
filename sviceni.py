@@ -13,11 +13,11 @@ def main():
     house = input("House:" )
     try:
         student = Student(name, house)
+        print(student.name)
+        print(student.house)
     except ValueError:
         print("creating of a student failed")
 
-    print(student.name)
-    print(student.house)
 
 #####################KONEC###########################
 main()
