@@ -1,17 +1,20 @@
 class Student:
     def __init__(self, name, house):
         if not name:
-            raise ValueError("")
-        if not house:
-            raise ValueError("")
+            raise ValueError("missing name")
+        if house not in ["Pr", "Kac", "Sra"]:
+            raise ValueError("not correct house")
         self.name = name
         self.house = house
 
 
 def main():
-    house = ["Prdelov", "Kacerov", "Srandov"]
     name = input("Name:" )
-    student = Student(name, house[0])
+    house = input("House:" )
+    try:
+        student = Student(name, house)
+    except ValueError:
+        print("creating of a student failed")
 
     print(student.name)
     print(student.house)
