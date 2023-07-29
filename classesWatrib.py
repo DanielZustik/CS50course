@@ -9,13 +9,20 @@ class Student:
         self.house = house
         self.patronus = patronus
         self.street = street
+        
 
     def __str__(self):
         return f"a student with name {self.name} and house {self.house} with patronus {self.patronus} on the street {self.street()}"
 
 
+    #getter
     def street(self):
         return self.street
+
+
+    #setter
+    def street(self, street):
+        self.street = street
 
 
     def charm(self):
