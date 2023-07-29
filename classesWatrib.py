@@ -13,8 +13,14 @@ class Student:
         return f"a student with name {self.name} and house {self.house} with patronus {self.patronus}"
 
 
-    def charm():
-        
+    def charm(self):
+        match self.patronus:
+            case "pes":
+                return "xD"
+            case "kocka":
+                return ">O"
+            case _:
+                return "xF"
 
 #####################| MAIN |############################
 def main():
@@ -24,6 +30,7 @@ def main():
     try:
         student = Student(name, house, patronus)
         print(student)
+        print("Expecto patronum!", student.charm())
     except ValueError:
         print("creating of a student failed")
 
