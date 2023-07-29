@@ -9,7 +9,7 @@ class Student:
 
 
     def __str__(self):
-        return "a student "
+        return f"a student with name {self.name} and house {self.house}"
 
 
 def main():
@@ -17,11 +17,9 @@ def main():
     house = input("House:" )
     try:
         student = Student(name, house)
-        print(student.name)
-        print(student.house)
+        print(student)
     except ValueError:
         print("creating of a student failed")
-    print(student)
 
 #####################KONEC###########################
 main()
