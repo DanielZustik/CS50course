@@ -7,8 +7,9 @@ class Student:
         self.name = name
         self.house = house
 
-    def __str__():
-        ...
+
+    def __str__(self):
+        return "a student "
 
 
 def main():
@@ -20,7 +21,6 @@ def main():
         print(student.house)
     except ValueError:
         print("creating of a student failed")
-
     print(student)
 
 #####################KONEC###########################
