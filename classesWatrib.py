@@ -12,7 +12,7 @@ class Student:
 
 
     def __str__(self):
-        return f"a student with name {self.name} and house {self.house} with patronus {self.patronus} on the street {self.street()}"
+        return f"a student with name {self.name} and house {self.house} with patronus {self.patronus} on the street {self.street}"
 
 
     #getter
