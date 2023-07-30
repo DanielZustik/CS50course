@@ -16,7 +16,7 @@ class Wizard:
     def __init__(self, name):
         if not name:
             raise ValueError
-        self.name = name
+        self.name = name ##mutual variable
 
 
 class Professor(Wizard):
@@ -32,3 +32,6 @@ class Student(Wizard):
             raise ValueError
         super().__init__(name)
         self.house = house
+
+student = Student("Harry", "Gryffindor")
+professor = Professor("Severus", "Defence against dark arts")
