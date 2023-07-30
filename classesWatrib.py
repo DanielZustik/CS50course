@@ -70,5 +70,6 @@ def main():
     except ValueError:
         print("=" *5 + "creating of a student failed ://" + "=" *5)
 
+    print(Hat.sort("Dan"))
 #####################| KONEC |###########################
 main()
