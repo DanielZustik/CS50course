@@ -1,3 +1,4 @@
+import random
 # class int:
     #def __init__(x, base=10):
         #...
@@ -48,9 +49,12 @@ class Student:
                 return "xF"
 
 class Hat: #only one exists in Potter universe... so no instances, just class
-    houses = []#class variable
+    houses = ["Pr", "Kac", "Sra"] #class variable
+
 
     @classmethod
+    def sort(cls, name) #cls reference to class
+        return f"name, 'shoudl be in', random.choice(cls.houses)"
 
 
 #####################| MAIN |############################
