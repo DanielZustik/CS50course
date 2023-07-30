@@ -53,8 +53,8 @@ class Hat: #only one exists in Potter universe... so no instances, just class
 
 
     @classmethod
-    def sort(cls, name) #cls reference to class
-        return f"name, 'shoudl be in', random.choice(cls.houses)"
+    def sort(cls, name): #cls reference to class
+        print(name, 'shoudl be in', random.choice(cls.houses))
 
 
 #####################| MAIN |############################
