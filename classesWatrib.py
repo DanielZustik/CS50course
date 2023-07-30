@@ -4,6 +4,8 @@
 # int1 = int()
 # int2 = int(5)
 # int2.something()
+# int3 = int(asd).... VAlueError
+# its datatype actually generaly but also datatype of python and the object of a class/datatype
 class Student:
     def __init__(self, name, house, patronus, street):
         if not name:
