@@ -20,14 +20,15 @@ class Wizard:
 
 
 class Professor(Wizard):
-    def __init__(self, subject):
+    def __init__(self, name, subject):
         if not subject:
             raise ValueError
-        super()
+        super().__init__(name)
         self.subject = subject
 
 class Student(Wizard):
-    def __init__(self, house):
+    def __init__(self, name, house):
         if not house:
             raise ValueError
+        super().__init__(name)
         self.house = house
