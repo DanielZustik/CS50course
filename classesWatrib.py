@@ -4,7 +4,7 @@ class Student:
             raise ValueError("missing name")
         if house not in ["Pr", "Kac", "Sra"]:
             raise ValueError("not correct house")
-        #######| atributes |########
+        #######| initializing atributes/instance variables |######## those trigger setter, if definied or in other words if it is actually atribute
         self.name = name
         self.house = house
         self.patronus = patronus
