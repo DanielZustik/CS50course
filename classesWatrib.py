@@ -49,7 +49,7 @@ class Student:
 
 class Hat:
     def sort(self, name):
-        
+         
 
 #####################| MAIN |############################
 def main():
