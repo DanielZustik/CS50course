@@ -1,3 +1,7 @@
+# class int:
+    #def __init__(x, base=10):
+        #...
+
 class Student:
     def __init__(self, name, house, patronus, street):
         if not name:
@@ -19,7 +23,7 @@ class Student:
     #getter
     @property
     def street(self): #property
-        return self._street #instance variable underline atribute... do not touch inst var with _ 
+        return self._street #instance variable underline atribute... do not touch inst var with _
 
 
     #setter
