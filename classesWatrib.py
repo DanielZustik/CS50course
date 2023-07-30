@@ -70,6 +70,7 @@ def main():
     house = input("House:" )
     patronus = input("Patronus:" )
     street = input("Street:" )
+    #nebo namisto toho callnout Student.get()
     try:
         student = Student(name, house, patronus, street)
         print(student)
