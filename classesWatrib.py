@@ -1,7 +1,9 @@
 # class int:
     #def __init__(x, base=10):
         #...
-
+# int1 = int()
+# int2 = int(5)
+# int2.something()
 class Student:
     def __init__(self, name, house, patronus, street):
         if not name:
