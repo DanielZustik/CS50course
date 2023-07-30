@@ -47,9 +47,9 @@ class Student:
             case _:
                 return "xF"
 
-class Hat:
-    def sort(self, name):
-         
+class Hat: #only one exists in Potter universe... so no instances, just class
+    
+
 
 #####################| MAIN |############################
 def main():
@@ -64,7 +64,5 @@ def main():
     except ValueError:
         print("=" *5 + "creating of a student failed ://" + "=" *5)
 
-    hat = Hat()
-    hat.sort("Dan")
 #####################| KONEC |###########################
 main()
