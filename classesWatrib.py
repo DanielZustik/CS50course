@@ -8,6 +8,7 @@ class Student:
         self.name = name
         self.house = house
         self.patronus = patronus
+        ###atribute##
         self.street = street #calls also setter before setting
 
 
