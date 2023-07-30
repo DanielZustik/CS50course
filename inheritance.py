@@ -19,13 +19,14 @@ class Wizard:
         self.name = name
 
 
-class Professor:
+class Professor(Wizard):
     def __init__(self, subject):
         if not subject:
             raise ValueError
+        super()
         self.subject = subject
 
-class Student:
+class Student(Wizard):
     def __init__(self, house):
         if not house:
             raise ValueError
