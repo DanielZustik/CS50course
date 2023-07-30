@@ -75,9 +75,10 @@ def main():
         student = Student(name, house, patronus, street)
         print(student)
         print("Expecto patronum!", student.charm())
+        print(Hat.sort("Dan"))
     except ValueError:
         print("=" *5 + "creating of a student failed ://" + "=" *5)
 
-    print(Hat.sort("Dan"))
+
 #####################| KONEC |###########################
 main()
