@@ -56,6 +56,13 @@ class Hat: #only one exists in Potter universe... so no instances, just class
     def sort(cls, name): #cls reference to class
         print(name, 'shoudl be in', random.choice(cls.houses))
 
+    @classmethod
+    def get(cls):
+        name = input("name:")
+        ...
+        return cls(name) #zavolani init resp. defkato constructor
+    #umozni encapsulovat vsechno do classy tj. neni treba se ptat na udaje ke studentovi v main
+
 
 #####################| MAIN |############################
 def main():
