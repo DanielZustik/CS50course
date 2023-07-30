@@ -48,7 +48,9 @@ class Student:
                 return "xF"
 
 class Hat: #only one exists in Potter universe... so no instances, just class
-    
+    houses = []#class variable
+
+    @classmethod
 
 
 #####################| MAIN |############################
