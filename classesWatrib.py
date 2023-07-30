@@ -18,8 +18,8 @@ class Student:
 
     #getter
     @property
-    def street(self):
-        return self._street
+    def street(self): #property
+        return self._street #instance variable underline atribute... do not touch inst var with _ 
 
 
     #setter
