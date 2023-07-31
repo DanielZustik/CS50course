@@ -13,6 +13,7 @@ print(total(**coins), "Knuts") #unpacking keys and values... returing them. not 
 """
 
 def f(*args, **kwargs): #varialbe number of arguments
-    print("positional arguments:", args)
+    print("Positional arguments:", args)
+    print("Named arguments:", kwargs)
 
-f(100)
+f(100, value=100)
