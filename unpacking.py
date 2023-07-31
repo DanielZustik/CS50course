@@ -1,6 +1,6 @@
 #first, last = input("what s ur full name?").split(" ")
-#print(f"hello, {first}")
-
+#print(f"hello, {first}")"
+"""
 def total(galleons, sickles, knuts):
     return (galleons * 17 + sickles) * 29 + knuts
 
@@ -10,3 +10,9 @@ def total(galleons, sickles, knuts):
 coins = {"galleons": 100, "sickles": 50, "knuts": 25}
 #print(total(coins["galleons"], coins["knuts"], coins["sickles"]), "Knuts")
 print(total(**coins), "Knuts") #unpacking keys and values... returing them. not just values as unpacking list.. but still works because above ..knuts=25, sickles=50)
+"""
+
+def f(*args, **kwargs): #varialbe number of arguments
+    print("positional arguments:", args)
+
+f()
