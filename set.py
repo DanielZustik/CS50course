@@ -11,3 +11,6 @@ for student in students:
     houses.add(student["house"])
 
 print(houses)
+
+for house in houses:
+    print(house)
