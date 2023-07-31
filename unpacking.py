@@ -18,4 +18,8 @@ def f(*args, **kwargs): #varialbe number of arguments
 
 f(100, value=100)
 """
-def f(*)
+def f(*asd,**asdd):
+    print("Positional arguments:", asd)
+    print("Named arguments:", asdd)
+
+f(10, 15, value=10)
