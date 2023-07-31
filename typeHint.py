@@ -1,5 +1,5 @@
 #python doesnt support type hint doesnt care but with mypy its possible to check
-def meow(n: int):
+def meow(n: int) -> None: # -> means return None... because there is no return code
     for _ in range(n):
         print("meow")
 
@@ -10,3 +10,4 @@ try:
 except:
     ...
 meow(3)
+print(meow(1)) #doesnt retunr value so it will print None
