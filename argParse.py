@@ -14,8 +14,8 @@ else:
 import argparse
 
 parser = argparse.ArgumentParser(description="Meows")
-parser.add_argument("-n", help="number of times to meow") # mpython argParse.py -h
+parser.add_argument("-n", default=2, help="number of times to meow", type=int) # mpython argParse.py -h
 args = parser.parse_args() #imports sys library itself, looks into args...
 
-for _ in range(int(args.n)):
+for _ in range(args.n):
     print("meow")
