@@ -15,4 +15,4 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-n")
-args = parser.parse_args()
+args = parser.parse_args() #imports sys library itself, looks into args...
