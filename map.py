@@ -28,4 +28,3 @@ def yell(*words):
     print(*uppercased)
 
 main()
-"""
