@@ -3,7 +3,7 @@ def meow(n):
     return "meow" * n
 
 def bark(n):
-    """
+    """ 
     Barks n times.
 
     :param n: Number of times to bark
@@ -11,5 +11,8 @@ def bark(n):
     :raise TypeError: If n is not an int
     :return: A string of barks per line
     :rtype: str
-    """ #documentation
-    return "Bark" * n
+    """
+    return "Bark\n" * n
+
+print(bark(10), end="")
+
