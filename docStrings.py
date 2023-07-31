@@ -10,5 +10,6 @@ def bark(n):
     :type n: int
     :raise TypeError: If n is not an int
     :return: A string of barks per line
+    :rtype: str
     """ #documentation
     return "Bark" * n
