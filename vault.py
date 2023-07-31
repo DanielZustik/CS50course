@@ -14,3 +14,5 @@ print(potters)
 
 weasleys = Vault(25, 50, 100)
 print(weasleys)
+
+total = 
