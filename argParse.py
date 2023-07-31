@@ -1,3 +1,4 @@
+"""
 import sys
 
 if len(sys.argv) == 1:
@@ -8,3 +9,5 @@ elif len(sys.argv) == 3 and sys.argv[1] == '-n':
         print("meow")
 else:
     print("usage: meows.py")
+"""
+
