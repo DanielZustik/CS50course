@@ -9,10 +9,14 @@ class Vault:
         return f"{self.galleons} galleons, {self.sickles} sickles, {self.knuts} knuts"
 
 
+    def __add__(self, )
+
+
 potters = Vault(100, 50, 25)
 print(potters)
 
 weasleys = Vault(25, 50, 100)
 print(weasleys)
 
-total = 
+total = potters + weasleys
+print(total)
