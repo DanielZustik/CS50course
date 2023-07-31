@@ -40,8 +40,11 @@ def main():
     print("Balance:", account.balance)
     account.deposit(100)
     account.withdraw(50)
-    account.balance = 0
     print("Balance:", account.balance)
-
+    try:
+        account.balance = 0 ### will not work setter is not set so its kind of not allowed to change attribute/property
+        print("Balance:", account.balance)
+    except AttributeError:
+        ...
 
 main()
