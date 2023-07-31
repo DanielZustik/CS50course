@@ -1,7 +1,7 @@
 def main():
     yell("This is CS50!")
 
-def yell(phrase):
+def yell(words):
     print(phrase.upper())
 
 main()
