@@ -3,7 +3,7 @@ def meow(n):
     return "meow" * n
 
 def bark(n):
-    """ 
+    """
     Barks n times.
 
     :param n: Number of times to bark
