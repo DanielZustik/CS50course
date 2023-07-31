@@ -21,5 +21,6 @@ f(100, value=100)
 def f(*asd,**asdd):
     print("Positional arguments:", asd)
     print("Named arguments:", asdd)
+    #for loop taking care of all obtained arguments
 
 f(10, 15, value=10)
