@@ -7,11 +7,13 @@ def main():
     print("Balance:", balance)
 
 
-#def deposit(n): #cant write into global var from here
-#    balance += n
+def deposit(n):
+    global balance
+    balance += n
 
 
 def withdraw(n):
+    global balance
     balance -= n
 
 
