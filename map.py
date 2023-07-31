@@ -7,7 +7,7 @@ def yell(words):
 
 main()
 """
-
+"""
 def main():
     yell("This", "is", "CS50!")
 
@@ -18,3 +18,14 @@ def yell(*words):
     print(*uppercased)
 
 main()
+"""
+
+def main():
+    yell("This", "is", "CS50!")
+
+def yell(*words):
+    
+    print(*uppercased)
+
+main()
+"""
