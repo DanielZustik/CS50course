@@ -15,4 +15,4 @@ print(total(**coins), "Knuts") #unpacking keys and values... returing them. not 
 def f(*args, **kwargs): #varialbe number of arguments
     print("positional arguments:", args)
 
-f()
+f(100)
