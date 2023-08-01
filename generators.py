@@ -5,6 +5,7 @@ def main():
 
 
 def sheep(n):
+    flock = []
     return "💋" * n
 
 
