@@ -15,3 +15,5 @@ print(gryffindors)
 """
 def is_gryffindor(s):
     return  s["house"] == "Gryffindor"
+
+gryffindors = filter(is_gryffindor, students)
