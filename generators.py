@@ -3,7 +3,8 @@ def main():
     for i in range(n):
         print(sheep(i))
 
-        
+
 def sheep(n)
+    
 
 main()
