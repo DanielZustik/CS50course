@@ -7,7 +7,7 @@ def main():
 def sheep(n):
 
     for i in range(n):
-        
+        yield "💋" * i
 
 
 main()
