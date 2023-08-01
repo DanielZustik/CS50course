@@ -3,4 +3,4 @@ students = ["Hermione", "Harry", "Ron"]
 gryffindors = []
 
 for student in students:
-    gryffindors.append({"name"})
+    gryffindors.append({"name": student, "house": "Gryffindor"})
