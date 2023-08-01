@@ -13,10 +13,15 @@ gryffindors = [
 
 print(gryffindors)
 """
+
+
 def is_gryffindor(s):
-    return  s["house"] == "Gryffindor"
+    return s["house"] == "Gryffindor"
+
 
 gryffindors = filter(is_gryffindor, students)
 print(gryffindors)
-for gryffindor in sorted(gryffindors, key=lambda s: s["name"]): #just without name function lambda
+for gryffindor in sorted(
+    gryffindors, key=lambda s: s["name"]
+):  # just without name function lambda
     print(gryffindor["name"])
