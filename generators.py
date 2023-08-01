@@ -5,7 +5,7 @@ def main():
 
 
 def sheep(n):
-    return "$" * n
+    return ":sheep:" * n
 
 
 main()
