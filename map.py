@@ -28,13 +28,17 @@ def yell(*words):
     print(*uppercased)
 
 main()
-""""
+"""
+
+
 ######| List comprehensions |######
 def main():
     yell("This", "is", "CS50!")
 
+
 def yell(*words):
     uppercased = [word.upper() for word in words]
     print(*uppercased)
+
 
 main()
