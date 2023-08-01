@@ -4,7 +4,8 @@ def main():
         print(sheep(i))
 
 
-def sheep(n)
-    
+def sheep(n):
+    return "$" * n
+
 
 main()
