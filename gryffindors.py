@@ -14,5 +14,4 @@ gryffindors = [
 print(gryffindors)
 """
 def is_gryffindor(s):
-    if s["house"] == "Gryffindor":
-        return 
+    return  s["house"] == "Gryffindor"
