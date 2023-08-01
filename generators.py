@@ -7,7 +7,7 @@ def main():
 def sheep(n):
 
     for i in range(n):
-        yield "💋" * i
+        yield "💋" * i ### something like return, returns just one value at a time...
 
 
 main()
