@@ -1,3 +1,6 @@
-n = int(input("whats n? "))
-for i in range(n):
-    print("*" * i)
+def main():
+    n = int(input("whats n? "))
+    for i in range(n):
+        print("*" * i)
+
+main()
