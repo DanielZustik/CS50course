@@ -5,7 +5,7 @@ def main():
 
 
 def sheep(n):
-    return ":sheep:" * n
+    return "💋" * n
 
 
 main()
