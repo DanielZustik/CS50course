@@ -18,3 +18,5 @@ def is_gryffindor(s):
 
 gryffindors = filter(is_gryffindor, students)
 print(gryffindors)
+for gryffindor in gryffindors:
+    print(gryffindor)
