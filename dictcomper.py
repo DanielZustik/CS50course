@@ -9,6 +9,6 @@ for student in students:
 
 """
 
-gryffindors = [{"name": student, "house": "Gryffindor"} for student in students]
+gryffindors = [{"name": student, "house": "Gryffindor"} for student in students] # quicker way with dict comprehension
 
 print(gryffindors)
