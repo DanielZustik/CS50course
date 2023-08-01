@@ -1,12 +1,14 @@
 def main():
     n = int(input("whats n? "))
-    for i in range(n):
-        print(sheep(i))
+    for s in sheep(n):
+        print(s)
 
 
 def sheep(n):
     flock = []
-    return "💋" * n
+    for i in range(n):
+        flock.append("💋" * i)
+    return flock
 
 
 main()
