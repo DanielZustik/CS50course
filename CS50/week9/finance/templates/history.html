@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        .center-table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td {
+            border-style: solid;
+            border-width: 1px;  /* added line */
+            border-color: black;  /* added line */
+        }
+        th {
+            padding-top: 31px;
+            padding-bottom: 11px;
+            padding-right: 31px;
+            padding-left: 31px;
+            }
+    </style>
+    <table class="center-table">
+        <tr>
+            <th>ID</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Transaction amount</th>
+            <th>Purchase or sell</th>
+            <th>Transaction time</th>
+        </tr>
+        {% for item in transactions %}
+        <tr>
+                <td>{{ item.transaction_id }}</td>
+                <td>{{ item.symbol }}</td>
+                <td>{{ "%.0f"|format(item.shares) }}</td>
+                <td>{{ "%.2f"|format(item.shares * item.price_per_share) }}</td>
+                {% if item.shares > 0 %}
+                    <td>Buy</td>
+                {% else %}
+                    <td>Sell</td>
+                {% endif %}
+                <td>{{ item.transaction_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

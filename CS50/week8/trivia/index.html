@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Who sang the title song for the latest Bond film, No Time to Die?</h3>
+                <div id="firstD"></div>
+                <button id="firstB" onclick= "aler(event)">Adele</button>
+                <button id="secondB" onclick= "aler(event)">Sam Smith</button>
+                <button id="thirdB" onclick= "aler(event)">Billie Eilish</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who is considered to be the founder of the frozen-food industry?</h3>
+                <div id="secondD"></div>
+                <input>
+                <button id="fourhB">Check answer</button>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            function aler(event) {
+                var trigger = event.srcElement;
+                alert(trigger.id)
+
+                if (trigger.id == "firstB") {
+                    document.querySelector('#firstB').style.backgroundColor = 'red';
+                    document.querySelector('#firstD').innerHTML = "Wrong!"
+                }
+                if (trigger.id == "secondB"){
+                    document.querySelector('#secondB').style.backgroundColor = 'red';
+                    document.querySelector('#firstD').innerHTML = "Wrong!"
+                }
+                if (trigger.id == "thirdB") {
+                    document.querySelector('#thirdB').style.backgroundColor = 'green';
+                    document.querySelector('#firstD').innerHTML = "Correct!"
+                }
+            };
+
+            document.querySelector('#fourhB').addEventListener('click', function() {
+                if (document.querySelector('input').value === "Clarence Birdseye") {
+                    document.querySelector('input').style.backgroundColor = 'green';
+                    document.querySelector('#secondD').innerHTML = "Correct!"
+                } else {
+                    document.querySelector('input').style.backgroundColor = 'red';
+                    document.querySelector('#secondD').innerHTML = "Wrong!"
+                }
+            });
+
+        </script>
+    </body>
+</html>
